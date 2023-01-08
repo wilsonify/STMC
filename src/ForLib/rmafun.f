@@ -1,16 +1,13 @@
-      function rmafun() bind(c)
-          use iso_c_binding
-          
+      function RMAFUN() bind(c)
+          use iso_c_binding          
           implicit none
+          real(c_double) :: RMAFUN
+          real(c_double) :: UNI
+          integer(c_int) :: I, J
+          real(c_double) :: C, CD, CM    
+          real(c_double), dimension(97) :: U          
 
-          real(c_double) :: rmafun
-          real(c_double) :: uni
-          integer(c_int) :: i, j
-          real(c_double) :: c, cd, cm    
-          real(c_double), dimension(97) :: u  
-          
-
-          common /raset1/ u, c, cd, cm, i, j
+          common /raset1/ U, C, CD, CM, I, J
           UNI=U(I)-U(J)
           IF(UNI.LT.0.0) UNI=UNI+1.0
           U(I)=UNI           
@@ -22,6 +19,6 @@
           IF(C.LT.0) C=C+CM
           UNI=UNI-C
           IF(UNI.LT.0.0) UNI=UNI+1.0
-          rmafun=UNI
+          RMAFUN=UNI
     
-      end function rmafun
+      end function RMAFUN

@@ -1,13 +1,17 @@
-      SUBROUTINE AC_INT(NT,ACOR,ACINT)
-C Copyright, Bernd Berg, Feb 11 2001.
-C Input:  Array of autocorrelations ACOR.
-C Output: Array of integrated autocorrelation times ACINT.
-      include 'implicit.sta'
-      include 'constants.par'
-      DIMENSION ACOR(0:NT),ACINT(0:NT)
-      ACINT(0)=ONE
-      DO IT=1,NT
-        ACINT(IT)=ACINT(IT-1)+TWO*ACOR(IT)/ACOR(0)
-      END DO
-      RETURN
-      END
+      subroutine ac_int(nt, acor, acint) bind(c)
+           use iso_c_binding
+           implicit none       
+           integer(c_int) :: nt
+           real(c_double), dimension(0:nt) :: acor, acint
+           real(c_double), parameter :: one = 1.0_c_double
+           real(c_double), parameter :: two = 2.0_c_double
+           integer(c_int) :: it
+       
+           acint(0) = one
+           do it = 1, nt
+               acint(it) = acint(it-1) + two * acor(it) / acor(0)
+           end do
+           return
+       
+       end subroutine ac_int
+       

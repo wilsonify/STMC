@@ -18,7 +18,10 @@ link_directories(external/googletest/build/lib)
 
 # build a fortran library
 include_directories(src/ForLib)
-FILE(GLOB ForLibSources src/ForLib/get_double.f src/ForLib/rmafun.f)
+FILE(GLOB ForLibSources 
+src/ForLib/get_double.f 
+src/ForLib/rmafun.f
+)
 add_library(forlib SHARED ${ForLibSources})
 set_target_properties(forlib PROPERTIES LINKER_LANGUAGE Fortran)
 link_directories(${CMAKE_CURRENT_BINARY_DIR})
