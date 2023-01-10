@@ -1,4 +1,4 @@
-      FUNCTION CHI2_XQ(Q)
+      FUNCTION CHI2_XQ(Q) bind(c)
       include 'implicit.sta'
       include 'constants.par'
       EXTERNAL CHI2_DF

@@ -1,4 +1,4 @@
-      FUNCTION AUTCORF(IT,NDAT,DATA,LMEAN)
+      FUNCTION AUTCORF(IT,NDAT,DATA,LMEAN) bind(c)
 C Copyright, Bernd Berg, Feb 11 2001.
 C The function calculates the autocorrelation at IT from the input array 
 C DATA of autocorrelations. Allowed values of IT are IT=0,1, ... < NDAT.

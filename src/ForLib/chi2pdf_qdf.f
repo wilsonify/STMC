@@ -1,4 +1,4 @@
-      FUNCTION CHI2PDF_QDF(CHI2)
+      FUNCTION CHI2PDF_QDF(CHI2) bind(c)
 C Coyright, Bernd Berg, July 3 1999.
 C CHI2 pdf: peaked distribution function.
       include 'implicit.sta'

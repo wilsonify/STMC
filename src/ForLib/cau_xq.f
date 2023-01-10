@@ -1,4 +1,4 @@
-      FUNCTION CAU_XQ(Q)
+      FUNCTION CAU_XQ(Q) bind(c)
 C CAUCHY, CUMULATIVE DISTRIBUTIO FUNCTION. BERG, JUN 1, 1999.
       include 'implicit.sta'
       include 'constants.par'

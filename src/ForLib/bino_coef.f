@@ -1,4 +1,4 @@
-      FUNCTION BINO_COEF(N,K)
+      FUNCTION BINO_COEF(N,K) bind(c)
 C Copyright, Bernd Berg, May 5 2002.
 C Binomial probability density. Fast calculation see below.
       include 'implicit.sta'

@@ -1,4 +1,4 @@
-      FUNCTION CHI2_DF(CHI2)
+      FUNCTION CHI2_DF(CHI2) bind(c)
 C Copyright, Bernd Berg, July 1 1999.
 C CHI2 cumulative distribution function.
       include 'implicit.sta'

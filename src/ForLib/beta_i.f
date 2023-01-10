@@ -1,4 +1,4 @@
-      FUNCTION BETA_I(X,A,B)
+      FUNCTION BETA_I(X,A,B) bind(c)
 C INCOMPLETE BETA FUNCTION. Copyright, Bernd Berg, Apr 2 2000.
       include 'implicit.sta'
       include 'constants.par'

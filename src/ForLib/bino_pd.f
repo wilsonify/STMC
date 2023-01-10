@@ -1,4 +1,4 @@
-      FUNCTION BINO_PD(N,K,P)
+      FUNCTION BINO_PD(N,K,P) bind(c)
 C Copyright, Bernd Berg, May 5 2001.
 C Binomial probability density. Fast calculation see below.
       include 'implicit.sta'

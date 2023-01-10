@@ -1,4 +1,4 @@
-      FUNCTION BBI1_NK_XQ(Q)
+      FUNCTION BBI1_NK_XQ(Q) bind(c)
 C Copyright, Berg, October 23 2000.
       include 'implicit.sta'
       include 'constants.par'

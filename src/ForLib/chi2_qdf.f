@@ -1,4 +1,4 @@
-      FUNCTION CHI2_QDF(CHI2)
+      FUNCTION CHI2_QDF(CHI2) bind(c)
 C Copyright, Bernd Berg, July 2 1999.
 C CHI2 peaked distribution function.
       include 'implicit.sta'

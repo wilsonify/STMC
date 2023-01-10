@@ -1,4 +1,4 @@
-      FUNCTION BINO_CLN(N,K)
+      FUNCTION BINO_CLN(N,K) bind(c)
 C Copyright, Bernd Berg, May 13 2002.
 C Log of the binomial probability density. Fast calculation see below.
       include 'implicit.sta'

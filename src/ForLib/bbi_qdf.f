@@ -1,4 +1,4 @@
-      FUNCTION BBI_QDF(N,K,P)
+      FUNCTION BBI_QDF(N,K,P) bind(c)
 C Copyright, Berg, October 23 1999.
       include 'implicit.sta'
       include 'constants.par'

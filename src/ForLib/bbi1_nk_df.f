@@ -1,4 +1,4 @@
-      FUNCTION BBI1_NK_DF(P)
+      FUNCTION BBI1_NK_DF(P) bind(c)
 C Copyright, Berg, October 23 2000.
       include 'implicit.sta'
       include 'constants.par'

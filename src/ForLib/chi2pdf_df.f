@@ -1,4 +1,4 @@
-      FUNCTION CHI2PDF_DF(CHI2)
+      FUNCTION CHI2PDF_DF(CHI2) bind(c)
       include 'implicit.sta'
       include 'constants.par'
       COMMON /CHI2PAR/ NF
