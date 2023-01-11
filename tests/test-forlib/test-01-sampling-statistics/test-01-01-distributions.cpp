@@ -1,23 +1,23 @@
+
 #include <gtest/gtest.h>
 #include "gmock/gmock-matchers.h"
 #include "forlib.h"
 
 TEST(test_RMAFUN, test_RMAFUN01)
 {
-    double result;
-    result = rmafun();
-    EXPECT_LE(result, 1.0);
-    EXPECT_GE(result, 0.0);
+  double result;
+  result = RMAFUN();
+  EXPECT_LE(result, 1.0);
+  EXPECT_GE(result, 0.0);
 }
 
 TEST(test_addln, test_addln01)
 {
-    double result;
-    result = addln(0.5,0.8);
-    EXPECT_LE(result, 1.0);
-    EXPECT_GE(result, 0.0);
+  double result;
+  result = ADDLN(0.5, 0.8);    
+  EXPECT_LE(result, 1.0);
+  EXPECT_GE(result, 0.0);
 }
-
 
 /*
 102 results - 88 files

@@ -19,6 +19,7 @@ link_directories(external/googletest/build/lib)
 # build a fortran library
 include_directories(src/ForLib)
 FILE(GLOB ForLibSources 
+src/ForLib/addln.f 
 src/ForLib/get_double.f 
 src/ForLib/rmafun.f
 )
