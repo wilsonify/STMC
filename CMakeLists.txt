@@ -22,6 +22,7 @@ FILE(GLOB ForLibSources
 src/ForLib/addln.f 
 src/ForLib/get_double.f 
 src/ForLib/rmafun.f
+src/ForLib/autcorf.f
 )
 add_library(forlib SHARED ${ForLibSources})
 set_target_properties(forlib PROPERTIES LINKER_LANGUAGE Fortran)

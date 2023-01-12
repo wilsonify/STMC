@@ -1,6 +1,7 @@
 
 #include <gtest/gtest.h>
 #include "gmock/gmock-matchers.h"
+#include <vector>
 #include "forlib.h"
 
 TEST(test_RMAFUN, test_RMAFUN01)
@@ -16,6 +17,16 @@ TEST(test_addln, test_addln01)
   double result;
   result = ADDLN(0.5, 0.8);    
   EXPECT_LE(result, 1.0);
+  EXPECT_GE(result, 0.0);
+}
+
+TEST(test_autocorf, test_autocorf01){
+  double result;
+  int IT = 2;
+  std::vector<double> DATA = {1,1,1,0,2,3,4,5};
+  int NDAT = DATA.size();
+  bool LMEAN = true;
+  result = AUTCORF(IT, NDAT, DATA, LMEAN);
   EXPECT_GE(result, 0.0);
 }
 
