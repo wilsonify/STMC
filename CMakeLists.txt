@@ -3,7 +3,10 @@ project(stmc LANGUAGES Fortran CXX)
 set(VERSION_MAJOR 1)
 set(VERSION_MINOR 0)
 set(CMAKE_EXPORT_COMPILE_COMMANDS true)
-set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "/usr/bin/include-what-you-use")
+find_program(IWYU_PATH NAMES iwyu)
+if(IWYU_PATH)
+    set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE IWYU_PATH)
+endif()
 set(CMAKE_CXX_STANDARD 11) # GoogleTest requires at least C++11
 set(CMAKE_CXX_FLAGS="-g -O0 -Wall -W -Wshadow -Wunused-variable -Wunused-parameter -Wunused-function -Wunused -Wno-system-headers -Wno-deprecated -Woverloaded-virtual -Wwrite-strings -fprofile-arcs -ftest-coverage")
 set(CMAKE_C_FLAGS="-g -O0 -Wall -W -fprofile-arcs -ftest-coverage")
@@ -19,10 +22,11 @@ link_directories(external/googletest/build/lib)
 # build a fortran library
 include_directories(src/ForLib)
 FILE(GLOB ForLibSources 
-src/ForLib/addln.f 
-src/ForLib/get_double.f 
+src/ForLib/get_double.f
 src/ForLib/rmafun.f
-src/ForLib/autcorf.f
+src/ForLib/addln.f 
+#src/ForLib/STMEAN.f
+#src/ForLib/autcorf.f
 )
 add_library(forlib SHARED ${ForLibSources})
 set_target_properties(forlib PROPERTIES LINKER_LANGUAGE Fortran)

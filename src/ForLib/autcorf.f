@@ -4,11 +4,13 @@
          ! C DATA of autocorrelations. Allowed values of IT are IT=0,1, ... < NDAT.
          use iso_c_binding
          implicit none
-         integer(c_int), value :: IT, NDAT, LMEAN
+         integer(c_int), value :: IT, NDAT
+         integer(c_int) :: NN
          integer(c_int) :: I
          real(c_double), dimension(NDAT), intent(in) :: DATA
-         real(c_double) :: AUTCORF, DMEAN
-         logical(c_bool) :: NN
+         real(c_double) :: AUTCORF
+         real(c_double) :: DMEAN
+         logical(c_bool) :: LMEAN
          real(c_double), parameter :: ONE = 1.0_c_double
          real(c_double), parameter :: ZERO = 0.0_c_double
          DMEAN=ZERO

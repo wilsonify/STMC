@@ -1,4 +1,4 @@
 extern "C"
 {
-    double ADDLN(double ALN, double BLN);
+    double ADDLN(double *ALN, double *BLN);
 }

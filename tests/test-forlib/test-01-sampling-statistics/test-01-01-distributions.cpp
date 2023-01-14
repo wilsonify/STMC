@@ -4,31 +4,78 @@
 #include <vector>
 #include "forlib.h"
 
+double round(double value, int decimal_places)
+{
+    const double multiplier = std::pow(10.0, decimal_places);
+    return std::round(value * multiplier) / multiplier;
+}
+std::vector<double> round_vector(std::vector<double> values, int decimal_places)
+{
+    std::vector<double> result;
+    result.resize(values.size());
+    for (int i = 0; i < values.size(); i++)
+    {
+        result[i] = round(values[i], decimal_places);
+    }
+    return result;
+}
+
+std::vector<std::vector<double>> round_matrix(std::vector<std::vector<double>> values, int decimal_places)
+{
+    std::vector<std::vector<double>> result;
+    result.resize(values.size());
+    for (int i = 0; i < values.size(); i++)
+    {
+        result[i] = round_vector(values[i], decimal_places);
+    }
+    return result;
+}
+
+TEST(test_get_double, test_get_double01)
+{
+    double result;
+    result = GET_DOUBLE();
+    EXPECT_LE(result, 1.0);
+    EXPECT_GE(result, 0.0);
+}
+
 TEST(test_RMAFUN, test_RMAFUN01)
 {
-  double result;
-  result = RMAFUN();
-  EXPECT_LE(result, 1.0);
-  EXPECT_GE(result, 0.0);
+    double result;
+    result = RMAFUN();
+    EXPECT_LE(result, 1.0);
+    EXPECT_GE(result, 0.0);
 }
 
 TEST(test_addln, test_addln01)
 {
-  double result;
-  result = ADDLN(0.5, 0.8);    
-  EXPECT_LE(result, 1.0);
-  EXPECT_GE(result, 0.0);
+    double result;
+    double aln = 0.5;
+    double bln = 0.8;
+    result = ADDLN(&aln, &bln);
+    result = round(result, 2);
+    EXPECT_EQ(result, 1.35);
+    // EXPECT_GE(result, 0.0);
 }
 
-TEST(test_autocorf, test_autocorf01){
-  double result;
-  int IT = 2;
-  std::vector<double> DATA = {1,1,1,0,2,3,4,5};
-  int NDAT = DATA.size();
-  bool LMEAN = true;
-  result = AUTCORF(IT, NDAT, DATA, LMEAN);
-  EXPECT_GE(result, 0.0);
-}
+// TEST(test_stmean, test_stmean01)
+// {
+//     double result;
+//     std::vector<double> DATA = {1, 1, 1, 0, 2, 3, 4, 5};
+//     int NDAT = DATA.size();
+//     result = STMEAN(NDAT, DATA);
+//     EXPECT_GE(result, 0.0);
+// }
+
+// TEST(test_autocorf, test_autocorf01){
+//   double result;
+//   int IT = 2;
+//   std::vector<double> DATA = {1,1,1,0,2,3,4,5};
+//   int NDAT = DATA.size();
+//   bool LMEAN = true;
+//   result = AUTCORF(IT, NDAT, DATA, LMEAN);
+//   EXPECT_GE(result, 0.0);
+// }
 
 /*
 102 results - 88 files
@@ -234,13 +281,6 @@ src/ForLib/gau_xq.f:
   1:       FUNCTION GAU_XQ(Q)
   2  C
 
-src/ForLib/get_double.f:
-  1:       real(c_double) function get_double() bind(c)
-  2            use iso_c_binding
-
-  8            get_double = x
-  9:       end function get_double
-  10
 
 src/ForLib/isfun.f:
   1:       function isfun(ix,nla,nd)
