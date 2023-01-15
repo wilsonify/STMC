@@ -55,17 +55,27 @@ TEST(test_addln, test_addln01)
     result = ADDLN(&aln, &bln);
     result = round(result, 2);
     EXPECT_EQ(result, 1.35);
-    // EXPECT_GE(result, 0.0);
 }
 
-// TEST(test_stmean, test_stmean01)
-// {
-//     double result;
-//     std::vector<double> DATA = {1, 1, 1, 0, 2, 3, 4, 5};
-//     int NDAT = DATA.size();
-//     result = STMEAN(NDAT, DATA);
-//     EXPECT_GE(result, 0.0);
-// }
+double STMEAN_check(const std::vector<double> &X)
+{
+    double XM = 0.0;
+    for (auto x : X)
+    {
+        XM += x;
+    }
+    return XM / double(X.size());
+}
+
+TEST(test_stmean, test_stmean01)
+{
+    double result;
+    std::vector<double> DATA = {1, 1, 1, 0, 2, 3, 4, 5};
+    auto ndat = int(DATA.size());
+    result = STMEAN(ndat, DATA);
+    result = round(result, 3);
+    EXPECT_EQ(result, 0.375);
+}
 
 // TEST(test_autocorf, test_autocorf01){
 //   double result;

@@ -134,7 +134,7 @@
 // #include "stebj0.h"
 // #include "stebj1.h"
 // #include "stebjj1.h"
-// #include "stmean.h"
+#include "stmean.h"
 // #include "stop_mpi.h"
 // #include "stud_df.h"
 // #include "stud_pd.h"
