@@ -1,5 +1,5 @@
 extern "C"
 {
-    void ac_int(const int nt, const double *acor, double *acint);
+    void ac_int_(const int nt, const double *acor, double *acint);
 }
 

@@ -1,4 +1,4 @@
-      SUBROUTINE AC_INTJ(NT,NBINS,ACORJ,ACINTJ)
+      SUBROUTINE AC_INTJ(NT,NBINS,ACORJ,ACINTJ) bind(c,name="ac_intj_")
 C Copyright, Bernd Berg, Feb 11 2001.
 C Input:  Jackknife array of autocorrelations ACORJ.
 C Output: Jackknife array of integrated autocorrelation times ACINTJ.

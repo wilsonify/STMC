@@ -1,5 +1,5 @@
-#include <stddef.h>
+#include <vector>
 extern "C"
 {
-    double AUTCORF(int IT, int NDAT, std::vector<double> DATA, bool LMEAN);
+    double autocorf_(int IT, int NDAT, std::vector<double> DATA, bool LMEAN);
 }

@@ -1,4 +1,4 @@
 extern "C"
 {
-    double GET_DOUBLE();
+    double get_double_();
 }

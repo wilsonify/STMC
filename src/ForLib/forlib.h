@@ -4,7 +4,7 @@
 #include "addln.h"
 // #include "addln2.h"
 // #include "autcora.h"
-// #include "autcorf.h"
+#include "autcorf.h"
 // #include "autcorj.h"
 // #include "autcorja.h"
 // #include "autoj_tau.h"

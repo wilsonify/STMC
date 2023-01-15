@@ -1,4 +1,4 @@
-      subroutine ac_int(nt, acor, acint) bind(c)
+      subroutine ac_int(nt, acor, acint) bind(c,name="ac_int_")
            use iso_c_binding
            implicit none       
            integer(c_int) :: nt

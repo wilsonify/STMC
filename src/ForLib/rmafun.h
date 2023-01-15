@@ -1,4 +1,4 @@
 extern "C"
 {
-    double RMAFUN();
+    double rmafun_();
 }

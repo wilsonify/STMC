@@ -1,4 +1,4 @@
-      real(c_double) function ADDLN(ALN,BLN) bind(c,name="ADDLN")
+      real(c_double) function ADDLN(ALN,BLN) bind(c,name="addln_")
       ! C Copyright Bernd Berg, Aug 19 2003.
       ! C Given ln(A) and ln(B), the function returns ln(C) with C=A+B.
          use iso_c_binding

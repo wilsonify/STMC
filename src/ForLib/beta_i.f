@@ -1,4 +1,4 @@
-      FUNCTION BETA_I(X,A,B) bind(c)
+      FUNCTION BETA_I(X,A,B) bind(c,name="beta_i_")
 C INCOMPLETE BETA FUNCTION. Copyright, Bernd Berg, Apr 2 2000.
       include 'implicit.sta'
       include 'constants.par'

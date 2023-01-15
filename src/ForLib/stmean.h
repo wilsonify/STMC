@@ -1,5 +1,5 @@
 #include <vector>
 extern "C"
 {
-    double STMEAN(int N, std::vector<double>& X);
+    double stmean_(int N, std::vector<double> &X);
 }

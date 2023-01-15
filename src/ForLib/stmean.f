@@ -1,5 +1,4 @@
-
-      real(c_double) function STMEAN(N,X) bind(c,name="STMEAN")
+      real(c_double) function STMEAN(N,X) bind(c,name="stmean_")
          ! C COPYRIGHT BERND BERG, FEB 10 1990.
          ! C CALCULATION OF THE MEAN VALUE FOR N DATA IN X(N).
          use iso_c_binding
@@ -18,4 +17,5 @@
          STMEAN=XM/N_float
          return
       end function STMEAN
+
 

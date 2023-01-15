@@ -1,4 +1,4 @@
-      SUBROUTINE ADDLN2(ALN,BLN,CLN,ISGN)
+      SUBROUTINE ADDLN2(ALN,BLN,CLN,ISGN) bind(c,name="add_ln2_")
 C Copyright, Bernd Berg, Aug 20, 2003.
 C Given ln(A) and ln(B), A>0,B>0. Output for
 C ISGN=+1: CLN=ln(C) with C=A+B, ISGN unchanged,

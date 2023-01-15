@@ -1,4 +1,4 @@
-      function RMAFUN() bind(c, name="RMAFUN")
+      function RMAFUN() bind(c, name="rmafun_")
         !   use iso_c_binding          
         !   implicit none
         !   real(c_double) :: RMAFUN

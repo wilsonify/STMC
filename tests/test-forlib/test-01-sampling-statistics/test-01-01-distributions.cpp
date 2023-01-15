@@ -34,7 +34,7 @@ std::vector<std::vector<double>> round_matrix(std::vector<std::vector<double>> v
 TEST(test_get_double, test_get_double01)
 {
     double result;
-    result = GET_DOUBLE();
+    result = get_double_();
     EXPECT_LE(result, 1.0);
     EXPECT_GE(result, 0.0);
 }
@@ -42,7 +42,7 @@ TEST(test_get_double, test_get_double01)
 TEST(test_RMAFUN, test_RMAFUN01)
 {
     double result;
-    result = RMAFUN();
+    result = rmafun_();
     EXPECT_LE(result, 1.0);
     EXPECT_GE(result, 0.0);
 }
@@ -52,7 +52,7 @@ TEST(test_addln, test_addln01)
     double result;
     double aln = 0.5;
     double bln = 0.8;
-    result = ADDLN(&aln, &bln);
+    result = addln_(&aln, &bln);
     result = round(result, 2);
     EXPECT_EQ(result, 1.35);
 }
@@ -72,20 +72,21 @@ TEST(test_stmean, test_stmean01)
     double result;
     std::vector<double> DATA = {1, 1, 1, 0, 2, 3, 4, 5};
     auto ndat = int(DATA.size());
-    result = STMEAN(ndat, DATA);
+    result = stmean_(ndat, DATA);
     result = round(result, 3);
     EXPECT_EQ(result, 0.375);
 }
 
-// TEST(test_autocorf, test_autocorf01){
-//   double result;
-//   int IT = 2;
-//   std::vector<double> DATA = {1,1,1,0,2,3,4,5};
-//   int NDAT = DATA.size();
-//   bool LMEAN = true;
-//   result = AUTCORF(IT, NDAT, DATA, LMEAN);
-//   EXPECT_GE(result, 0.0);
-// }
+TEST(test_autocorf, test_autocorf01)
+{
+    double result;
+    int IT = 2;
+    std::vector<double> DATA = {1, 1, 1, 0, 2, 3, 4, 5};
+    auto NDAT = int(DATA.size());
+    bool LMEAN = true;
+    //result = AUTCORF(IT, NDAT, DATA, LMEAN);
+    //EXPECT_GE(result, 0.0);
+}
 
 /*
 102 results - 88 files

@@ -1,4 +1,4 @@
-      FUNCTION ADDLN_CUT(ALN,BLN) bind(c)
+      FUNCTION ADDLN_CUT(ALN,BLN) bind(c,name="addln_cut_")
       ! Copyright Bernd Berg, May 25 2001.
       ! Given ln(A) and ln(B), the function returns ln(C) with C=A+B.
       ! include 'implicit.sta'
