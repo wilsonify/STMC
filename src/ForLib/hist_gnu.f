@@ -13,8 +13,7 @@ C              MAXIMUM OF THE DATA ARE CHOSEN.
 C  CHIST:      NAME OF GNUPLOT FILE. E.G. hist1, hist2, ...
 C              MUST BE CHOSEN TO MATCH CHARACTER*5!
 C
-      include 'implicit.sta'
-      include 'constants.par'
+
       CHARACTER CI*2
       DIMENSION HIST(NHIST),DATA(NDAT)
       DATA ICNT /0/

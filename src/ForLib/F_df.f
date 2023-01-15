@@ -1,7 +1,5 @@
       FUNCTION F_DF(F)
 C VARIANCE RATIO DISTRIBUTION FUNCTION.
-      include 'implicit.sta'
-      include 'constants.par'
       COMMON /PARFT/ NF1,NF2
       XF1H=HALF*NF1
       XF2H=HALF*NF2

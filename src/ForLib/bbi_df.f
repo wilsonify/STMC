@@ -5,13 +5,15 @@
          implicit none
          integer(c_int) N
          integer(c_int) K
-         integer(c_int) P
+         real(c_double) P
          real(c_double), parameter :: ONE = 1.0_c_double
          real(c_double), parameter :: ZERO = 0.0_c_double
          real(c_double) XKP1
          real(c_double) XNMK
          real(c_double) BETA_I
-
+         IF(K.GT.N) STOP "BBI_DF: K cannot be > N"
+         IF(N.LE.0) STOP "BBI_DF: N cannot be < 0"
+         IF(K.LT.0) STOP "BBI_DF: K cannot be < 0"
          IF(K.GT.N.OR.N.LE.0.OR.K.LT.0) STOP "BBI_DF: False N or K."
          IF(P.LT.ZERO .OR. P.GT.ONE) STOP "BBI_DF: False P input."
 

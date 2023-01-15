@@ -1,8 +1,7 @@
       subroutine XY_ran(sta,ns)
 C Copyright, Bernd Berg, Feb 10, 2002.
 C Assigns random (i.e. beta=0) values to the states sta(*,is).
-      include 'implicit.sta'
-      include 'constants.par'
+
       dimension sta(2,ns)
       do is=1,ns
         phi=tpi*rmafun()

@@ -6,9 +6,19 @@ C - THE MEAN VALUE:   FM,
 C - THE VARIANCE:     FV,
 C - THE ERROR BAR:    FE=SQRT(FV/N), (STANDARD DEVIATION OF FM).   
 C                                                                     
-      include 'implicit.sta' 
-      include 'constants.par' 
+       
+      implicit none
+      integer :: N
+      real :: FJ
+      real :: FM
+      real :: FV
+      real :: FE
+      real, parameter :: ZERO=0.0
+      real, parameter :: ONE=1.0
+      integer :: i
+
       DIMENSION FJ(N)
+
 C
       IF(N.LT.2) STOP 'STEBJ0: N TOO SMALL!'
       FM=ZERO

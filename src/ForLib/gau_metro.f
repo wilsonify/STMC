@@ -14,8 +14,7 @@ C    =======
 C    DATA(NDAT):   MARKOV SEQUENCE OF GAUSSIAN RANDOM NUMBERS.
 C    ACPT:         ACCEPTANCE RATE.
 C
-      include 'implicit.sta'
-      include 'constants.par'
+
       DIMENSION DATA(NDAT)
       DATA ICALL/0/
       SAVE X,ICALL

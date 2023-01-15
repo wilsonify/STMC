@@ -1,7 +1,6 @@
       SUBROUTINE ELLIPSE(XM,SGXM,SGYM,EIGVS,PROB,IUD)
 C PURPOSE: PREPARE CONFIDENCE ELLIPSE FOR GNUPLOT.
-      include 'implicit.sta'
-      include 'constants.par'
+
       PARAMETER (NGNU=100)
       DIMENSION XM(2),SGXM(2),SGYM(2),EIGVS(2,2)
 C

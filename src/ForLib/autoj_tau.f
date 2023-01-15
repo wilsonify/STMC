@@ -1,8 +1,7 @@
       SUBROUTINE AUTOJ_TAU(IUO,NBINS,AJ)
 C Jackknife analysis of the exponential and integrated 
 C autocorrelation times. Input: coefficients from jackknifed fits.
-      include 'implicit.sta'
-      include 'constants.par'
+
       PARAMETER(NB_MAX=256)
       DIMENSION TAUJ_EXP(0:NB_MAX),TAUJ_INT(0:NB_MAX),AJ(0:NBINS) 
       IF(NBINS.GT.NB_MAX) STOP "AUTO_TAU: Enlarge NB_MAX!"

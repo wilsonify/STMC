@@ -11,6 +11,10 @@ set(CMAKE_C_FLAGS="-g -O0 -Wall -W -fprofile-arcs -ftest-coverage")
 set(CMAKE_SHARED_LINKER_FLAGS="-fprofile-arcs -ftest-coverage ")
 set(CMAKE_EXE_LINKER_FLAGS="-fprofile-arcs -ftest-coverage ")
 
+# find message-passing-interface
+#find_package(MPI REQUIRED)
+#include_directories(${MPI_INCLUDE_PATH})
+
 #build the test runner
 include_directories(external/googletest/googletest/include)
 include_directories(external/googletest/googlemock/include)
@@ -22,17 +26,7 @@ link_directories(external/googletest/build/lib)
 include_directories(src/ForLib)
 add_library(stmeanlibrary SHARED src/ForLib/stmean.f)
 set_target_properties(stmeanlibrary PROPERTIES LINKER_LANGUAGE Fortran)
-FILE(GLOB ForLibSources 
-src/ForLib/get_double.f
-src/ForLib/rmafun.f
-src/ForLib/addln.f
-src/ForLib/addln_cut.f 
-src/ForLib/stmean.f
-src/ForLib/autcorf.f
-src/ForLib/gamma_ln.f
-src/ForLib/beta_i.f
-#src/ForLib/bbi_df_.f
-)
+FILE(GLOB ForLibSources src/ForLib/*.f)
 add_library(forlib SHARED ${ForLibSources})
 set_target_properties(forlib PROPERTIES LINKER_LANGUAGE Fortran)
 target_link_libraries(forlib stmeanlibrary)

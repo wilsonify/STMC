@@ -118,32 +118,18 @@ TEST(test_beta_i, test_beta_i01)
     result = round(result, 2);
     EXPECT_EQ(result, 1.0);
 }
-// TEST(test_bbi_df, test_bbi_df01)
-// {
-//     double result;
-//     double N=2.0;
-//     double K=5.0;
-//     double P=8.0;
-//     result = bbi_df_(&N, &K, &P);
-//     result = round(result, 2);
-//     EXPECT_EQ(result, 1.35);
-// }
+
+TEST(test_bbi_df, test_bbi_df01)
+{
+    double result;
+    int N = 50;
+    int K = 20;
+    double P = 0.8;
+    result = bbi_df_(&N, &K, &P);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0000);
+}
 /*
-
-src/ForLib/gamma_ln.f:
-  1:       FUNCTION GAMMA_LN(X)
-  2  C BERG, JUNE 23, 1999.
-  3: C LN OF GAMMA FUNCTION ALA LANCZOS, SIAM Num. Anal. B1 (1964) 1.
-  4        include 'implicit.sta'
-
-
-src/ForLib/beta_i.f:
-  1:       FUNCTION BETA_I(X,A,B) bind(c)
-  2  C INCOMPLETE BETA FUNCTION. Copyright, Bernd Berg, Apr 2 2000.
-
-src/ForLib/bbi_df.f:
-  1:       FUNCTION BBI_DF(N,K,P) bind(c)
-  2  C Copyright, Berg, October 23 1998.
 
 src/ForLib/bbi_nk_df.f:
   1:       FUNCTION BBI_NK_DF(P) bind(c)

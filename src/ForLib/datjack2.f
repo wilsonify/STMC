@@ -2,8 +2,7 @@
 C Copyright Bernd Berg, Dec 13 2000.
 C CALCULATION OF  SECOND LEVEL JACKKNIFE BINS  XJJ(N-1,N)
 C FROM  N  DATA  X(N).                          
-      include 'implicit.sta'
-      include 'constants.par'
+
       DIMENSION X(N),XJJ(N-1,N)
 C
       XSUM=ZERO

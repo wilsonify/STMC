@@ -1,8 +1,7 @@
       subroutine On_act(sta,ipf,n,ns,nd,act)
 C Copyright, Bernd Berg, Feb 12 2002.
 C Calculates action value iact of potts.com.
-      include 'implicit.sta'
-      include 'constants.par'
+
       dimension sta(n,ns),ipf(nd,ns)
       act=zero
       do is=1,ns        

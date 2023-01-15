@@ -2,8 +2,7 @@
 C Copyright, Bernd Berg, Dec 9, 2000. 
 C Re-weighting of the histogram ha() and its error bars hae() at beta0 
 C              to the histogram hb() and its error bars hbe() at beta.
-      include 'implicit.sta'
-      include 'constants.par'
+
       dimension ha(0:nlink),hae(0:nlink),hb(0:nlink),hbe(0:nlink)
 c
       hasum=zero

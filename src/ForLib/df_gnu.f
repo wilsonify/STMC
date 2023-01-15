@@ -2,8 +2,7 @@
 C Copyright, Bernd Berg, Nov 7 2000.
 C GNUPLOT FOR DISTRIBUTION FUNCTION.
 C THE ARRAY X HAS TO BE SORTED ON INPUT (CALL HEASORT). 
-      include 'implicit.sta'
-      include 'constants.par'
+
       CHARACTER CI*2
       DIMENSION X(N)
       DATA ICNT /0/

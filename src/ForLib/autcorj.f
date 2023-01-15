@@ -1,9 +1,9 @@
       SUBROUTINE AUTCORJ(IT,NDAT,NBINS,DATA,WORK,ACORJ,LMEAN)
 C Copyright, Bernd Berg, Feb 11, 2001.
 C Calculates the jackknife array of autocorrelation at IT (0\le IT).
-      include 'implicit.sta'
-      include 'constants.par'
+
       DIMENSION DATA(NDAT),WORK(NBINS),ACORJ(NBINS)
+      logical :: LMEAN
 c
       DMEAN=ZERO
       IF(LMEAN) DMEAN=STMEAN(NDAT,DATA)

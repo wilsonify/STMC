@@ -1,7 +1,6 @@
       SUBROUTINE RWGHT_TS_ZLN(nmeas,beta,beta0,tsa,Zln,Aln,A2ln) 
 C BB, Nov 29 2003. Temperature re-weighting of an action time series.
-      include 'implicit.sta'
-      include 'constants.par'
+
       dimension tsa(nmeas)
  
       do imeas=1,nmeas

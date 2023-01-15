@@ -1,7 +1,6 @@
       FUNCTION F_XQ(Q)
 C
-      include 'implicit.sta'
-      include 'constants.par'
+
       EXTERNAL F_DF
       COMMON /PARFT/ NF1,NF2
 C

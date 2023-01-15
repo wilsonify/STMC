@@ -1,6 +1,5 @@
       FUNCTION STUD_DF(T)  
-      include 'implicit.sta'
-      include 'constants.par'
+
       COMMON /PARSTUD/ NF
 C
       A=HALF*NF

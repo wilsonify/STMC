@@ -1,7 +1,6 @@
-      FUNCTION BBI1_NK_DF(P) bind(c)
+      FUNCTION BBI1_NK_DF(P) bind(c,name="bbi1_nk_df_")
 C Copyright, Berg, October 23 2000.
-      include 'implicit.sta'
-      include 'constants.par'
+
       include 'binom.com'
       IF(K.GT.N.OR.N.LE.0.OR.K.LT.0) STOP "BBI1_NK_DF: False N or K."
       IF(P.LT.ZERO .OR. P.GT.ONE) STOP "BBI1_NK_DF: False P input."

@@ -1,7 +1,6 @@
       FUNCTION STUD_XQ(Q)
 C
-      include 'implicit.sta'
-      include 'constants.par'
+
       EXTERNAL STUD_DF
       COMMON /PARSTUD/ NF
 C

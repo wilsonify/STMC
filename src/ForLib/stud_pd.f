@@ -1,6 +1,5 @@
       FUNCTION STUD_PD(T)  
-      include 'implicit.sta'
-      include 'constants.par'
+
       COMMON /PARSTUD/ NF
 C
       F=NF*ONE

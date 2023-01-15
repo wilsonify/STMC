@@ -1,7 +1,6 @@
       FUNCTION BINO_DF(N,K,P) bind(c)
 C Copyright, Berg, October 23 1998.
-      include 'implicit.sta'
-      include 'constants.par'
+
       IF(K.GT.N.OR.N.LE.0.OR.K.LT.0) STOP "BINO_DF: False N or K."
       IF(P.LT.ZERO .OR. P.GT.ONE) STOP "BINO_DF: False P input."
 C

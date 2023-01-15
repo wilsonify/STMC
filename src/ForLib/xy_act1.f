@@ -1,7 +1,6 @@
       subroutine XY_act1(sta,ipf,ns,nd,act)
 C Calculates action value iact of potts.com.
-      include 'implicit.sta'
-      include 'constants.par'
+
       dimension sta(ns),ipf(nd,ns)
       act=zero
       do is=1,ns

@@ -2,8 +2,7 @@
 C Copyright, Bernd Berg, June 15, 2002.
 C GNUPLOT FOR THE PEAKED DISTRIBUTION FUNCTION.
 C THE ARRAY X HAS TO BE SORTED ON INPUT. 
-      include 'implicit.sta'
-      include 'constants.par'
+
       CHARACTER CI*2
       DIMENSION X(N)
       DATA ICNT /0/

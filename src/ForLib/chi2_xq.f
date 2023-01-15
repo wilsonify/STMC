@@ -1,6 +1,5 @@
-      FUNCTION CHI2_XQ(Q) bind(c)
-      include 'implicit.sta'
-      include 'constants.par'
+      FUNCTION CHI2_XQ(Q) bind(c,name="chi2_xq_")
+
       EXTERNAL CHI2_DF
       COMMON /CHI2PAR/ NF
       X1=ZERO

@@ -1,8 +1,7 @@
       FUNCTION CHI2_PD(CHI2) bind(c)
 C Copyright, Bernd Berg, July 1 1999.
 C CHI2 probability density.
-      include 'implicit.sta'
-      include 'constants.par'
+
       COMMON /CHI2PAR/ NF
       XNF=ONE*NF
       A=HALF*XNF

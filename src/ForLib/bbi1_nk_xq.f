@@ -1,7 +1,6 @@
       FUNCTION BBI1_NK_XQ(Q) bind(c)
 C Copyright, Berg, October 23 2000.
-      include 'implicit.sta'
-      include 'constants.par'
+
       include 'binom.com'
       external BBI1_NK_DF
       IF(N.LE.0) STOP "BBI_NK_XQ: N.LE.0."

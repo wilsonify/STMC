@@ -5,8 +5,7 @@ C =================================
 C INPUT:   NUMBER OF GAUSSIAN DATA, CONFIDENCE INTERVAL.
 C OUTPUT:  UPPER AND LOWER ERROR BAR LIMITS (EXACT).
 C
-      include 'implicit.sta'
-      include 'constants.par'
+
       COMMON /CHI2PAR/ NF
       NF=N-1
       IF(N.GT.17 000) CALL SEBAR_E_AS(N,PC,EBUP,EBDO)

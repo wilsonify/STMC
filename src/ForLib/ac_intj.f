@@ -2,8 +2,7 @@
 C Copyright, Bernd Berg, Feb 11 2001.
 C Input:  Jackknife array of autocorrelations ACORJ.
 C Output: Jackknife array of integrated autocorrelation times ACINTJ.
-      include 'implicit.sta'
-      include 'constants.par'
+
       DIMENSION ACORJ(NBINS,0:NT),ACINTJ(NBINS,0:NT)
       DO IBINS=1,NBINS
       ACINTJ(IBINS,0)=ONE

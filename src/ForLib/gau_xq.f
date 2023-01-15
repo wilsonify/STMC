@@ -1,7 +1,6 @@
       FUNCTION GAU_XQ(Q)
 C
-      include 'implicit.sta'
-      include 'constants.par'
+
       EXTERNAL GAU_DF
 C
       IF(Q.EQ.HALF)                  THEN
