@@ -25,7 +25,8 @@ set_target_properties(stmeanlibrary PROPERTIES LINKER_LANGUAGE Fortran)
 FILE(GLOB ForLibSources 
 src/ForLib/get_double.f
 src/ForLib/rmafun.f
-src/ForLib/addln.f 
+src/ForLib/addln.f
+src/ForLib/addln_cut.f 
 src/ForLib/stmean.f
 src/ForLib/autcorf.f
 )

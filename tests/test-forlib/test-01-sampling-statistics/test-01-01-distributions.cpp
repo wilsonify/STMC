@@ -84,8 +84,19 @@ TEST(test_autocorf, test_autocorf01)
     std::vector<double> DATA = {1, 1, 1, 0, 2, 3, 4, 5};
     auto NDAT = int(DATA.size());
     bool LMEAN = true;
-    //result = AUTCORF(IT, NDAT, DATA, LMEAN);
-    //EXPECT_GE(result, 0.0);
+    result = autocorf_(IT, NDAT, DATA, &LMEAN);
+    result = round(result,2);
+    EXPECT_EQ(result, 0.19);
+}
+
+TEST(test_addln_cut, test_addln_cut01)
+{
+    double result;
+    double aln = 0.5;
+    double bln = 0.8;
+    result = addln_cut_(&aln, &bln);
+    result = round(result, 2);
+    EXPECT_EQ(result, 1.35);
 }
 
 /*
