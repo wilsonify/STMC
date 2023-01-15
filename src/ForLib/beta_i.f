@@ -2,6 +2,9 @@
          !C INCOMPLETE BETA FUNCTION. Copyright, Bernd Berg, Apr 2 2000.
 
          use iso_c_binding
+         implicit none
+         real(c_double) GAMMA_LN
+         real(c_double) BETA_I
          real(c_double) X
          real(c_double) A
          real(c_double) B
@@ -9,15 +12,50 @@
          real(c_double), parameter :: ZERO = 0.0_c_double
          real(c_double), parameter :: HALF = 0.5_c_double
          real(c_double), parameter :: ONE = 1.0_c_double
-         real(c_double) one_minux_x
-         PARAMETER (ITER_MAX=200, EPS=1.D-10)
+         real(c_double), parameter :: TWO = 2.0_c_double
+         integer(c_int), parameter :: ITER_MAX = 200
+         real(c_double), parameter :: EPS = 1.D-10
+         real(c_double) :: one_minux_x
+         real(c_double) :: first_term
+         real(c_double) :: second_term
+         real(c_double) :: third_term
+         real(c_double) :: fourth_term
+         real(c_double) :: fifth_term
+         real(c_double) :: exp_term
+         real(c_double) :: XX
+         real(c_double) :: AA
+         real(c_double) :: BB
+         real(c_double) :: APB
+         real(c_double) :: AP1
+         real(c_double) :: AM1
+         real(c_double) :: BCFM
+         real(c_double) :: BM
+         real(c_double) :: BCF
+         real(c_double) :: BZ
+         integer(c_int) :: ITER
+         real(c_double) :: XITER
+         real(c_double) :: TWO_ITER
+         real(c_double) :: BCFP
+         real(c_double) :: BP
+         real(c_double) :: BPP
+         real(c_double) :: BCFOLD
+         real(c_double) :: C1
+         real(c_double) :: C2
 
          IF(X.LT.ZERO .OR. X.GT.ONE) STOP 'BAD ARGUMENT X IN BETA_I'
          IF(X.EQ.ZERO .OR. X.EQ.ONE) THEN
             BT=ZERO
          ELSE
             one_minux_x = ONE-X
-            BT=EXP(GAMMA_LN(A+B)-GAMMA_LN(A)-GAMMA_LN(B) +A*LOG(X)+B*LOG(one_minux_x))
+            first_term = GAMMA_LN(A+B)
+            second_term = GAMMA_LN(A)
+            third_term = GAMMA_LN(B)
+            fourth_term = A*LOG(X)
+            fifth_term = B*LOG(one_minux_x)
+            exp_term = first_term - second_term - 
+     &                  third_term + fourth_term + 
+     &                  fifth_term
+            BT = EXP(exp_term)
          ENDIF
 
          IF(X.LT.(A+ONE)/(A+B+TWO)) THEN
@@ -33,7 +71,6 @@
          APB=AA+BB
          AP1=AA+ONE
          AM1=AA-ONE
-
          BCFM=ONE
          BM=ONE
          BCF=ONE

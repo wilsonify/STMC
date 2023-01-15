@@ -30,7 +30,7 @@ src/ForLib/addln_cut.f
 src/ForLib/stmean.f
 src/ForLib/autcorf.f
 src/ForLib/gamma_ln.f
-#src/ForLib/beta_i.f
+src/ForLib/beta_i.f
 #src/ForLib/bbi_df_.f
 )
 add_library(forlib SHARED ${ForLibSources})

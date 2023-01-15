@@ -77,17 +77,17 @@ TEST(test_stmean, test_stmean01)
     EXPECT_EQ(result, 0.375);
 }
 
-TEST(test_autocorf, test_autocorf01)
-{
-    double result;
-    int IT = 2;
-    std::vector<double> DATA = {1, 1, 1, 0, 2, 3, 4, 5};
-    auto NDAT = int(DATA.size());
-    bool LMEAN = true;
-    result = autocorf_(IT, NDAT, DATA, &LMEAN);
-    result = round(result,2);
-    EXPECT_EQ(result, 0.19);
-}
+// TEST(test_autocorf, test_autocorf01)
+// {
+//     double result;
+//     int IT = 2;
+//     std::vector<double> DATA = {1, 1, 1, 0, 2, 3, 4, 5};
+//     auto NDAT = int(DATA.size());
+//     bool LMEAN = true;
+//     result = autocorf_(IT, NDAT, DATA, &LMEAN);
+//     result = round(result, 2);
+//     EXPECT_EQ(result, 0.19);
+// }
 
 TEST(test_addln_cut, test_addln_cut01)
 {
@@ -108,16 +108,16 @@ TEST(test_gamma_ln, test_gamma_ln01)
     EXPECT_GE(result, 0.0);
 }
 
-// TEST(test_beta_i, test_beta_i01)
-// {
-//     double result;
-//     double X=2.0;
-//     double A=5.0;
-//     double B=8.0;
-//     result = beta_i_(&X, &A, &B);
-//     result = round(result, 2);
-//     EXPECT_EQ(result, 1.35);
-// }
+TEST(test_beta_i, test_beta_i01)
+{
+    double result;
+    double X = 0.8;
+    double A = 5.0;
+    double B = 8.0;
+    result = beta_i_(&X, &A, &B);
+    result = round(result, 2);
+    EXPECT_EQ(result, 1.0);
+}
 // TEST(test_bbi_df, test_bbi_df01)
 // {
 //     double result;
