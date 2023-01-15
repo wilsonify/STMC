@@ -99,13 +99,13 @@ TEST(test_addln_cut, test_addln_cut01)
     EXPECT_EQ(result, 1.35);
 }
 
-TEST(test_gamma_ln, test_gamma_ln01) {
+TEST(test_gamma_ln, test_gamma_ln01)
+{
     double result;
-    double x=0.75;
+    double x = 0.75;
     result = gamma_ln_(x);
-    result = round(result,2);
+    result = round(result, 2);
     EXPECT_GE(result, 0.0);
-
 }
 
 // TEST(test_beta_i, test_beta_i01)
