@@ -99,25 +99,47 @@ TEST(test_addln_cut, test_addln_cut01)
     EXPECT_EQ(result, 1.35);
 }
 
-/*
-102 results - 88 files
-src/ForLib/addln_cut.f:
-  1:       FUNCTION ADDLN_CUT(ALN,BLN) bind(c)
-  2        ! Copyright Bernd Berg, May 25 2001.
-  3:       ! Given ln(A) and ln(B), the function returns ln(C) with C=A+B.
-  4        ! include 'implicit.sta'
+TEST(test_gamma_ln, test_gamma_ln01) {
+    double result;
+    double x=0.75;
+    result = gamma_ln_(x);
+    result = round(result,2);
+    EXPECT_GE(result, 0.0);
 
-src/ForLib/addln.f:
-  1:       FUNCTION ADDLN(ALN,BLN) bind(c)
-  2  C Copyright Bernd Berg, Aug 19 2003.
-  3: C Given ln(A) and ln(B), the function returns ln(C) with C=A+B.
+}
+
+// TEST(test_beta_i, test_beta_i01)
+// {
+//     double result;
+//     double X=2.0;
+//     double A=5.0;
+//     double B=8.0;
+//     result = beta_i_(&X, &A, &B);
+//     result = round(result, 2);
+//     EXPECT_EQ(result, 1.35);
+// }
+// TEST(test_bbi_df, test_bbi_df01)
+// {
+//     double result;
+//     double N=2.0;
+//     double K=5.0;
+//     double P=8.0;
+//     result = bbi_df_(&N, &K, &P);
+//     result = round(result, 2);
+//     EXPECT_EQ(result, 1.35);
+// }
+/*
+
+src/ForLib/gamma_ln.f:
+  1:       FUNCTION GAMMA_LN(X)
+  2  C BERG, JUNE 23, 1999.
+  3: C LN OF GAMMA FUNCTION ALA LANCZOS, SIAM Num. Anal. B1 (1964) 1.
   4        include 'implicit.sta'
 
-src/ForLib/autcorf.f:
-  1:       FUNCTION AUTCORF(IT,NDAT,DATA,LMEAN) bind(c)
-  2  C Copyright, Bernd Berg, Feb 11 2001.
-  3: C The function calculates the autocorrelation at IT from the input array
-  4  C DATA of autocorrelations. Allowed values of IT are IT=0,1, ... < NDAT.
+
+src/ForLib/beta_i.f:
+  1:       FUNCTION BETA_I(X,A,B) bind(c)
+  2  C INCOMPLETE BETA FUNCTION. Copyright, Bernd Berg, Apr 2 2000.
 
 src/ForLib/bbi_df.f:
   1:       FUNCTION BBI_DF(N,K,P) bind(c)
@@ -143,9 +165,6 @@ src/ForLib/bbi1_nk_xq.f:
   1:       FUNCTION BBI1_NK_XQ(Q) bind(c)
   2  C Copyright, Berg, October 23 2000.
 
-src/ForLib/beta_i.f:
-  1:       FUNCTION BETA_I(X,A,B) bind(c)
-  2  C INCOMPLETE BETA FUNCTION. Copyright, Bernd Berg, Apr 2 2000.
 
 src/ForLib/beta.f:
   1:       FUNCTION BETA(A,B) bind(c)
@@ -277,11 +296,6 @@ src/ForLib/fi1.f:
   3: C INVERSE OF THE FUNCTION F.
   4  C RESULT:     FI1=X SUCH THAT Y=F(X).
 
-src/ForLib/gamma_ln.f:
-  1:       FUNCTION GAMMA_LN(X)
-  2  C BERG, JUNE 23, 1999.
-  3: C LN OF GAMMA FUNCTION ALA LANCZOS, SIAM Num. Anal. B1 (1964) 1.
-  4        include 'implicit.sta'
 
 src/ForLib/gamma_p.f:
   1:       FUNCTION GAMMA_P(A,X)
