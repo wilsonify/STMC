@@ -6,7 +6,7 @@ C Potts time series (ts) with Heat Bath updating.
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts_hb.com'
       include 'lat.dat'
       dimension es_ts(0:nequi,2),act(0:nequi,2)

@@ -8,7 +8,7 @@ C Single processor program!
       include 'lat.par'
       include 'mc_pt_mpi.par'
       include 'potts.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts_hb.com'
 c     include 'p_pt_mpi.com'
       include '../../ForLib/p_pt_mpi.com'

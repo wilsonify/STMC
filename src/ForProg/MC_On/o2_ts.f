@@ -7,7 +7,7 @@ C MC prodcution run to create energy (action variable) time series.
       include 'lat.par'
       include 'mc.par'
       include 'on.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/on.com'
       include 'lat.dat'
       if(n.ne.2) stop "o2_ts: set n=2 in on.par (for ana_tson.f)!"

@@ -11,7 +11,7 @@ C NSTEP Stepsize in the data file for the plot.
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       DIMENSION ACORJ(NBINS,0:NT),ACOR(0:NT),WORK(NBINS)
       DIMENSION ACINTJ(NBINS,0:NT),ACINT(0:NT),ACE(0:NT)

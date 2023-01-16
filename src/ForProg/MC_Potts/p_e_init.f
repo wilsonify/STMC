@@ -7,7 +7,7 @@ C Initializes arrays needed for generalized Potts Model MC calculation.
       include 'mc.par'
       include 'potts.par'
       include 'p_eds.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/p_eds.com'
       dimension ix(nd)
@@ -50,7 +50,7 @@ C Copyright, Bernd Berg, Jan 13 2002.
       include 'lat.par'
       include 'potts.par'
       include 'p_eds.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/p_eds.com'
       dimension iqarray(n2d),nqa(n2d)

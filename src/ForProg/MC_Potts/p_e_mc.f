@@ -5,7 +5,7 @@ C Copyright, Bernd Berg, Jan 13 2002.
       include 'lat.par'
       include 'potts.par'
       include 'p_eds.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/p_eds.com'
       dimension nqa(n2d)
@@ -140,7 +140,7 @@ C Copyright, Bernd Berg, Jan 13 2002. Update EDS tables.
       include 'lat.par'
       include 'potts.par'
       include 'p_eds.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/p_eds.com'
       is2=Index(NAcase(icase),icase)
@@ -170,7 +170,7 @@ C Copyright, Bernd Berg, Jan 13 2002.
       include 'lat.par'
       include 'potts.par'
       include 'p_eds.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/p_eds.com'
       dimension icase_work(mcase)

@@ -1,12 +1,14 @@
       subroutine potts_ran(ista,ns,nq)
-C Copyright, Bernd Berg, Nov 10 2000.
-C Assigns random (i.e. beta=0) values 0,..,nq-1 to the states ista(is).
+         !C Copyright, Bernd Berg, Nov 10 2000.
+         !C Assigns random (i.e. beta=0) values 0,..,nq-1 to the states ista(is).
+         use iso_c_binding
+         implicit none
 
-      dimension ista(ns)
-      q=one*nq
-      do is=1,ns
-        call ranmar(xr)
-        ista(is)=int(q*xr)
-      end do
-      return
+         dimension ista(ns)
+         q=one*nq
+         do is=1,ns
+            call ranmar(xr)
+            ista(is)=int(q*xr)
+         end do
+         return
       end

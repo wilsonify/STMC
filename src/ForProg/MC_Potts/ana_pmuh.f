@@ -8,7 +8,7 @@ C Analysis program for multicanonical data.
       include 'mc.par'
       include 'potts.par'
       include 'muca.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/potts_muca.com'
       dimension b(0:mlink),hasum(0:mlink),ph(0:mlink,3),phe(0:mlink,3),

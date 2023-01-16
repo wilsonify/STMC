@@ -6,7 +6,7 @@ C O(n) model: Sequential Metropolis updating (inefficient code).
       include 'lat.par'
       include 'mc.par'
       include 'on.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/on.com'
       dimension stanew(n)
       amin=act

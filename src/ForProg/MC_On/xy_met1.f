@@ -5,7 +5,7 @@ C XY model: Sequential Metropolis updating. Single angle variable.
       
       include 'lat.par'
       include 'mc.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/xy1.com'
       amin=act
       amax=act

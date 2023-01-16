@@ -7,7 +7,7 @@ C Measurements: the action ha and the magnetization hm histograms.
 C Faster when the magnetization measurements are eliminated!
       include 'lat.par'
       include 'potts.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts_hb.com'
       dimension prob_hb(-1:nqm1),iact_a(0:nqm1)
       iamin=iact

@@ -6,7 +6,7 @@ C           updating. The acceptance rate is self-adjusting to acpt_rate.
       parameter(n=2,acpt_rate=half)
       include 'lat.par'
       include 'mc.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/on.com'
       data dphi/tpi/, facpt/zero/, sweep/zero/
       save dphi,facpt

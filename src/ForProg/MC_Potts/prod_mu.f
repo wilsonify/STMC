@@ -9,7 +9,7 @@ C Potts muca with Metropolis updating.
       include 'mc.par'
       include 'potts.par'
       include 'muca.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/potts_muca.com'
       include 'lat.dat'
@@ -125,7 +125,7 @@ C
       include 'mc.par'
       include 'potts.par'
       include 'muca.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/potts_muca.com'
       write(iuo,'(/," Interruption ...",/)') 
@@ -154,7 +154,7 @@ C
       include 'mc.par'
       include 'potts.par'
       include 'muca.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/potts_muca.com'
       call rmasave(iud1,cbak)

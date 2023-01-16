@@ -9,7 +9,8 @@
          implicit none
 
          real(c_double) :: FI1,Y,X1,X2
-         real(c_double) :: F,XX1,XX2,Y1,Y2,XX,FF
+         real(c_double) :: F
+         real(c_double) :: XX1,XX2,Y1,Y2,XX,FF
          integer(c_int) :: ITER,ITERMAX
          real(c_double) :: EPS
          real(c_double), parameter :: ONE=1.0,TEN=10.0,HALF=0.5

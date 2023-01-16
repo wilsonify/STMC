@@ -6,7 +6,7 @@ C Initializes arrays needed for O3 Model MC heat bath calculations.
       parameter(n=3)
       include 'lat.par'
       include 'mc.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/on.com'
       dimension ix(nd)
 C

@@ -6,7 +6,7 @@ C O3 model: Sequential heat bath updating.
       parameter(n=3,eps=one/ten**10)
       include 'lat.par'
       include 'mc.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/on.com'
       amin=act
       amax=act

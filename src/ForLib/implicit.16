@@ -1,2 +1,0 @@
-      implicit real*16 (a-h,o-z)
-      implicit logical (l)

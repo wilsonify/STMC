@@ -5,7 +5,7 @@ C Copyright, Bernd Berg, Nov 28 2000.
 C nhit Metropolis updating with sequential spin choice.
       include 'lat.par'
       include 'potts.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       if(nhit.lt.1.or.nhit.gt.nq) stop "potts_metn: nhit too large."
       q=nq*ONE

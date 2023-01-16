@@ -6,7 +6,7 @@ C Initializes arrays needed for O(n) Model Metropolis calculations.
       include 'lat.par'
       include 'mc.par'
       include 'on.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/on.com'
       dimension ix(nd)
 C

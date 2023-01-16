@@ -1,1 +1,0 @@
-      COMMON/BINOM/ N,K

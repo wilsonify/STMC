@@ -8,7 +8,7 @@ C Initialization for MPI (parallel tempering) Potts Model heat bath MC.
       include 'lat.par'
       include 'potts.par'
       include 'mc_pt_mpi.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts_hb.com'
       include '../../ForLib/p_pt_mpi.com'
       dimension ix(nd)

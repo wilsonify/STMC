@@ -26,7 +26,7 @@
          real(c_double), parameter :: c5_l = 0.120858003_c_double
          real(c_double), parameter :: c6_l = -0.536382_c_double
          real(c_double), parameter :: stp_l = 2.50662827465_c_double
-         real(c_double), parameter :: hbar = 4.135669_c_double
+
 
          IF(X.LE.ZERO) THEN
             PRINT*,"GAMMA_LN: Argument X =",X

@@ -12,7 +12,7 @@ c     PARAMETER(LAUTO=.FALSE.,NT=16,NBINS=32,NSTEP=1,LMEAN=.TRUE.)
       include 'lat.par'
       include 'mc.par'
       include 'on.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/on.com'
       DIMENSION ACORJ(NBINS,0:NT),ACOR(0:NT),WORK(NBINS)
       DIMENSION ACINTJ(NBINS,0:NT),ACINT(0:NT),ACE(0:NT),ATAU(NRPT,0:NT)

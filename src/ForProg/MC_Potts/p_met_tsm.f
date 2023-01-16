@@ -8,7 +8,7 @@ C using mean values averaged over the updates of the sweep.
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       dimension tsa(nmeas)
       include 'lat.dat'

@@ -6,7 +6,7 @@ C Wolff cluster updating for q-state Potts models in d dimensions.
       include 'lat.par'
       include 'potts.par'
       include '../../ForLib/potts1.com'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       dimension iacl(ms)
 C
       qm1=one*nqm1

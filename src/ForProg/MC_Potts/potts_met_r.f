@@ -5,7 +5,7 @@ C Copyright, Bernd Berg, Nov 14 2000.
 C Metropolis updating with random spin choice.
       include 'lat.par'
       include 'potts.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       q=nq*ONE
       iamin=iact

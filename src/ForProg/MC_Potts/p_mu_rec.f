@@ -7,7 +7,7 @@ C Recursion of multicanonical weights.
       include 'mc.par'
       include 'potts.par'
       include 'muca.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/potts_muca.com'
 C

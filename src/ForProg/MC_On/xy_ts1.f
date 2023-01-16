@@ -6,7 +6,7 @@ C MC production run to create energy (action variable) time series.
       character cd*1,cl*3
       include 'lat.par'
       include 'mc.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/xy1.com'
       include 'lat.dat'
       ltest=.true.

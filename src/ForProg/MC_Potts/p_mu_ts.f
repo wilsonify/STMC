@@ -8,7 +8,7 @@ C Potts muca with Metropolis updating, time series version.
       include 'mc.par'
       include 'potts.par'
       include 'muca.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/potts_muca.com'
       dimension tsa(nmeas,0:nq),nstate(0:nqm1)

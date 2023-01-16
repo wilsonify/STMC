@@ -6,7 +6,7 @@ C Initializes arrays needed for XY Model Metropolis calculations.
       parameter(n=2)
       include 'lat.par'
       include 'mc.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/on.com'
       dimension ix(nd)
 C

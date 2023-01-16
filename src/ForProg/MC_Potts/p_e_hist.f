@@ -9,7 +9,7 @@ C       histograms ha of the energy (action variable).
       include 'mc.par'
       include 'potts.par'
       include 'p_eds.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/p_eds.com'
       include 'lat.dat'

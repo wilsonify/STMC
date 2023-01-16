@@ -1,4 +1,4 @@
-      FUNCTION LPT_EX_IA(BETA1,BETA2,IACT1,IACT2) 
+      FUNCTION LPT_EX_IA(BETA1,BETA2,IACT1,IACT2)
      &   bind(c,name="lpt_ex_ia_")
          use iso_c_binding
          implicit none

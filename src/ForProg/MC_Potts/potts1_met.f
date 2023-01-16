@@ -6,7 +6,7 @@ C Metropolis updating with sequential spin choice.
 C Small wrat() array of potts1.com used.
       include 'lat.par'
       include 'potts.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts1.com'
       q=nq*ONE
       iamin=iact

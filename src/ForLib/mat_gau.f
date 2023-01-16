@@ -1,6 +1,8 @@
       Subroutine MAT_GAU(AMAT,N,BMAT,M)
-C Invert a square matrix
-         logical LTEST
+        !C Invert a square matrix
+        use iso_c_binding
+        implicit none
+        logical LTEST
 
          PARAMETER(NMAX=100)
          Dimension AMAT(N,N),BMAT(N,M),BIN(NMAX),IK(NMAX),JK(NMAX)

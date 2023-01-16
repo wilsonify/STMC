@@ -5,7 +5,7 @@
          real(c_double) :: BINO1_NK_DF,P,ZERO=0.0,ONE=1.0,BINO_PD
          integer(c_int) :: N,K,I,KP1
 
-         include 'binom.com'
+         COMMON/BINOM/ N,K
          IF(K.GT.N.OR.N.LE.0.OR.K.LT.0) STOP "False N or K."
          IF(P.LT.ZERO .OR. P.GT.ONE) STOP "False P input."
 

@@ -7,7 +7,7 @@ C MC prodcution run to create energy (action variable) histograms.
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include 'lat.dat'
 C

@@ -5,7 +5,7 @@ C Before compiling: copy lat4d.par to lat.par and lat4d.dat to lat.dat.
       
       parameter(iuo=6)
       include 'lat.par'
-      include '../../ForLib/lat.com'
+      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include 'lat.dat'
       dimension ix(nd)
 C
