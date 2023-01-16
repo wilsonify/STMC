@@ -4,8 +4,8 @@
          ! C DATA of autocorrelations. Allowed values of IT are IT=0,1, ... < NDAT.
          use iso_c_binding
          implicit none
-         integer(c_int), value :: IT
-         integer(c_int), value :: NDAT
+         integer(c_int) :: IT
+         integer(c_int) :: NDAT
          integer(c_int) :: NN
          integer(c_int) :: I
          real(c_double), dimension(NDAT) :: DATA

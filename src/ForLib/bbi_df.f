@@ -1,5 +1,5 @@
 
-      real(c_double) FUNCTION BBI_DF(N,K,P) bind(c,name="bbi_df_")
+      FUNCTION BBI_DF(N,K,P) bind(c,name="bbi_df_")
          !C Copyright, Berg, October 23 1998.
          use iso_c_binding
          implicit none
@@ -11,6 +11,7 @@
          real(c_double) XKP1
          real(c_double) XNMK
          real(c_double) BETA_I
+         real(c_double) BBI_DF
          IF(K.GT.N) STOP "BBI_DF: K cannot be > N"
          IF(N.LE.0) STOP "BBI_DF: N cannot be < 0"
          IF(K.LT.0) STOP "BBI_DF: K cannot be < 0"

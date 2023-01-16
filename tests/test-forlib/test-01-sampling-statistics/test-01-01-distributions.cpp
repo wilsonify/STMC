@@ -70,23 +70,23 @@ double STMEAN_check(const std::vector<double> &X)
 TEST(test_stmean, test_stmean01)
 {
     double result;
-    std::vector<double> DATA = {1, 1, 1, 0, 2, 3, 4, 5};
-    auto ndat = int(DATA.size());
+    double DATA[8] = {1, 1, 1, 0, 2, 3, 4, 5};
+    auto ndat = 8;
     result = stmean_(ndat, DATA);
     result = round(result, 3);
-    EXPECT_EQ(result, 0.375);
+    EXPECT_EQ(result, 2.125);
 }
 
 // TEST(test_autocorf, test_autocorf01)
 // {
 //     double result;
 //     int IT = 2;
-//     std::vector<double> DATA = {1, 1, 1, 0, 2, 3, 4, 5};
-//     auto NDAT = int(DATA.size());
+//     double DATA[8] = {1, 1, 1, 0, 2, 3, 4, 5};
+//     auto NDAT = 8;
 //     bool LMEAN = true;
-//     result = autocorf_(IT, NDAT, DATA, &LMEAN);
+//     result = autocorf_(&IT, &NDAT, DATA, &LMEAN);
 //     result = round(result, 2);
-//     EXPECT_EQ(result, 0.19);
+//     EXPECT_EQ(result, 4.95);
 // }
 
 TEST(test_addln_cut, test_addln_cut01)
@@ -129,15 +129,19 @@ TEST(test_bbi_df, test_bbi_df01)
     result = round(result, 4);
     EXPECT_EQ(result, 0.0000);
 }
+
+TEST(test_bbi_qdf, test_bbi_qdf01)
+{
+    double result;
+    int N = 50;
+    int K = 20;
+    double P = 0.8;
+    result = bbi_qdf_(&N, &K, &P);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0000);
+}
+
 /*
-
-src/ForLib/bbi_nk_df.f:
-  1:       FUNCTION BBI_NK_DF(P) bind(c)
-  2  C Copyright, Berg, October 23 2000.
-
-src/ForLib/bbi_nk_xq.f:
-  1:       FUNCTION BBI_NK_XQ(Q) bind(c)
-  2  C Copyright, Berg, October 23 2000.
 
 src/ForLib/bbi_qdf.f:
   1:       FUNCTION BBI_QDF(N,K,P) bind(c)
@@ -506,5 +510,28 @@ src/ForProg/MPI_Potts/lpt_ex_ia.f:
   1:       FUNCTION LPT_EX_IA(BETA1,BETA2,IACT1,IACT2)
   2  C Copyright, Bernd Berg, Jan 8 2002.
 
+src/ForLib/bbi_nk_df.f:
+  1:       FUNCTION BBI_NK_DF(P) bind(c)
+  2  C Copyright, Berg, October 23 2000.
+TEST(test_bbi_nk_df, test_bbi_nk_df01)
+{
+    double result;
+    double P = 0.8;
+    result = bbi_nk_df_(&P);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0000);
+}
 
+src/ForLib/bbi_nk_xq.f:
+  1:       FUNCTION BBI_NK_XQ(Q) bind(c)
+  2  C Copyright, Berg, October 23 2000.
+
+TEST(test_bbi_df, test_bbi_df01)
+{
+    double result;
+    double Q = 0.8;
+    result = bbi_nk_xq_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0000);
+}
 */
