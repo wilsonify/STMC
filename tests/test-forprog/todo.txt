@@ -1,0 +1,107 @@
+src/ForProg/AutoC/uncor_gau.f:
+  3  C Copyright, Bernd Berg, Feb 11, 2001.
+  4: C - CORRELATION FUNCTION AND INTEGRATED AUTOCORRELATION TIME:
+  5  C   TESTED FOR UNCORRELATED GAUSSIAN RANDOM NUMBERS.
+
+src/ForProg/chi2/chi2_tabs.f:
+  54        WRITE(IUO,*)
+  55:      & ' CHI2 per degree of freedom distribution function '
+  56        WRITE(IUO,*) ' '
+
+src/ForProg/Ferdinand/ferdinand.f:
+  64  C   WE PUT IN A MULTIPLICATION FACTOR Z0 TO PREVENT THE PARTITION
+  65: C   FUNCTION BLOW UP.
+  66  C
+
+src/ForProg/fit_g/subg_1ox.f:
+  1        SUBROUTINE SUBG(X,A,YFIT,DYDA,MFTO)
+  2: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1+A2/X.
+  3        include '../../ForLib/implicit.sta'
+
+src/ForProg/fit_g/subg_exp.f:
+  2  C Copyright, Bernd Berg, Sep 26 2002.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*EXP(A2*X).
+  4        include '../../ForLib/implicit.sta'
+
+src/ForProg/fit_g/subg_exp2.f:
+  2  C Copyright, Bernd Berg, Oct 4 2002.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION
+  4  C Y=A1*EXP(A2*X)+A3*EXP(A4*X).
+
+src/ForProg/fit_g/subg_expc.f:
+  2  C Bernd Berg, Apr 2004.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION
+  4  C Y=A1+A2*EXP(A3*X).
+
+src/ForProg/fit_g/subg_expc2.f:
+  2  C Bernd Berg, Apr 30 2004.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION
+  4  C Y=A1+A2*EXP(A3*X)+A4*EXP(A5*X).
+
+src/ForProg/fit_g/subg_linear.f:
+  2        SUBROUTINE SUBG(X,A,YFIT,DYDA,NFIT)
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1+A2*X (linear).
+  4        include '../../ForLib/implicit.sta'
+
+src/ForProg/fit_g/subg_power.f:
+  2  C Copyright, Bernd Berg, Feb 8 2002.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*X**A2.
+  4        include '../../ForLib/implicit.sta'
+
+src/ForProg/fit_g/subg_power2.f:
+  2  C Copyright, Bernd Berg, Apr 21 2002.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*X**A2+A3*X**A4.
+  4        include '../../ForLib/implicit.sta'
+
+src/ForProg/fit_g/subg_powerc.f:
+  2  C Bernd Berg, Apr 30 2004.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1+A2*X**A3.
+  4        include '../../ForLib/implicit.sta'
+
+src/ForProg/fit_g_old/subg_1ox.f:
+  1        SUBROUTINE SUBG(X,A,YFIT,DYDA,MFTO)
+  2: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1+A2/X.
+  3        include '../../ForLib/implicit.sta'
+
+src/ForProg/fit_g_old/subg_exp.f:
+  2  C Copyright, Bernd Berg, Sep 26 2002.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*EXP(A2*X).
+  4        include '../../ForLib/implicit.sta'
+
+src/ForProg/fit_g_old/subg_exp2.f:
+  2  C Copyright, Bernd Berg, Oct 4 2002.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION
+  4  C Y=A1*EXP(A2*X)+A3*EXP(A4*X).
+
+src/ForProg/fit_g_old/subg_linear.f:
+  2        SUBROUTINE SUBG(X,A,YFIT,DYDA,NFIT)
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1+A2*X (linear).
+  4        include '../../ForLib/implicit.sta'
+
+src/ForProg/fit_g_old/subg_power.f:
+  2  C Copyright, Bernd Berg, Feb 8 2002.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*X**A2.
+  4        include '../../ForLib/implicit.sta'
+
+src/ForProg/fit_g_old/subg_power2.f:
+  2  C Copyright, Bernd Berg, Apr 21 2002.
+  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*X**A2+A3*X**A4.
+  4        include '../../ForLib/implicit.sta'
+
+src/ForProg/MC_Potts/ana_pmu_ts.f:
+  127          write(iud4,'(4F12.6)') beta0,Cj(0),Cm,Ce
+  128: C Partition function ln:
+  129          call stebj0(nrpt,Zlnj(1),Zlnm,Zlnv,Zlne)
+
+  230          write(iud4,'(4F12.6)') beta0,Cj(0),Cm,Ce
+  231: C Partition function ln:
+  232          call stebj0(nrpt,Zlnj(1),Zlnm,Zlnv,Zlne)
+
+src/ForProg/MC_Potts/ana_pmu.f:
+  118          write(iud4,'(4F12.6)') beta0,Cj(0),Cm,Ce
+  119: C Partition function ln:
+  120          call stebj0(nrpt,Zlnj(1),Zlnm,Zlnv,Zlne)
+
+src/ForProg/MPI_Potts/lpt_ex_ia.f:
+  1:       FUNCTION LPT_EX_IA(BETA1,BETA2,IACT1,IACT2)
+  2  C Copyright, Bernd Berg, Jan 8 2002.

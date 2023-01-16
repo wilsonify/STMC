@@ -1,5 +1,9 @@
-      FUNCTION BINO1_NK_XQ(Q) bind(c)
+      FUNCTION BINO1_NK_XQ(Q) bind(c,name="bino1_nk_xq_")
 C Copyright, Berg, October 23 2000.
+        use iso_c_binding
+        implicit none
+        real(c_double) :: BINO1_NK_XQ,Q,BBI1_NK_XQ,ZERO=0.0,ONE=1.0,FI1
+        integer(c_int) :: N,K
 
       include 'binom.com'
       external BINO1_NK_DF

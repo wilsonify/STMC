@@ -77,8 +77,6 @@ TEST(test_stmean, test_stmean01)
     EXPECT_EQ(result, 2.125);
 }
 
-
-
 TEST(test_addln_cut, test_addln_cut01)
 {
     double result;
@@ -160,6 +158,7 @@ TEST(test_bino_coef, test_bino_coef01)
     result = round(result, 4);
     EXPECT_EQ(result, 10.0338);
 }
+
 TEST(test_bino_df, test_bino_df01)
 {
     double result;
@@ -170,37 +169,31 @@ TEST(test_bino_df, test_bino_df01)
     result = round(result, 4);
     EXPECT_EQ(result, 0.0581);
 }
+
+TEST(test_bino_pd, test_bino_pd01)
+{
+    double result;
+    int N = 5.0;
+    int K = 2.0;
+    double P = 0.8;
+    result = bino_pd_(&N, &K, &P);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0514);
+}
+
+TEST(test_bino_qdf, test_bino_qdf01)
+{
+    double result;
+    int N = 5.0;
+    int K = 2.0;
+    double P = 0.8;
+    result = bino_qdf_(&N, &K, &P);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+
 /*
 
-
-
-src/ForLib/bino_df.f:
-  1:       FUNCTION BINO_DF(N,K,P) bind(c)
-  2  C Copyright, Berg, October 23 1998.
-
-src/ForLib/bino_nk_df.f:
-  1:       FUNCTION BINO_NK_DF(P) bind(c)
-  2  C Copyright, Berg, October 23 2000.
-
-src/ForLib/bino_nk_xq.f:
-  1:       FUNCTION BINO_NK_XQ(Q) bind(c)
-  2  C Copyright, Berg, October 23 2000.
-
-src/ForLib/bino_pd.f:
-  1:       FUNCTION BINO_PD(N,K,P) bind(c)
-  2  C Copyright, Bernd Berg, May 5 2001.
-
-src/ForLib/bino_qdf.f:
-  1:       FUNCTION BINO_QDF(N,K,P) bind(c)
-  2  C Copyright, Berg, October 23 1998.
-
-src/ForLib/bino1_nk_df.f:
-  1:       FUNCTION BINO1_NK_DF(P) bind(c)
-  2  C Copyright, Berg, October 23 2000.
-
-src/ForLib/bino1_nk_xq.f:
-  1:       FUNCTION BINO1_NK_XQ(Q) bind(c)
-  2  C Copyright, Berg, October 23 2000.
 
 src/ForLib/cau_df.f:
   1:       FUNCTION CAU_DF(X) bind(c)
@@ -246,12 +239,6 @@ src/ForLib/chi2pdf_xq.f:
   1:       FUNCTION CHI2PDF_XQ(Q) bind(c)
   2        include 'implicit.sta'
 
-src/ForLib/d.r:
-  1  4c4
-  2: < C Potts model, normalization of the partition function Z at beta0=0.
-  3  ---
-  4: > C Potts model, normalization of the partition function Z at beta=0.
-  5  10,11c10
 
 src/ForLib/error_f.f:
   1:       FUNCTION ERROR_F(X)
@@ -408,113 +395,19 @@ src/ForLib/stud_xq.f:
   1:       FUNCTION STUD_XQ(Q)
   2  C
 
-src/ForProg/AutoC/uncor_gau.f:
-  3  C Copyright, Bernd Berg, Feb 11, 2001.
-  4: C - CORRELATION FUNCTION AND INTEGRATED AUTOCORRELATION TIME:
-  5  C   TESTED FOR UNCORRELATED GAUSSIAN RANDOM NUMBERS.
 
-src/ForProg/chi2/chi2_tabs.f:
-  54        WRITE(IUO,*)
-  55:      & ' CHI2 per degree of freedom distribution function '
-  56        WRITE(IUO,*) ' '
 
-src/ForProg/Ferdinand/ferdinand.f:
-  64  C   WE PUT IN A MULTIPLICATION FACTOR Z0 TO PREVENT THE PARTITION
-  65: C   FUNCTION BLOW UP.
-  66  C
-
-src/ForProg/fit_g/subg_1ox.f:
-  1        SUBROUTINE SUBG(X,A,YFIT,DYDA,MFTO)
-  2: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1+A2/X.
-  3        include '../../ForLib/implicit.sta'
-
-src/ForProg/fit_g/subg_exp.f:
-  2  C Copyright, Bernd Berg, Sep 26 2002.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*EXP(A2*X).
-  4        include '../../ForLib/implicit.sta'
-
-src/ForProg/fit_g/subg_exp2.f:
-  2  C Copyright, Bernd Berg, Oct 4 2002.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION
-  4  C Y=A1*EXP(A2*X)+A3*EXP(A4*X).
-
-src/ForProg/fit_g/subg_expc.f:
-  2  C Bernd Berg, Apr 2004.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION
-  4  C Y=A1+A2*EXP(A3*X).
-
-src/ForProg/fit_g/subg_expc2.f:
-  2  C Bernd Berg, Apr 30 2004.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION
-  4  C Y=A1+A2*EXP(A3*X)+A4*EXP(A5*X).
-
-src/ForProg/fit_g/subg_linear.f:
-  2        SUBROUTINE SUBG(X,A,YFIT,DYDA,NFIT)
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1+A2*X (linear).
-  4        include '../../ForLib/implicit.sta'
-
-src/ForProg/fit_g/subg_power.f:
-  2  C Copyright, Bernd Berg, Feb 8 2002.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*X**A2.
-  4        include '../../ForLib/implicit.sta'
-
-src/ForProg/fit_g/subg_power2.f:
-  2  C Copyright, Bernd Berg, Apr 21 2002.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*X**A2+A3*X**A4.
-  4        include '../../ForLib/implicit.sta'
-
-src/ForProg/fit_g/subg_powerc.f:
-  2  C Bernd Berg, Apr 30 2004.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1+A2*X**A3.
-  4        include '../../ForLib/implicit.sta'
-
-src/ForProg/fit_g_old/subg_1ox.f:
-  1        SUBROUTINE SUBG(X,A,YFIT,DYDA,MFTO)
-  2: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1+A2/X.
-  3        include '../../ForLib/implicit.sta'
-
-src/ForProg/fit_g_old/subg_exp.f:
-  2  C Copyright, Bernd Berg, Sep 26 2002.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*EXP(A2*X).
-  4        include '../../ForLib/implicit.sta'
-
-src/ForProg/fit_g_old/subg_exp2.f:
-  2  C Copyright, Bernd Berg, Oct 4 2002.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION
-  4  C Y=A1*EXP(A2*X)+A3*EXP(A4*X).
-
-src/ForProg/fit_g_old/subg_linear.f:
-  2        SUBROUTINE SUBG(X,A,YFIT,DYDA,NFIT)
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1+A2*X (linear).
-  4        include '../../ForLib/implicit.sta'
-
-src/ForProg/fit_g_old/subg_power.f:
-  2  C Copyright, Bernd Berg, Feb 8 2002.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*X**A2.
-  4        include '../../ForLib/implicit.sta'
-
-src/ForProg/fit_g_old/subg_power2.f:
-  2  C Copyright, Bernd Berg, Apr 21 2002.
-  3: C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION Y=A1*X**A2+A3*X**A4.
-  4        include '../../ForLib/implicit.sta'
-
-src/ForProg/MC_Potts/ana_pmu_ts.f:
-  127          write(iud4,'(4F12.6)') beta0,Cj(0),Cm,Ce
-  128: C Partition function ln:
-  129          call stebj0(nrpt,Zlnj(1),Zlnm,Zlnv,Zlne)
-
-  230          write(iud4,'(4F12.6)') beta0,Cj(0),Cm,Ce
-  231: C Partition function ln:
-  232          call stebj0(nrpt,Zlnj(1),Zlnm,Zlnv,Zlne)
-
-src/ForProg/MC_Potts/ana_pmu.f:
-  118          write(iud4,'(4F12.6)') beta0,Cj(0),Cm,Ce
-  119: C Partition function ln:
-  120          call stebj0(nrpt,Zlnj(1),Zlnm,Zlnv,Zlne)
-
-src/ForProg/MPI_Potts/lpt_ex_ia.f:
-  1:       FUNCTION LPT_EX_IA(BETA1,BETA2,IACT1,IACT2)
-  2  C Copyright, Bernd Berg, Jan 8 2002.
+TEST(test_autocorf, test_autocorf01)
+{
+    double result;
+    int IT = 2;
+    double DATA[8] = {1, 1, 1, 0, 2, 3, 4, 5};
+    auto NDAT = 8;
+    bool LMEAN = true;
+    result = autocorf_(&IT, &NDAT, DATA, &LMEAN);
+    result = round(result, 2);
+    EXPECT_EQ(result, 4.95);
+}
 
 src/ForLib/bbi_nk_df.f:
   1:       FUNCTION BBI_NK_DF(P) bind(c)
@@ -565,16 +458,51 @@ TEST(test_bbi1_nk_xq, test_bbi1_nk_xq01)
     EXPECT_EQ(result, 0.0000);
 }
 
-
-TEST(test_autocorf, test_autocorf01)
+src/ForLib/bino_nk_df.f:
+  1:       FUNCTION BINO_NK_DF(P) bind(c)
+  2  C Copyright, Berg, October 23 2000.
+TEST(test_bino_nk_df, test_bino_nk_df01)
 {
     double result;
-    int IT = 2;
-    double DATA[8] = {1, 1, 1, 0, 2, 3, 4, 5};
-    auto NDAT = 8;
-    bool LMEAN = true;
-    result = autocorf_(&IT, &NDAT, DATA, &LMEAN);
-    result = round(result, 2);
-    EXPECT_EQ(result, 4.95);
+    double Q = 0.8;
+    result = bino_nk_df_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
 }
+src/ForLib/bino_nk_xq.f:
+  1:       FUNCTION BINO_NK_XQ(Q) bind(c)
+  2  C Copyright, Berg, October 23 2000.
+TEST(test_bino_nk_xq, test_bino_nk_xq01)
+{
+    double result;
+    double Q = 0.8;
+    result = bino_nk_xq_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+
+src/ForLib/bino1_nk_df.f:
+  1:       FUNCTION BINO1_NK_DF(P) bind(c)
+  2  C Copyright, Berg, October 23 2000.
+TEST(test_bino1_nk_df, test_bino1_nk_df01)
+{
+    double result;
+    double P = 0.8;
+    result = bino1_nk_df_(&P);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+
+src/ForLib/bino1_nk_xq.f:
+  1:       FUNCTION BINO1_NK_XQ(Q) bind(c)
+  2  C Copyright, Berg, October 23 2000.
+TEST(test_bino1_nk_xq, test_bino1_nk_xq01)
+{
+    double result;
+    double Q = 0.8;
+    result = bino1_nk_xq_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+
 */
