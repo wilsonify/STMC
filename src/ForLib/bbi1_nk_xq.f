@@ -1,4 +1,4 @@
-      FUNCTION BBI1_NK_XQ(Q) bind(c)
+      FUNCTION BBI1_NK_XQ(Q) bind(c,name="bbi1_nk_xq_")
 C Copyright, Berg, October 23 2000.
 
       include 'binom.com'

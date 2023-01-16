@@ -77,17 +77,7 @@ TEST(test_stmean, test_stmean01)
     EXPECT_EQ(result, 2.125);
 }
 
-// TEST(test_autocorf, test_autocorf01)
-// {
-//     double result;
-//     int IT = 2;
-//     double DATA[8] = {1, 1, 1, 0, 2, 3, 4, 5};
-//     auto NDAT = 8;
-//     bool LMEAN = true;
-//     result = autocorf_(&IT, &NDAT, DATA, &LMEAN);
-//     result = round(result, 2);
-//     EXPECT_EQ(result, 4.95);
-// }
+
 
 TEST(test_addln_cut, test_addln_cut01)
 {
@@ -141,32 +131,48 @@ TEST(test_bbi_qdf, test_bbi_qdf01)
     EXPECT_EQ(result, 0.0000);
 }
 
+TEST(test_beta, test_beta01)
+{
+    double result;
+    double A = 50.0;
+    double B = 20.0;
+    result = beta_(&A, &B);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0000);
+}
+
+TEST(test_bino_cln, test_bino_cln01)
+{
+    double result;
+    int N = 50.0;
+    int K = 20.0;
+    result = bino_cln_(&N, &K);
+    result = round(result, 4);
+    EXPECT_EQ(result, 31.4954);
+}
+
+TEST(test_bino_coef, test_bino_coef01)
+{
+    double result;
+    int N = 5.0;
+    int K = 2.0;
+    result = bino_coef_(&N, &K);
+    result = round(result, 4);
+    EXPECT_EQ(result, 10.0338);
+}
+TEST(test_bino_df, test_bino_df01)
+{
+    double result;
+    int N = 5.0;
+    int K = 2.0;
+    double P = 0.8;
+    result = bino_df_(&N, &K, &P);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
 /*
 
-src/ForLib/bbi_qdf.f:
-  1:       FUNCTION BBI_QDF(N,K,P) bind(c)
-  2  C Copyright, Berg, October 23 1999.
 
-src/ForLib/bbi1_nk_df.f:
-  1:       FUNCTION BBI1_NK_DF(P) bind(c)
-  2  C Copyright, Berg, October 23 2000.
-
-src/ForLib/bbi1_nk_xq.f:
-  1:       FUNCTION BBI1_NK_XQ(Q) bind(c)
-  2  C Copyright, Berg, October 23 2000.
-
-
-src/ForLib/beta.f:
-  1:       FUNCTION BETA(A,B) bind(c)
-  2  C INCOMPLETE BETA FUNCTION
-
-src/ForLib/bino_cln.f:
-  1:       FUNCTION BINO_CLN(N,K) bind(c)
-  2  C Copyright, Bernd Berg, May 13 2002.
-
-src/ForLib/bino_coef.f:
-  1:       FUNCTION BINO_COEF(N,K) bind(c)
-  2  C Copyright, Bernd Berg, May 5 2002.
 
 src/ForLib/bino_df.f:
   1:       FUNCTION BINO_DF(N,K,P) bind(c)
@@ -533,5 +539,42 @@ TEST(test_bbi_df, test_bbi_df01)
     result = bbi_nk_xq_(&Q);
     result = round(result, 4);
     EXPECT_EQ(result, 0.0000);
+}
+
+src/ForLib/bbi1_nk_df.f:
+  1:       FUNCTION BBI1_NK_DF(P) bind(c)
+  2  C Copyright, Berg, October 23 2000.
+TEST(test_bbi1_nk_df, test_bbi1_nk_df01)
+{
+    double result;
+    double P = 0.8;
+    result = bbi1_nk_df_(&P);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0000);
+}
+
+src/ForLib/bbi1_nk_xq.f:
+  1:       FUNCTION BBI1_NK_XQ(Q) bind(c)
+  2  C Copyright, Berg, October 23 2000.
+TEST(test_bbi1_nk_xq, test_bbi1_nk_xq01)
+{
+    double result;
+    double Q = 0.8;
+    result = bbi1_nk_xq_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0000);
+}
+
+
+TEST(test_autocorf, test_autocorf01)
+{
+    double result;
+    int IT = 2;
+    double DATA[8] = {1, 1, 1, 0, 2, 3, 4, 5};
+    auto NDAT = 8;
+    bool LMEAN = true;
+    result = autocorf_(&IT, &NDAT, DATA, &LMEAN);
+    result = round(result, 2);
+    EXPECT_EQ(result, 4.95);
 }
 */
