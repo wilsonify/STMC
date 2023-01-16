@@ -1,8 +1,8 @@
       subroutine potts_clw(ncl)
 C Copyright, Bernd Berg, Oct 17 2001. 
 C Wolff cluster updating for q-state Potts models in d dimensions.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       include 'lat.par'
       include 'potts.par'
       include '../../ForLib/potts1.com'

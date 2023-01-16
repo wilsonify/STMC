@@ -2,8 +2,8 @@
 C Copyright, Bernd Berg, Oct 25 2001.
 C Heat Bath algorithm: MC production runs for histograms of the 
 C      energy (action) and magnetization, ha and hm respectively.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cq*2,cl*3
       include 'lat.par'
       include 'mc.par'

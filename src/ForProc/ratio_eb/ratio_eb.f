@@ -4,7 +4,7 @@ C                     a conservative Gaussian approximation.
 C INPUT:   TWO GAUSSIAN DATA POINTS, MEAN VALUES AND ERROR BARS.
 C OUTPUT:  RATIO WITH ERROR BARS.
       PARAMETER(IUO=6)
-      include '../../ForLib/implicit.sta'
+      
 C
       PRINT*,'RATIO OF 2 MEANS WITH ERROR BARS.'
       PRINT*,'INPUT:   TWO MEANS VALUES, THEIR ERROR BARS 

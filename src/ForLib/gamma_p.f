@@ -1,11 +1,18 @@
-      FUNCTION GAMMA_P(A,X)
-C INCOMPLETE GAMMA FUNCTION. BERG JUNE 8, 1999.
+      FUNCTION GAMMA_P(A,X) BIND(C,NAME="gamma_p_")
+         !C INCOMPLETE GAMMA FUNCTION. BERG JUNE 8, 1999.
+         use iso_c_binding
+         implicit none
+         real(c_double) :: GAMMA_P,A,X,GLN,GAMMA_LN
+         real(c_double) :: SUM,ADD,GOLD,A0,A1,B0,B1,G,XITER,XITERMA
+         integer(c_int) :: ITER_MAX,ITER
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0,HALF=0.5
+
          logical :: LBAD2
          logical :: LBAD1
          real(8) :: EPS
 
          PARAMETER (ITER_MAX=800,EPS=3.D-9)
-C
+
          LBAD1=.FALSE.
          LBAD2=.FALSE.
          IF(X.LT.ZERO.OR.A.LE.ZERO) PRINT*,'A,X:',A,X

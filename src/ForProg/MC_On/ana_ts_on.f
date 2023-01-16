@@ -1,14 +1,14 @@
       program ana_ts_on
 C Copyright, Bernd Berg, Feb 13 2002. O(n) models, time series analysis,
 C prepares plots. Calculates the average energy (action).
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cn*2,cl*3
 C For autocorrelation calculations:
 C NT      Maximum time difference considered.
 C NSTEP   Step size for the data of the plot.
       PARAMETER(LAUTO=.TRUE.,NT=16,NBINS=32,NSTEP=1,LMEAN=.TRUE.)
 c     PARAMETER(LAUTO=.FALSE.,NT=16,NBINS=32,NSTEP=1,LMEAN=.TRUE.)
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'on.par'

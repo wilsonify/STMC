@@ -1,8 +1,8 @@
       program ana_mag
 C Copyright, Bernd Berg, Oct 15, 2001.  Prepares histogram 
 C plots for the magnetizations and calculates their averages.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cq*2,cl*3,ciq*2
       include 'lat.par'
       include 'mc.par'

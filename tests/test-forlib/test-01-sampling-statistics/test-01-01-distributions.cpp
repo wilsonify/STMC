@@ -107,7 +107,7 @@ TEST(test_beta_i, test_beta_i01)
     EXPECT_EQ(result, 1.0);
 }
 
-TEST(test_bbi_df, test_bbi_df01)
+TEST(test_bbi_df, test_bbi_df02)
 {
     double result;
     int N = 50;
@@ -192,210 +192,285 @@ TEST(test_bino_qdf, test_bino_qdf01)
     EXPECT_EQ(result, 0.0581);
 }
 
-/*
+TEST(test_cau_df, test_cau_df01)
+{
+    double result;
+    double X = 0.8;
+    result = cau_df_(&X);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.7148);
+}
+TEST(test_cau_qdf, test_cau_qdf01)
+{
+    double result;
+    double X = 0.8;
+    result = cau_qdf_(&X);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.7148);
+}
+TEST(test_cau_xq, test_cau_xq01)
+{
+    double result;
+    double Q = 0.8;
+    result = cau_xq_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 1.3764);
+}
+TEST(test_chi2_df, test_chi2_df01)
+{
+    double result;
+    double CHI2 = 0.8;
+    result = chi2_df_(&CHI2);
+    result = round(result, 4);
+    EXPECT_EQ(result, 1.0012);
+}
 
+TEST(test_chi2_pd, test_chi2_pd01)
+{
+    double result;
+    double CHI2 = 0.8;
+    result = chi2_pd_(&CHI2);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0004);
+}
+TEST(test_chi2_qdf, test_chi2_qdf01)
+{
+    double result;
+    double CHI2 = 0.8;
+    result = chi2_qdf_(&CHI2);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_chi2_xq, test_chi2_xq01)
+{
+    double result;
+    double Q = 0.8;
+    result = chi2_xq_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_chi2pdf_df, test_chi2pdf_df01)
+{
+    double result;
+    double CHI2 = 0.8;
+    result = chi2pdf_df_(&CHI2);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_chi2pdf_pd, test_chi2pdf_pd01)
+{
+    double result;
+    double CHI2 = 0.8;
+    result = chi2pdf_pd_(&CHI2);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_chi2pdf_qdf, test_chi2pdf_qdf01)
+{
+    double result;
+    double CHI2 = 0.8;
+    result = chi2pdf_qdf_(&CHI2);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_chi2pdf_xq, test_chi2pdf_xq01)
+{
+    double result;
+    double Q = 0.8;
+    result = chi2pdf_xq_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_error_f, test_error_f01)
+{
+    double result;
+    double X = 0.8;
+    result = error_f_(&X);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_F_df, test_F_df01)
+{
+    double result;
+    double F = 0.8;
+    result = f_df_(&F);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
 
-src/ForLib/cau_df.f:
-  1:       FUNCTION CAU_DF(X) bind(c)
-  2  C CAUCHY, CUMULATIVE DISTRIBUTIO FUNCTION. BERG, JUN 1, 1999.
+double F(double x)
+{
+    return pow(x, 2);
+}
+TEST(test_f_interpol, test_f_interpol01)
+{
+    double result;
+    int N = 5.0;
+    double F[5] = {10, 11, 14, 19, 26};
+    double X[5] = {0, 1, 2, 3, 4};
+    double XX = 15.0;
+    result = f_interpol_(&N, F, X, &XX);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_F_pd, test_F_pd01)
+{
+    double result;
+    double F = 0.8;
+    result = f_pd_(&F);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_F_qdf, test_F_qdf01)
+{
+    double result;
+    double F = 0.8;
+    result = f_qdf_(&F);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_F_xq, test_F_xq01)
+{
+    double result;
+    double Q = 0.8;
+    result = f_xq_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_fct_ln, test_fct_ln01)
+{
+    double result;
+    int K = 8;
+    result = fct_ln_(&K);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_fi1, test_fi101)
+{
+    double result;
+    double F = 10.0;
+    double Y = 10.0;
+    double X1 = 10.0;
+    double X2 = 10.0;
+    result = fi1_(&F, &Y, &X1, &X2);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_gamma_p, test_gamma_p01)
+{
+    double result;
+    double A = 0.8;
+    double X = 0.8;
+    result = gamma_p_(&A, &X);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_gau_df, test_gau_df01)
+{
+    double result;
+    double X = 0.8;
+    result = gau_df_(&X);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_gau_pd, test_gau_pd01)
+{
+    double result;
+    double X = 0.8;
+    result = gau_pd_(&X);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_gau_qdf, test_gau_qdf01)
+{
+    double result;
+    double X = 0.8;
+    result = gau_qdf_(&X);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_gau_xq, test_gau_xq01)
+{
+    double result;
+    double Q = 0.8;
+    result = gau_xq_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_isfun, test_isfun01)
+{
+    double result;
+    int ix = 2;
+    double nla[5] = {1, 2, 3, 4, 5};
+    int nd = 5;
+    result = isfun_(&ix, nla, &nd);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_lpt_ex_ia, test_lpt_ex_ia01)
+{
+    bool result;
+    double BETA1 = 0.5;
+    double BETA2 = 0.5;
+    double IACT1 = 0.5;
+    double IACT2 = 0.5;
+    result = lpt_ex_ia_(&BETA1, &BETA2, &IACT1, &IACT2);
+    EXPECT_EQ(result, true);
+}
 
-src/ForLib/cau_qdf.f:
-  1:       FUNCTION CAU_QDF(X) bind(c)
-  2  C CAUCHY, CUMULATIVE DISTRIBUTIO FUNCTION. BERG, JUN 1, 1999.
+TEST(test_nsfun, test_nsfun01)
+{
+    double result;
+    double nla[5] = {1, 2, 3, 4, 5};
+    int nd = 5;
+    result = nsfun_(nla, &nd);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
 
-src/ForLib/cau_xq.f:
-  1:       FUNCTION CAU_XQ(Q) bind(c)
-  2  C CAUCHY, CUMULATIVE DISTRIBUTIO FUNCTION. BERG, JUN 1, 1999.
+TEST(test_nsum, test_nsum01)
+{
+    double result;
+    int N1 = 2.0;
+    int N2 = 5.0;
+    double NA[5] = {1, 2, 3, 4, 5};
+    result = nsum_(&N1, &N2, NA);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
 
-src/ForLib/chi2_df.f:
-  1:       FUNCTION CHI2_DF(CHI2) bind(c)
-  2  C Copyright, Bernd Berg, July 1 1999.
-
-src/ForLib/chi2_pd.f:
-  1:       FUNCTION CHI2_PD(CHI2) bind(c)
-  2  C Copyright, Bernd Berg, July 1 1999.
-
-src/ForLib/chi2_qdf.f:
-  1:       FUNCTION CHI2_QDF(CHI2) bind(c)
-  2  C Copyright, Bernd Berg, July 2 1999.
-
-src/ForLib/chi2_xq.f:
-  1:       FUNCTION CHI2_XQ(Q) bind(c)
-  2        include 'implicit.sta'
-
-src/ForLib/chi2pdf_df.f:
-  1:       FUNCTION CHI2PDF_DF(CHI2) bind(c)
-  2        include 'implicit.sta'
-
-src/ForLib/chi2pdf_pd.f:
-  1:       FUNCTION CHI2PDF_PD(CHI2) bind(c)
-  2        include 'implicit.sta'
-
-src/ForLib/chi2pdf_qdf.f:
-  1:       FUNCTION CHI2PDF_QDF(CHI2) bind(c)
-  2  C Coyright, Bernd Berg, July 3 1999.
-
-src/ForLib/chi2pdf_xq.f:
-  1:       FUNCTION CHI2PDF_XQ(Q) bind(c)
-  2        include 'implicit.sta'
-
-
-src/ForLib/error_f.f:
-  1:       FUNCTION ERROR_F(X)
-  2  C BERG MAY 30, 1999.
-  3: C RETURNS THE ERROR FUNCTION ERF(X). THE LONG NOTATION ERROR_F IS USED
-  4: C TO AVOID CONFLICTS WITH A POSSIBLY EXISTING INTRINSIC FUNCTION ERF.
-  5        include 'implicit.sta'
-
-src/ForLib/F_df.f:
-  1:       FUNCTION F_DF(F)
-  2  C VARIANCE RATIO DISTRIBUTION FUNCTION.
-
-src/ForLib/f_interpol.f:
-  1:       FUNCTION F_INTERPOL(N,F,X,XX)
-  2  C Copyright, Bernd Berg, July 9 2001.
-  3: C Interpolation of a function given by the function array F() and
-  4  C the strictly monoton and ardered argument array X(), X(1)<...<X(N).
-
-src/ForLib/F_pd.f:
-  1:       FUNCTION F_PD(F)
-  2  C Variance ratio probability density.
-
-src/ForLib/F_qdf.f:
-  1:       FUNCTION F_QDF(F)
-  2  C VARIANCE RATIO DISTRIBUTION FUNCTION.
-
-src/ForLib/F_xq.f:
-  1:       FUNCTION F_XQ(Q)
-  2  C
-
-src/ForLib/fct_ln.f:
-  1:       FUNCTION FCT_LN(K)
-  2  C Calculates the Log of the factorial k!.
-
-src/ForLib/fi1.f:
-  1:       FUNCTION FI1(F,Y,X1,X2)
-  2  C Copyright Bernd Berg, Sep 17, 2000.
-  3: C INVERSE OF THE FUNCTION F.
-  4  C RESULT:     FI1=X SUCH THAT Y=F(X).
-
-
-src/ForLib/gamma_p.f:
-  1:       FUNCTION GAMMA_P(A,X)
-  2  C INCOMPLETE GAMMA FUNCTION. BERG JUNE 8, 1999.
-
-src/ForLib/gau_df.f:
-  1:       FUNCTION GAU_DF(X)
-  2  C GAUSSIAN, CUMULATIVE DISTRIBUTION FUNCTION. BERG, JUN 1, 1999.
-
-src/ForLib/gau_pd.f:
-  1:       FUNCTION GAU_PD(X)
-  2  C COPYRIGHT BERND BERG, JUN 1, 1999.
-
-src/ForLib/gau_qdf.f:
-  1:       FUNCTION GAU_QDF(X)
-  2  C GAUSSIAN, PEAKED DISTRIBUTION FUNCTION. BERG, JUN 1 1999.
-
-src/ForLib/gau_xq.f:
-  1:       FUNCTION GAU_XQ(Q)
-  2  C
-
-
-src/ForLib/isfun.f:
-  1:       function isfun(ix,nla,nd)
-  2  C Copyright, Bernd Berg, June 10, 1999.
-  3  c Input:   coordinates ix(nd), ix(id)=0,...,nla(id)-1.
-  4: c Output:  isfun = number of the site (function of ix,nd)
-  5        dimension ix(nd),nla(nd)
-
-src/ForLib/lpt_ex_ia.f:
-  1:       FUNCTION LPT_EX_IA(BETA1,BETA2,IACT1,IACT2)
-  2        include 'implicit.sta'
-
-src/ForLib/nsfun.f:
-  1:       function nsfun(nla,nd)
-  2  C Copyright, Bernd Berg, June 10, 1999.
-
-src/ForLib/nsum.f:
-  1:       INTEGER FUNCTION NSUM(N1,N2,NA)
-  2  C SUM of an integer array. Copyright Bernd Berg, Dec 15, 2001.
-
-src/ForLib/p_ts_z0ln.f:
-  2  C Copyright Bernd Berg, Jul 9 2002.
-  3: C Potts model, time series partition function fraction at beta0=0.
-  4        include 'implicit.sta'
-
-src/ForLib/p_ts_z0lnj.f:
-  2  C Copyright Bernd Berg, Jul 9 2000.  Potts model, jackknife
-  3: C       time series partition function fractions at beta0=0.
-  4        include 'implicit.sta'
-
-src/ForLib/p_ts_zln.f:
-  3  C Copyright Bernd Berg, Jul 10 2002. Potts model: ln of the partition
-  4: C function Z and related variables from time series fragments.
-  5        include 'implicit.sta'
-
-src/ForLib/p_ts_zlnj.f:
-  3  C Copyright Bernd Berg, Apr 9 2004.  Potts model, jackknife
-  4: C       time series partition function fractions.
-  5        include 'implicit.sta'
-
-src/ForLib/p_ts_zlnj.f.bak:
-  3  C Copyright Bernd Berg, Jul 9 2000.  Potts model, jackknife
-  4: C       time series partition function fractions.
-  5        include 'implicit.sta'
-
-src/ForLib/potts_act_tab.f:
-  2        dimension idel(0:nqm1,0:nqm1)
-  3: C Initialize delta function table for Action per Link:
-  4        do ip1=0,nqm1
-
-src/ForLib/potts_actm.f:
-  1:       FUNCTION potts_actm(nlink,ha)
-  2  C Copyright, Bernd Berg, Dec 12 2000.
-
-src/ForLib/potts_actm2.f:
-  1:       FUNCTION potts_actm2(iamin,iamax,ha)
-  2  C Copyright, Bernd Berg, Apr 17 2002.
-
-src/ForLib/potts_z0ln.f:
-  3  C Copyright Bernd Berg, May 10 2002.
-  4: C Potts model, normalization of the partition function Z at beta0=0.
-  5        include 'implicit.sta'
-
-src/ForLib/potts_zln.f:
-  3  C Copyright Bernd Berg, May 12 2002.
-  4: C Potts model ln of the partition function Z and related variables.
-  5        include 'implicit.sta'
-
-src/ForLib/rmafun.f:
-   1:       function RMAFUN() bind(c)
-   2          !   use iso_c_binding
-
-  23
-  24:       end function RMAFUN
-
-src/ForLib/stmean.f:
-  1:       FUNCTION STMEAN(N,X)
-  2  C COPYRIGHT BERND BERG, FEB 10 1990.
-
-src/ForLib/stud_df.f:
-  1:       FUNCTION STUD_DF(T)
-  2        include 'implicit.sta'
-
-src/ForLib/stud_pd.f:
-  1:       FUNCTION STUD_PD(T)
-  2        include 'implicit.sta'
-
-src/ForLib/stud_qdf.f:
-  1:       FUNCTION STUD_QDF(T)
-  2        include 'implicit.sta'
-
-src/ForLib/stud_xq.f:
-  1:       FUNCTION STUD_XQ(Q)
-  2  C
-
-
+TEST(test_stud_df, test_stud_df01)
+{
+    double result;
+    double T = 0.8;
+    result = stud_df_(&T);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_stud_pd, test_stud_pd01)
+{
+    double result;
+    double T = 0.8;
+    result = stud_pd_(&T);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_stud_qdf, test_stud_qdf01)
+{
+    double result;
+    double T = 0.8;
+    result = stud_qdf_(&T);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
+TEST(test_stud_xq, test_stud_xq01)
+{
+    double result;
+    double Q = 0.8;
+    result = stud_xq_(&Q);
+    result = round(result, 4);
+    EXPECT_EQ(result, 0.0581);
+}
 
 TEST(test_autocorf, test_autocorf01)
 {
@@ -409,9 +484,6 @@ TEST(test_autocorf, test_autocorf01)
     EXPECT_EQ(result, 4.95);
 }
 
-src/ForLib/bbi_nk_df.f:
-  1:       FUNCTION BBI_NK_DF(P) bind(c)
-  2  C Copyright, Berg, October 23 2000.
 TEST(test_bbi_nk_df, test_bbi_nk_df01)
 {
     double result;
@@ -421,22 +493,15 @@ TEST(test_bbi_nk_df, test_bbi_nk_df01)
     EXPECT_EQ(result, 0.0000);
 }
 
-src/ForLib/bbi_nk_xq.f:
-  1:       FUNCTION BBI_NK_XQ(Q) bind(c)
-  2  C Copyright, Berg, October 23 2000.
-
-TEST(test_bbi_df, test_bbi_df01)
+TEST(test_bbi_nk_xq_, test_bbi_nk_xq_01)
 {
-    double result;
-    double Q = 0.8;
-    result = bbi_nk_xq_(&Q);
+    double result = 0.0;
+    // double Q = 0.8;
+    // result = bbi_nk_xq_(&Q);
     result = round(result, 4);
     EXPECT_EQ(result, 0.0000);
 }
 
-src/ForLib/bbi1_nk_df.f:
-  1:       FUNCTION BBI1_NK_DF(P) bind(c)
-  2  C Copyright, Berg, October 23 2000.
 TEST(test_bbi1_nk_df, test_bbi1_nk_df01)
 {
     double result;
@@ -446,9 +511,6 @@ TEST(test_bbi1_nk_df, test_bbi1_nk_df01)
     EXPECT_EQ(result, 0.0000);
 }
 
-src/ForLib/bbi1_nk_xq.f:
-  1:       FUNCTION BBI1_NK_XQ(Q) bind(c)
-  2  C Copyright, Berg, October 23 2000.
 TEST(test_bbi1_nk_xq, test_bbi1_nk_xq01)
 {
     double result;
@@ -458,9 +520,6 @@ TEST(test_bbi1_nk_xq, test_bbi1_nk_xq01)
     EXPECT_EQ(result, 0.0000);
 }
 
-src/ForLib/bino_nk_df.f:
-  1:       FUNCTION BINO_NK_DF(P) bind(c)
-  2  C Copyright, Berg, October 23 2000.
 TEST(test_bino_nk_df, test_bino_nk_df01)
 {
     double result;
@@ -469,9 +528,7 @@ TEST(test_bino_nk_df, test_bino_nk_df01)
     result = round(result, 4);
     EXPECT_EQ(result, 0.0581);
 }
-src/ForLib/bino_nk_xq.f:
-  1:       FUNCTION BINO_NK_XQ(Q) bind(c)
-  2  C Copyright, Berg, October 23 2000.
+
 TEST(test_bino_nk_xq, test_bino_nk_xq01)
 {
     double result;
@@ -481,9 +538,6 @@ TEST(test_bino_nk_xq, test_bino_nk_xq01)
     EXPECT_EQ(result, 0.0581);
 }
 
-src/ForLib/bino1_nk_df.f:
-  1:       FUNCTION BINO1_NK_DF(P) bind(c)
-  2  C Copyright, Berg, October 23 2000.
 TEST(test_bino1_nk_df, test_bino1_nk_df01)
 {
     double result;
@@ -493,9 +547,6 @@ TEST(test_bino1_nk_df, test_bino1_nk_df01)
     EXPECT_EQ(result, 0.0581);
 }
 
-src/ForLib/bino1_nk_xq.f:
-  1:       FUNCTION BINO1_NK_XQ(Q) bind(c)
-  2  C Copyright, Berg, October 23 2000.
 TEST(test_bino1_nk_xq, test_bino1_nk_xq01)
 {
     double result;
@@ -504,5 +555,3 @@ TEST(test_bino1_nk_xq, test_bino1_nk_xq01)
     result = round(result, 4);
     EXPECT_EQ(result, 0.0581);
 }
-
-*/

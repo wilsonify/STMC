@@ -3,8 +3,8 @@ C
 C VARIANCE RATIO TEST (F-TEST): COMPARISON OF TWO ERROR BARS.
 C ===========================================================
 C
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       CHARACTER*16 CHIN
 C
       PRINT*,'VARIANCE RATIO TEST (F-TEST):'

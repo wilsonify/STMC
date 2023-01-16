@@ -1,4 +1,4 @@
-      FUNCTION FCT_LN(K)
+      FUNCTION FCT_LN(K) bind(c,name="fct_ln_")
          !C Calculates the Log of the factorial k!.
          use iso_c_binding
          implicit none

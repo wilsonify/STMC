@@ -2,8 +2,8 @@
 C Copyright, Bernd Berg, Jun 27 2003. Upper and lower Kolmogorov 
 C            tests to check whether the binned data are Gaussian.
 C            Compare assignment a0206_03.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cq*2,cl*3
       include 'lat.par'
       include 'mc.par'

@@ -3,8 +3,8 @@ C
 C Bernd Berg, August 20, 2003.
 C Illustrates and tests addln.f and addln2.f using random numbers.
 C
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       parameter(iuo=6,iud=10,iseed1=1,iseed2=0,npri=14,ndat=14)
 c
       call rmaset(iuo,iud,iseed1,iseed2,'no_file')

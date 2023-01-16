@@ -1,8 +1,8 @@
       program sphere_test
 C Copyright, Bernd Berg, Jan 13 2002. MC estimate of the volume occupied 
 C     by the nd-dimensional unit sphere in the nd-dimensional hypercube.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       parameter(nrpt=10 000)
 C
       call rmaset(-6,10,1,1,'no_file')

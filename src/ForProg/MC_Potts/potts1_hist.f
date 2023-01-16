@@ -1,8 +1,8 @@
       program potts1_hist
 C Copyright, Bernd Berg, Nov 6 2002.
 C Energy precision MC calculations.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cq*2,cl*3
       include 'lat.par'
       include 'mc.par'

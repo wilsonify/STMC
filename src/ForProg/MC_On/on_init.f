@@ -1,6 +1,6 @@
       subroutine On_init(lpr)
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Copyright, Bernd Berg, Feb 12 2002.
 C Initializes arrays needed for O(n) Model Metropolis calculations.
       include 'lat.par'

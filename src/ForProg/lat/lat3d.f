@@ -2,7 +2,7 @@
 C Copyright, Bernd Berg, Nov 10 2000.
 C Bookkeeping for a 3d hypercubic lattice. Example tuned to 2x2x4. 
 C Before compiling: copy lat3d.par to lat.par and lat3d.dat to lat.dat.
-      include '../../ForLib/implicit.sta'
+      
       parameter(iuo=6)
       include 'lat.par'
       include '../../ForLib/lat.com'

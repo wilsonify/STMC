@@ -10,8 +10,8 @@ C OUTPUT:  CONSTANTS  A(1), A(2) WITH ERRORS BARS SGA(1), SGA(2).
 C          CORRESPONDING TO THE FIT Y=A(1)+A(2)*X. IF N.GE.3:
 C          ALSO  CHI2  AND  THE GOODNESS OF FIT Q ARE RETURNED.
 C
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       PARAMETER(IUO=06,IUD=10,NMAX=100)
       DIMENSION X(NMAX),Y(NMAX),EY(NMAX), A(2),SGA(2),COV(2,2)
 C

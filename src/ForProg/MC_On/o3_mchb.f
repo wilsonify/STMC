@@ -1,8 +1,8 @@
       subroutine O3_mchb
 C Copyright Bernd Berg, May 5 2002.
 C O3 model: Sequential heat bath updating.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       parameter(n=3,eps=one/ten**10)
       include 'lat.par'
       include 'mc.par'

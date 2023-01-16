@@ -1,7 +1,7 @@
       program lat4d_ckb
 C Copyright, Bernd Berg, Sep 26 2003.
 C Bookkeeping for a 2**4 checkerboard lattice.
-      include '../../ForLib/implicit.sta'
+      
       parameter(iuo=6)
       include 'latc.par'
       include '../../ForLib/latc.com'

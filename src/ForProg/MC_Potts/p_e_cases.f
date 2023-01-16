@@ -1,7 +1,7 @@
       program p_e_cases
 C Copyright, Bernd Berg, Jan 19 2002.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       parameter (iuo=6,nd_max=3,nq_max=8,mcase=80,n2d_max=3*nd_max)
       dimension iqarray(n2d_max),nqa(n2d_max)
       dimension nact_old(0:n2d_max+1,mcase),nact_new(0:n2d_max+1)

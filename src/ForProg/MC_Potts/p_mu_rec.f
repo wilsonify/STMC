@@ -1,8 +1,8 @@
       subroutine p_mu_rec
 C Copyright: Bernd Berg, Nov 25, 2000.
 C Recursion of multicanonical weights.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

@@ -2,9 +2,9 @@
 C Copyright, Bernd Berg, December 20, 2001.
 C Parallel tempering for the Potts models heat bath code.
 C MPI implementation of the beta exchange.
-      include '../../ForLib/implicit.sta'
+      
       INCLUDE 'mpif.h'
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'potts.par'
       include 'mc_pt_mpi.par'

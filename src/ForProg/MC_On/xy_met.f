@@ -1,8 +1,8 @@
       subroutine XY_met(lacpt)
 C Copyright Bernd Berg, Feb 10 2002. XY model: Sequential Metropolis
 C           updating. The acceptance rate is self-adjusting to acpt_rate.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       parameter(n=2,acpt_rate=half)
       include 'lat.par'
       include 'mc.par'

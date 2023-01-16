@@ -1,9 +1,9 @@
       program ana_ptmpi ! Analysis program for Parallel Tempering data.
 C Copyright, Bernd Berg, Jan 10 2002.
 C Single processor program!
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3,cmy_id*2,cnp*2
-      include '../../ForLib/constants.par'
+      
       PARAMETER(N_PROC=08,NPM1=N_PROC-1)
       include 'lat.par'
       include 'mc_pt_mpi.par'

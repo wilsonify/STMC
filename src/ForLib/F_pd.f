@@ -1,4 +1,4 @@
-      FUNCTION F_PD(F)
+      FUNCTION F_PD(F) bind(c,name="f_pd_")
 C Variance ratio probability density.
       
       COMMON /PARFT/ NF1,NF2

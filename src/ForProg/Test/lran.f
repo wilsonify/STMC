@@ -6,8 +6,8 @@ C  NFIT:    NUMBER OF FIT PARAMETERS.
 C  A:       ARRAY OF FIT PARAMETERS (INITIAL GUESS READ FROM DATA FILE).
 C  X,Y,EY:  DATA WITH THEIR STATISTICAL ERRORS.
 C
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       PARAMETER(NFIT=4,IUO=6,IUD=10,ISD1=1,ISD2=0)
       DIMENSION AIN(NFIT,NFIT),BIN(NFIT), AMAT(NFIT,NFIT),BMAT(NFIT)
 C

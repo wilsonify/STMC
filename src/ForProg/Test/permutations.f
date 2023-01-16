@@ -3,7 +3,7 @@ C
 C Copyright, Bernd Berg, Oct 30, 2000.
 C ILLUSTRATES GENERATION OF PERMUTATIONS BY PERM.F.  
 C
-      include '../../ForLib/implicit.sta'
+      
       PARAMETER(IUO=6,NDAT=20,N=12)
       DIMENSION IPER(N)
 C

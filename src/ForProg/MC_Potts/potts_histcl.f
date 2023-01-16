@@ -1,8 +1,8 @@
       program potts_histcl
 C Copyright, Bernd Berg, Oct 19 2001.
 C MC prodcution runs for energy (action) histograms.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cq*2,cl*3
       include 'lat.par'
       include 'mc.par'

@@ -1,4 +1,4 @@
-      FUNCTION STUD_QDF(T)  
+      FUNCTION STUD_QDF(T)  bind(c,name="stud_qdf_")
 
       COMMON /PARSTUD/ NF
 C

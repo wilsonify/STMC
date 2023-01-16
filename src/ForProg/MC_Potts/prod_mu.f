@@ -2,9 +2,9 @@ C JUL 03 2001
       program prod_mu
 C Copyright, Bernd Berg, May 26 2001.
 C Potts muca with Metropolis updating.
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3,cdat*14,cbak*14
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'
@@ -118,9 +118,9 @@ C
 
       SUBROUTINE read_bak(cbak,irec,irec1,mu_swp,na_swp,ntun,ntun_old,
      &                         ltun0,iequ1, irp1,imea1,ntu_m)
-      include '../../ForLib/implicit.sta'
+      
       character*(*) cbak
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'
@@ -147,9 +147,9 @@ C
 
       SUBROUTINE write_bak(cbak,irec,mu_swp,na_swp,ntun,ltun0,
      &                     iequi, irpt,imeas,ntu_m)
-      include '../../ForLib/implicit.sta'
+      
       character*(*) cbak
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

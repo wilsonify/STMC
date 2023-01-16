@@ -2,7 +2,7 @@
       SUBROUTINE SUBL(IUO,N,X,Y,EY)
 C Copyright, Bernd Berg, September 27, 2002.
 C Fit y=c1*exp(-c2*x) -> ynew=ln(y)=ln(c1)-c2*x, then a1=ln(c1), a2=-c2. 
-      include '../../ForLib/implicit.sta'
+      
       DIMENSION X(N),Y(N),EY(N)
       DATA NCALL/0/
       SAVE NCALL
@@ -19,8 +19,8 @@ C Fit y=c1*exp(-c2*x) -> ynew=ln(y)=ln(c1)-c2*x, then a1=ln(c1), a2=-c2.
       END
  
       SUBROUTINE SUBPLOT(IUO,IUD,N,X,Y,EY,A)
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       PARAMETER(NPLOT=200)
       DIMENSION X(N),Y(N),EY(N),A(2)
       WRITE(IUO,*) "SUBPLOT: Data for fit.plt, lfit.plt and gaudif.plt."

@@ -1,11 +1,11 @@
       program ana_ts_onm
 C Copyright, Bernd Berg, Jan 23 2004. On models, time series analysis.
 C Calculates the average energy (action), prepares histogram plots.
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cn*2,cl*3
 C For autocorrelation calculations:
       PARAMETER(NT=16,NT_est=01,NSTEP=1,NBINS=32,LMEAN=.TRUE.)
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'on.par'

@@ -1,4 +1,4 @@
-      FUNCTION F_INTERPOL(N,F,X,XX)
+      FUNCTION F_INTERPOL(N,F,X,XX) bind(c,name="f_interpol_")
 C Copyright, Bernd Berg, July 9 2001.
 C Interpolation of a function given by the function array F() and
 C the strictly monoton and ardered argument array X(), X(1)<...<X(N).

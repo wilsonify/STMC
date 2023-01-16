@@ -1,6 +1,6 @@
       subroutine potts1_init(lpr)
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Copyright, Bernd Berg, Sep 13 2001.
 C Initializes arrays needed for generalized Potts Model MC calculation.
       include 'lat.par'

@@ -1,6 +1,6 @@
       subroutine XY_init1(lpr)
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Copyright, Bernd Berg, Nov 14 2000.
 C Initializes arrays needed for generalized Potts Model MC calculation.
       include 'lat.par'

@@ -1,6 +1,6 @@
       subroutine potts1_metn(nhit)
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Copyright, Bernd Berg, Nov 15 2000.
 C nhit Metropolis updating with sequential spin choice.
       include 'lat.par'

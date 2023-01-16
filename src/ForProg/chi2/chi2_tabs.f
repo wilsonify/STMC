@@ -3,8 +3,6 @@ C
 C CHI2 DISTRIBUTION: SOME TABLES.
 C Copyright, Bernd Berg, October 25, 2000.
 C
-      include '../../ForLib/implicit.sta' 
-      include '../../ForLib/constants.par' 
       PARAMETER (NMAX=8,NQ=5,IUO=6)
       DIMENSION F(NMAX),Q(NQ),XQ(NQ)
       COMMON /CHI2PAR/ NF

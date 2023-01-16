@@ -1,10 +1,10 @@
       program p_ptmpi0
 C Copyright, Bernd Berg, Jan 8 2002.
 C Parallel tempering MPI implementation with recursion pt_rec0.f.
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3,cmy_id*2,cnp*2
       include 'mpif.h'
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc_pt_mpi.par'
       include 'potts.par'

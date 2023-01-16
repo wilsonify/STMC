@@ -1,11 +1,11 @@
       program ana_ts_pm
 C Copyright, Bernd Berg, Jan 24 2004. Potts model, time series analysis.
 C Calculates the average energy (action), prepares histogram plots.
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3
 C For autocorrelation calculations:
       PARAMETER(NT=16,NT_est=11,NSTEP=1,NBINS=32,LMEAN=.TRUE.)
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

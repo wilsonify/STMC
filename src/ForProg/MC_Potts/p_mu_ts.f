@@ -1,9 +1,9 @@
       program p_mu_ts
 C Copyright, Bernd Berg, Jul 8 2002.
 C Potts muca with Metropolis updating, time series version.
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

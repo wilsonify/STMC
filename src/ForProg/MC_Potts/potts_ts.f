@@ -1,8 +1,8 @@
       program potts_ts
 C Copyright, Bernd Berg, Dec 11 2000.
 C Potts time series (ts) with systematic Metropolis updating.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

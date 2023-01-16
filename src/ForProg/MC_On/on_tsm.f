@@ -1,8 +1,8 @@
       program On_tsm
 C Copyright, Bernd Berg, Jan 26 2004.
 C MC prodcution run to create energy (action variable) time series.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cn*2,cl*3
       include 'lat.par'
       include 'mc.par'

@@ -1,8 +1,8 @@
       program pottshb_ts
 C Copyright, Bernd Berg, June 20 2002.
 C Potts time series (ts) with Heat Bath updating.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

@@ -1,4 +1,4 @@
-      FUNCTION F_QDF(F)
+      FUNCTION F_QDF(F) bind(c,name="f_qdf_")
 C VARIANCE RATIO DISTRIBUTION FUNCTION.
       
       COMMON /PARFT/ NF1,NF2

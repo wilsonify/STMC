@@ -2,7 +2,7 @@
 C Copyright, Bernd Berg, Oct 4 2002.
 C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION 
 C Y=A1*EXP(A2*X)+A3*EXP(A4*X).
-      include '../../ForLib/implicit.sta'
+      
       DIMENSION A(MFTO),DYDA(MFTO)
       YFIT=A(1)*EXP(A(2)*X)+A(3)*EXP(A(4)*X)
       DYDA(1)=EXP(A(2)*X)

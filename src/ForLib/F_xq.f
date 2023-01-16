@@ -1,4 +1,4 @@
-      FUNCTION F_XQ(Q)
+      FUNCTION F_XQ(Q) bind(c,name="f_xq_")
 C
 
       EXTERNAL F_DF

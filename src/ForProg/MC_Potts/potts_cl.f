@@ -1,7 +1,7 @@
       subroutine potts_cl(ncl)
 C Bernd Berg, August 26, 2001. Swendsen-Wang cluster updating.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       include 'lat.par'
       include 'potts.par'
       include '../../ForLib/potts1.com'

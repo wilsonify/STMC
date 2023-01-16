@@ -1,9 +1,9 @@
       program p_mu
 C Copyright, Bernd Berg, May 24 2001.
 C Potts muca with Metropolis updating.
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

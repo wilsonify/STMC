@@ -1,8 +1,8 @@
       subroutine O3_init(lpr)
 C Copyright, Bernd Berg, Feb 11 2000.
 C Initializes arrays needed for O3 Model MC heat bath calculations.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       parameter(n=3)
       include 'lat.par'
       include 'mc.par'

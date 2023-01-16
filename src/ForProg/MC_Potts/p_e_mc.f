@@ -1,6 +1,6 @@
       subroutine p_e_mc(iuo)
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Copyright, Bernd Berg, Jan 13 2002.
       include 'lat.par'
       include 'potts.par'
@@ -134,8 +134,8 @@ C
 
 
       subroutine p_etabs_update(icase,jcase,is0,is1)
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Copyright, Bernd Berg, Jan 13 2002. Update EDS tables.
       include 'lat.par'
       include 'potts.par'
@@ -164,8 +164,8 @@ C Copyright, Bernd Berg, Jan 13 2002. Update EDS tables.
 
 
       subroutine Pcase_sort
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Copyright, Bernd Berg, Jan 13 2002.
       include 'lat.par'
       include 'potts.par'

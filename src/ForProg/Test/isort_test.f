@@ -1,9 +1,9 @@
       program isort_test
 C BB Feb 14 2003.
 C Test of the isort routines.
-      include '../../ForLib/implicit.sta'
+      
       character cnp*2
-      include '../../ForLib/constants.par'
+      
       parameter(iuo=6,iud0=10,m=9,mdat=3000,lper=.true.)
       dimension adat(mdat),iadat(mdat),iper(mdat),iiper(mdat)
       ltest=.true.
@@ -43,8 +43,8 @@ c         print'(" jdat,sort:",I9,F18.2)',jdat,sort(jdat)
 
       subroutine read_d(iuo,iud0,mdat,ndat,iadat)
 C BB Feb 14 2003.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       parameter(iseed1=1,iseed2=0)
       dimension iadat(mdat),prob(4)
       data prob/4*zero/

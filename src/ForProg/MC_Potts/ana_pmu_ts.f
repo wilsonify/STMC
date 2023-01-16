@@ -1,10 +1,10 @@
       program ana_pmu_ts
 C Copyright Bernd Berg, Jul 10 2001.  
 C Analysis program for multicanonical data, including times series.
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3
       parameter(iud3=13,iud4=14,iud5=15,iud6=16,iud7=17,iud8=18)
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

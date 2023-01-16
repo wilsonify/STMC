@@ -1,9 +1,9 @@
       program ana_pmuh
 C Copyright Bernd Berg, May 30 2001.
 C Analysis program for multicanonical data.
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

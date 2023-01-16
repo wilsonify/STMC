@@ -1,8 +1,8 @@
       subroutine potts_inithb(lpr)
 C Copyright, Bernd Berg, Oct 20 2002.
 C Initializes arrays needed for generalized Potts Model MC heat bath.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

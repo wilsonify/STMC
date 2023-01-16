@@ -1,8 +1,8 @@
       subroutine XY_init(lpr)
 C Copyright, Bernd Berg, Feb 11 2002.
 C Initializes arrays needed for XY Model Metropolis calculations.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       parameter(n=2)
       include 'lat.par'
       include 'mc.par'

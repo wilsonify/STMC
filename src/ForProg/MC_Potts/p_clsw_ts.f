@@ -1,8 +1,8 @@
       program p_clsw_ts
 C Copyright, Bernd Berg, Nov 26 2002. Potts model Swendsen-Wang cluster.
 C MC production run to create energy (action variable) time series.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cq*2,cl*3
       include 'lat.par'
       include 'mc.par'

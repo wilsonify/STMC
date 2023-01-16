@@ -1,8 +1,8 @@
       program ran_range
 C Copyright Bernd Berg, Feb 17 2002. Purpose: To investigate the
 C extreme values (the range) of the Marsaglia random number generator.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character*3 c1,c2
       parameter(iuo=6,iud=10,iseed1=1,iseed2=0,xitmax=ten**10-half)
       parameter(xsmall=zero)

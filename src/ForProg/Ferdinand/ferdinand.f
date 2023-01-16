@@ -4,8 +4,10 @@ C Copyright, Bernd Berg, Oct 10, 2000.
 C Ising Model on finite lattice after
 C FERDINAND and FISHER, PR 185 (1969) 832.
 C
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      real,parameter:: ONE=1.0
+      real :: X
+      real :: GM, IPI, XML
+      
       PARAMETER (IUO=6,IUD=10,NL=20,ML=20,NS=ML*NL,NLL=2*NL-1)
       PARAMETER (NBETA=500,DBETA=ONE/NBETA)
       DIMENSION GM(0:NLL),GMPR(0:NLL),GM2PR(0:NLL)
@@ -22,8 +24,8 @@ C
       END
       
       SUBROUTINE GFF(NL,NLL,BETA,GM,GMPR,GM2PR)
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       DIMENSION C(NLL),GM(0:NLL),GMPR(0:NLL),GM2PR(0:NLL)
       BK=TWO*BETA 
       GM(0)=BK+LOG(TANH(BETA))
@@ -53,8 +55,8 @@ C
       
 
       SUBROUTINE PARTFN(NL,ML,NLL,BETA,GM,GMPR,GM2PR, F,UENG,S,CHT,ZL)
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       DIMENSION GM(0:NLL),GMPR(0:NLL),GM2PR(0:NLL)
       BK=TWO*BETA
       XML=ML*ONE
@@ -128,7 +130,7 @@ C
           ZZPP4=ZZPP4+GM2PR(IPI)*XML/TWO*
      &     (ONE+EXP(-GM(IPI)*XML))/(ONE-EXP(-GM(IPI)*XML))-
      &     (GMPR(IPI)*XML/(ONE-EXP(-GM(IPI)*XML)))
-     &     **2*DEXP(-GM(IPI)*XML)
+     &     **2*EXP(-GM(IPI)*XML)
         ELSE
           ZZ4=ZZ4-GM(IPI)*XML/TWO+LOG(ONE-EXP(GM(IPI)*XML))
           Z4Sign=-Z4Sign

@@ -1,8 +1,8 @@
       subroutine XY_met0
 C Copyright Bernd Berg, Feb 11 2002.
 C XY model: Sequential Metropolis updating.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       parameter(n=2)
       include 'lat.par'
       include 'mc.par'

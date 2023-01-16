@@ -1,13 +1,13 @@
       program ana_ts1_p
 C Copyright, Bernd Berg, Feb 11 2002. Potts model, single time series 
 C analysis, prepares plot. Calculates the average energy (action).
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3
 C For autocorrelation calculations:
 C NT    Maximum time distance considered.
 C NSTEP Stepsize in the data file for the plot.
       PARAMETER(NT=2**13,NBINS=32,NSTEP=2**7,LMEAN=.TRUE.)
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

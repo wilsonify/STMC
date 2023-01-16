@@ -1,8 +1,8 @@
       program potts_hist
 C Copyright, Bernd Berg, Dec 13 2000.
 C MC prodcution run to create energy (action variable) histograms.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cq*2,cl*3
       include 'lat.par'
       include 'mc.par'

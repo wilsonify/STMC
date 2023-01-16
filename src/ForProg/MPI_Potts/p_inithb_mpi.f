@@ -1,10 +1,10 @@
       subroutine p_inithb_mpi(cd,cq,cl,cmy_id,cnp,lpri)
 C Copyright, Bernd Berg, Nov 26 2001.
 C Initialization for MPI (parallel tempering) Potts Model heat bath MC.
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3,cmy_id*2,cnp*2
       INCLUDE 'mpif.h'
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'potts.par'
       include 'mc_pt_mpi.par'

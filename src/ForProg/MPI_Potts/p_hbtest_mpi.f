@@ -1,10 +1,10 @@
       program p_hbtest_mpi
 C Copyright, Bernd Berg, Jan 9 2002.
 C MPI test for the Potts model Heat Bath (HB) MC algorithm.
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3,cmy_id*2,cnp*2
       include 'mpif.h'
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc_pt_mpi.par'
       include 'potts.par'

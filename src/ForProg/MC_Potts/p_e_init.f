@@ -1,7 +1,7 @@
       subroutine p_e_init(lpr)
 C Copyright, Bernd Berg, Nov 6 2002.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Initializes arrays needed for generalized Potts Model MC calculation.
       include 'lat.par'
       include 'mc.par'
@@ -45,8 +45,8 @@ C
 
       subroutine p_e_tabs(beta)
 C Copyright, Bernd Berg, Jan 13 2002.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       include 'lat.par'
       include 'potts.par'
       include 'p_eds.par'

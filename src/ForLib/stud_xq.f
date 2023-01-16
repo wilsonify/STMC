@@ -1,4 +1,4 @@
-      FUNCTION STUD_XQ(Q)
+      FUNCTION STUD_XQ(Q) bind(c,name="stud_xq_")
 C
 
       EXTERNAL STUD_DF

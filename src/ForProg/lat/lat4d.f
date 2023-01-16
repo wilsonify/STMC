@@ -2,7 +2,7 @@
 C Copyrioght, Bernd Berg, Nov 12 2000.
 C Bookkeeping for a 4d hypercubic lattice. Example tuned to 2**4.
 C Before compiling: copy lat4d.par to lat.par and lat4d.dat to lat.dat.
-      include '../../ForLib/implicit.sta'
+      
       parameter(iuo=6)
       include 'lat.par'
       include '../../ForLib/lat.com'

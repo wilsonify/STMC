@@ -1,6 +1,6 @@
       subroutine potts1_met
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Copyright, Bernd Berg, Nov 15 2000.
 C Metropolis updating with sequential spin choice.
 C Small wrat() array of potts1.com used.

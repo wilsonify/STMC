@@ -2,8 +2,8 @@
 C Copyright, Bernd Berg, Nov 6 2002.
 C Event driven MC simulation: production runs for the
 C       histograms ha of the energy (action variable).
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cq*2,cl*3
       include 'lat.par'
       include 'mc.par'

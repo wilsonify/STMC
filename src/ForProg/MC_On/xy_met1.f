@@ -1,8 +1,8 @@
       subroutine XY_met1
 C Copyright Bernd Berg, Feb 10 2002.
 C XY model: Sequential Metropolis updating. Single angle variable.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       include 'lat.par'
       include 'mc.par'
       include '../../ForLib/lat.com'

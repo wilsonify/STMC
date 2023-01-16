@@ -1,8 +1,8 @@
       program o3_tshbm
 C Copyright, Bernd Berg, June 9 2002.
 C MC prodcution run to create energy (action variable) time series.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cl*3
       include 'lat.par'
       include 'mc.par'

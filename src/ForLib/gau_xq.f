@@ -1,4 +1,4 @@
-      FUNCTION GAU_XQ(Q)
+      FUNCTION GAU_XQ(Q) bind(c,name="gau_xq_")
 C
 
       EXTERNAL GAU_DF

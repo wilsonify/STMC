@@ -4,7 +4,7 @@ C Copyright, Bernd Berg, November 1, 2000.
       SUBROUTINE SUBL(IUO,N,X,Y,EY)
 C subl_1ox package
 C Fit y=c1+c2/x -> ynew=c1*x+c2=a1+a2*x 
-      include '../../ForLib/implicit.sta'
+      
       DIMENSION X(N),Y(N),EY(N)
       WRITE(IUO,*) 'SUBL: FIT Y=C1+C2/X -> Ynew=Y*X=C1*X+C2'
       WRITE(IUO,*) '           =A1+A2*X with A1=C2, A2=C1.'
@@ -19,7 +19,7 @@ C Fit y=c1+c2/x -> ynew=c1*x+c2=a1+a2*x
       SUBROUTINE SUBPLOT(IUO,IUD,N,X,Y,EY,A)
 C subl_1ox package
 C Fit y=c1+c2/x -> ynew=c1*x+c2=a1+a2*x 
-      include '../../ForLib/implicit.sta'
+      
       PARAMETER(NPLOT=200)
       DIMENSION X(N),Y(N),EY(N),A(2)
       WRITE(IUO,*) 'fit.plt gives plot y=c1+c2/x.'

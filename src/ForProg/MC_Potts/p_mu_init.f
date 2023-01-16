@@ -1,7 +1,7 @@
       subroutine p_mu_init
 C Copyright, Bernd Berg, Nov 10 2000.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

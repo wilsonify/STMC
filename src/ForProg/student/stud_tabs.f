@@ -6,8 +6,8 @@ C
 C  NSI:   CONFIDENCE LEVEL INVESTIGATED UP TO NSI*E-BAR.
 C  MDAT:  MAXIMUM NUMBER OF (GAUSSIAN) INPUT DATA.
 C
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       PARAMETER(NSI=5,MDAT=64)
       DIMENSION P(NSI),S(NSI)
       COMMON /PARSTUD/ NF

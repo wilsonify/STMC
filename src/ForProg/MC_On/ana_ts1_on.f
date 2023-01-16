@@ -1,13 +1,13 @@
       program ana_ts1_on
 C Copyright, Bernd Berg, Feb 11 2002. Single time series analysis, 
 C           prepares plot. Calculates the average energy (action).
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cn*2,cl*3
 C For autocorrelation calculations:
 C NT    Maximum time distance considered.
 C NSTEP Stepsize in the data file for the plot.
       PARAMETER(NT=2**12,NBINS=32,NSTEP=2**4,LMEAN=.TRUE.)
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'on.par'

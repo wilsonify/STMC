@@ -3,8 +3,8 @@ C
 C STUDENT DIFFERENCE TEST: COMPARISION OF TWO MEANS.
 C ==================================================
 C
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       CHARACTER*16 CHIN
 C
       PRINT*,'STUDENTS DIFFERENCE TEST: COMPARISION OF TWO MEANS.'

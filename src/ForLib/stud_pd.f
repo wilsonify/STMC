@@ -1,4 +1,4 @@
-      FUNCTION STUD_PD(T)  
+      FUNCTION STUD_PD(T) bind(c,name="stud_pd_")
 
       COMMON /PARSTUD/ NF
 C

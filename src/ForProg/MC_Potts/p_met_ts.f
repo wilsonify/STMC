@@ -1,8 +1,8 @@
       program p_met_ts
 C Copyright, Bernd Berg, Apr 11 2002. Potts model Metropolis.
 C MC prodcution run to create energy (action variable) time series.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cq*2,cl*3
       include 'lat.par'
       include 'mc.par'

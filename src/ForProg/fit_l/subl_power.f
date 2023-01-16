@@ -4,7 +4,7 @@ C Copyright, Bernd Berg, November 2, 2001.
       SUBROUTINE SUBL(IUO,N,X,Y,EY)
 C Fit y=c1*exp(-c2*ln(x)) -> ynew=ln(y)=ln(c1)-c2*xnew
 c     with xnew=ln(x). Then: a1=ln(c1), a2=-c2. 
-      include '../../ForLib/implicit.sta'
+      
       DIMENSION X(N),Y(N),EY(N)
       WRITE(IUO,*) 'SUBL_POWER: FIT Y=C1*EXP(-C2*LOG(X)) ->',
      &                  ' Ynew=LOG(Y)=LOG(C1)-C2*LOG(X)'
@@ -20,8 +20,8 @@ c     with xnew=ln(x). Then: a1=ln(c1), a2=-c2.
       END
      
       SUBROUTINE SUBPLOT(IUO,IUD,N,X,Y,EY,A)
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       PARAMETER(NPLOT=200)
       DIMENSION X(N),Y(N),EY(N),A(2)
       WRITE(IUO,*) 'fit.g gives plot y=c1*exp(-c2*ln(x)).'

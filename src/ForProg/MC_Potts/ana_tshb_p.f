@@ -1,14 +1,14 @@
       program ana_tshb
 C Copyright, Bernd Berg, Oct 21 2002. Potts model, time series analysis,
 C prepares plots (heat bath). Calculates the average energy (action).
-      include '../../ForLib/implicit.sta'
+      
       character cd*1,cq*2,cl*3
 C For autocorrelation calculations:
 C NT      Maximum time difference considered.
 C NSTEP   Step size for the data of the plot.
 c     PARAMETER(NT=256,NBINS=32,NSTEP=8,LMEAN=.TRUE.)
       PARAMETER(NT=064,NBINS=32,NSTEP=1,LMEAN=.TRUE.)
-      include '../../ForLib/constants.par'
+      
       include 'lat.par'
       include 'mc.par'
       include 'potts.par'

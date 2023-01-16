@@ -1,8 +1,8 @@
       subroutine On_met
 C Copyright Bernd Berg, Feb 10 2002.
 C O(n) model: Sequential Metropolis updating (inefficient code).
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       include 'lat.par'
       include 'mc.par'
       include 'on.par'

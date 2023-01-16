@@ -1,8 +1,8 @@
       program ana_hist
 C Copyright, Bernd Berg, Jan 21 2002.
 C Prepares energy histogram plots and calculates average energy (action).
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       character cd*1,cq*2,cl*3
       include 'lat.par'
       include 'mc.par'

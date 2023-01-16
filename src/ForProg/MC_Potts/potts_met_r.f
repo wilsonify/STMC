@@ -1,6 +1,6 @@
       subroutine potts_met_r
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Copyright, Bernd Berg, Nov 14 2000.
 C Metropolis updating with random spin choice.
       include 'lat.par'

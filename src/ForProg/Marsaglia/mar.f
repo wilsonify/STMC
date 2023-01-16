@@ -11,7 +11,7 @@ C - Whenever the file ranmar.d exists: Continuation using the seeds
 C   saved by RMASAVE is ensured. Compare the last number of the previous 
 C   run with the first of the continuation!
 C
-      include '../../ForLib/implicit.sta'
+      
       parameter(iuo=6,iud=10,iseed1=1,iseed2=0,ndat=004)
 c
       inquire(file='ranmar.d',exist=lexist)

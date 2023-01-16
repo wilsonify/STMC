@@ -3,8 +3,8 @@ C Copyright, Bernd Berg, September 27, 2002.
 
       SUBROUTINE LGNU(IUD,N,X,Y,EY,A,SGA,COV,PROB)
 C PROB:  CONFIDENCE LEVEL FOR ELLIPSE.
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C ===> YOU CAN SET XMIN,XMAX DIFFERENT FROM DEFAULT:
       PARAMETER(NFIG=200,LMIMA=.FALSE.,XMIN=-3.0D0,XMAX=+6.0D00)
       DIMENSION X(N),Y(N),EY(N), A(2),SGA(2),COV(2,2)
@@ -50,7 +50,7 @@ C
 
       SUBROUTINE SUBL(IUO,N,X,Y,EY)
 C SUBL - linear package. Straight line fit y=a1+a2*x.
-      include '../../ForLib/implicit.sta'
+      
       DATA NCALL/0/
       SAVE NCALL
       NCALL=NCALL+1
@@ -63,7 +63,7 @@ C SUBL - linear package. Straight line fit y=a1+a2*x.
       SUBROUTINE SUBPLOT(IUO,IUD,N,X,Y,EY,A)
 C subl.linear package
 C Straight line fit y=a1+a2*x.
-      include '../../ForLib/implicit.sta'
+      
       PARAMETER(NPLOT=200)
       DIMENSION X(N),Y(N),EY(N),A(2)
 

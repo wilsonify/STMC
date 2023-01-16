@@ -9,8 +9,8 @@ C
 C OUTPUT:  CONSTANTS  AM(1),AM(2) WITH Jackknife ERRORS BARS AE(1),AE(2),
 C          CORRESPONDING TO THE FIT Y=AM(1)+AM(2)*X.
 C
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
       PARAMETER(IUO=06,IUD=10,NMAX=100,NBINS=32)
       CHARACTER CBIN*2
       DIMENSION X(NMAX),Y(NMAX),YE(NMAX),AJ(0:NBINS,2),AM(2),AE(2)

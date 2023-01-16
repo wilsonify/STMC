@@ -1,6 +1,6 @@
       subroutine potts_mchb
-      include '../../ForLib/implicit.sta'
-      include '../../ForLib/constants.par'
+      
+      
 C Copyright Bernd Berg, Oct 14 2001.
 C MC Heat Bath updating with sequential spin choice.
 C Measurements: the action ha and the magnetization hm histograms.
