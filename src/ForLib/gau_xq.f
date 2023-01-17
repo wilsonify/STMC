@@ -1,6 +1,8 @@
       FUNCTION GAU_XQ(Q) bind(c,name="gau_xq_")
          use iso_c_binding
          implicit none
+         real(c_double) :: GAU_XQ,Q,GAU_DF,X1,X2,FI1
+         real(c_double),parameter :: HALF=0.5,ZERO=0.0,ONE=1.0
 
          EXTERNAL GAU_DF
 

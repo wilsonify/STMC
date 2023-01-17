@@ -4,7 +4,8 @@
          !C         and ordinate yext are returned.
          use iso_c_binding
          implicit none
-
+         real(c_double) :: x,y,a,b,c,xext,yext
+         real(c_double),parameter :: HALF=0.5
          dimension x(3),y(3)
          a=( (y(3)-y(2))/(x(3)-x(2))-(y(3)-y(1))/(x(3)-x(1)) ) /
      &    ( (x(3)**2-x(2)**2)/(x(3)-x(2))-(x(3)**2-x(1)**2)/(x(3)-x(1)) )

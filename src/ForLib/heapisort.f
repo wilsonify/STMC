@@ -1,5 +1,8 @@
-      SUBROUTINE HEAPISORT(N,IX)
+      SUBROUTINE HEAPISORT(N,IX) bind(c,name="heapisort_")
          !C COPYRIGHT, BERND BERG, FEB 14, 2003.
+         use iso_c_binding
+         implicit none
+         integer(c_int) :: N,IX,M,NHALF,ITEMP,I1,I2,I
 
          DIMENSION IX(N)
 

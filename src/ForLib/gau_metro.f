@@ -1,4 +1,4 @@
-      SUBROUTINE GAU_METRO(A,NDAT,DATA,ACPT)
+      SUBROUTINE GAU_METRO(A,NDAT,DATA,ACPT) bind(c,name="gau_metro_")
          !C
          !C Copyright, Bernd Berg, Nov 16 2000.
          !C METROPOLIS GENERATION OF GAUSSIAN RANDOM NUMBERS.
@@ -16,6 +16,9 @@
          !C
          use iso_c_binding
          implicit none
+         real(c_double) :: A,DATA,ACPT,X,TWOA,X2,XR,XP,XP2
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0,TWO=2.0,HALF=0.5
+         integer(c_int) :: ICALL,NDAT,I
 
          DIMENSION DATA(NDAT)
          DATA ICALL/0/

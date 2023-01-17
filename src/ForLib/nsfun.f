@@ -3,6 +3,7 @@
          !C Calculates number of lattice sites ns from edges nla(1:nd)
          use iso_c_binding
          implicit none
+         integer(c_int) :: NLA,ND,NSFUN,ID
 
          dimension nla(nd)
          nsfun=1

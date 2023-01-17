@@ -3,6 +3,10 @@
          !C time series partition function fractions at beta0=0.
          use iso_c_binding
          implicit none
+         real(c_double) :: Zlna,Zlnj,Zlnj_dif,zln0,addln
+         real(c_double),parameter :: ONE=1.0
+         integer(c_int) ::ns,nq,nrpt,irpt,isgn
+
 
          dimension Zlna(nrpt),Zlnj(0:nrpt),Zlnj_dif(0:nrpt)
 C

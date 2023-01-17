@@ -1,6 +1,7 @@
       subroutine lat_init(ns,nd,ipf,ipb,nla,ix,nlink)
          use iso_c_binding
          implicit none
+         integer(c_int) :: ns,nd,ipf,ipb,nla,ix,nlink,nsfun,is
 
          dimension ipf(nd,ns),ipb(nd,ns),nla(nd),ix(nd)
          !C Initialize number of lattice sites and links. Initialize pointer arrays.

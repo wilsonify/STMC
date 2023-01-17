@@ -1,9 +1,13 @@
-      SUBROUTINE KOLM1_AS(N,Fxct,EPS1,EPS2,Q1as,Q2as)
+      SUBROUTINE KOLM1_AS(N,Fxct,EPS1,EPS2,Q1as,Q2as) bind(c,name="kolm1_as_")
          !C Copyright, Bernd Berg, Apr 3, 2001.
          !C Asymptotic one-sided Kolmogorov tests, implementing Smirnov's
          !C equation, see van der Waerden, Mathematical Statistics, Springer 1969.
-        use iso_c_binding
-        implicit none
+         use iso_c_binding
+         implicit none
+         real(c_double) ::  Fxct,EPS1,EPS2,Q1as,Q2as,EPS,Femp
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0,TWO=2.0
+         integer(c_int) :: N,J,I
+
 
          DIMENSION Fxct(N)
 C

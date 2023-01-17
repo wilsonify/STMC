@@ -4,6 +4,9 @@
          ! time series partition function fractions.
          use iso_c_binding
          implicit none
+         real(c_double) :: Zlna,Alna,A2lna,XM2lna,Zlnj
+         real(c_double) :: Alnj,A2lnj,XM2lnj,addln
+         integer(c_int) :: nq,nrpt,irpt,isgn,iq,nqm1
 
          dimension Zlna(nrpt),Alna(nrpt),A2lna(nrpt),XM2lna(nrpt),
      &     Zlnj(0:nrpt),Alnj(0:nrpt),A2lnj(0:nrpt),XM2lnj(0:nrpt)

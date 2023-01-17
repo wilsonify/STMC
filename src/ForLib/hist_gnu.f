@@ -1,4 +1,5 @@
-      SUBROUTINE HIST_GNU(IUG0,NHIST,NDAT,HIST,DATA,XMIN,XMAX)
+      SUBROUTINE HIST_GNU(IUG0,NHIST,NDAT,HIST,
+     &   DATA,XMIN,XMAX) bind(c,name="hist_gnu_")
 
          !C Copyright, Bernd Berg, Sep 21, 2000.
          !C GNUPLOT FOR HISTOGRAM. FOR IUG0<0 the HISTOGRAM will
@@ -15,6 +16,9 @@
          !C
          use iso_c_binding
          implicit none
+         real(c_double) :: HIST,DATA,XMIN,XMAX,X,FACTOR,XDAT,DEL
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0,HALF=0.5
+         integer(c_int) :: IUG0,NHIST,NDAT,ICNT,N_OMIT,IUG,I,IDAT
 
          CHARACTER CI*2
          DIMENSION HIST(NHIST),DATA(NDAT)

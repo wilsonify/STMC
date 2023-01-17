@@ -4,8 +4,7 @@
          !c Output:  isfun = number of the site (function of ix,nd)
          use iso_c_binding
          implicit none
-         real(c_double) :: isfun,nla,nsa
-         integer(c_int) :: ix,nd,id
+         integer(c_int) :: ix,nd,id,isfun,nla,nsa
          dimension ix(nd),nla(nd)
          isfun=1
          nsa=1

@@ -4,6 +4,10 @@
          use iso_c_binding
          implicit none
 
+         real(c_double) :: sta,SUM,RMAFUN,FN
+         real(c_double),parameter :: ZERO=0.0,TWO=2.0,half=0.5,ONE=1.0
+         integer(c_int) :: n,ns,is,i
+
          dimension sta(n,ns)
          do is=1,ns
     1       sum=zero

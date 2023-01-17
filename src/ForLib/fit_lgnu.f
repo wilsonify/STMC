@@ -1,8 +1,11 @@
-      SUBROUTINE FIT_LGNU(IUD,N,X,Y,EY,A,SGA,COV,PROB)
+      SUBROUTINE FIT_LGNU(IUD,N,X,Y,EY,A,SGA,COV,PROB) bind(c,name="fit_lgnu_")
          !C Copyright, Bernd Berg, Dec 13, 2000.
          !C PROB:  CONFIDENCE LEVEL FOR THE ELLIPSE.
          use iso_c_binding
          implicit none
+         real(c_double) :: X,Y,EY,A,SGA,COV,PROB,covdd,sgb,eigvs
+         real(c_double) :: delx,xx,varb1,varb2,ym,yy,yp
+         integer(c_int) :: IUD,N,NFIG,I
 
          PARAMETER(NFIG=200)
          DIMENSION X(N),Y(N),EY(N), A(2),SGA(2),COV(2,2)

@@ -6,6 +6,7 @@
          !C
          use iso_c_binding
          implicit none
+         integer(c_int) :: II,N,IP,NMAX,IWORK,NM1,I,NF,JJ,J,KK
 
          PARAMETER(NMAX=12)
          DIMENSION IWORK(NMAX),IP(N)

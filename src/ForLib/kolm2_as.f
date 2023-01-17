@@ -4,6 +4,9 @@
          !C M.A. Stephens, J. Royal Stat. Soc. B 32 (1970) 115.
          use iso_c_binding
          implicit none
+         real(c_double) ::  Fxct,DEL,Q,FEMP,SQN,A,SIGN_TWO,CUT,ADD
+         real(c_double),parameter :: ONE=1.0,ZERO=0.0,TWO=2.0
+         integer(c_int) :: N,I,J
 
          DIMENSION Fxct(N)
 C

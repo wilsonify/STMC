@@ -1,6 +1,9 @@
       SUBROUTINE KOLM2_DEL2(N1,N2,DAT1,DAT2,DEL)
          use iso_c_binding
          implicit none
+         real(c_double) :: DAT1,DAT2,DEL,FEMP1,FEMP2
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0
+         integer(c_int) :: N1,N2,I1,I2
 
 
          DIMENSION DAT1(N1),DAT2(N2)

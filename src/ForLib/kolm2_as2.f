@@ -4,6 +4,11 @@
          !C See kolm2_as.f for further comments.
          use iso_c_binding
          implicit none
+         real(c_double) :: DAT1,DAT2,DEL,Q,FEMP1,FEMP2,SQN,A
+         real(c_double) :: SIGN_TWO,CUT,ADD
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0,TWO=2.0
+         integer(c_int) :: N1,N2,I1,I2,J
+
 
          DIMENSION DAT1(N1),DAT2(N2)
 C

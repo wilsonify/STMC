@@ -3,6 +3,9 @@
          !C Potts model, time series partition function fraction at beta0=0.
          use iso_c_binding
          implicit none
+         real(c_double) :: b,a,tsa,Zln,zln1,addln
+         real(c_double),parameter :: TWO=2.0
+         integer(c_int) :: nq,ns,nlink,nmeas,imeas,iact
 
          dimension b(0:nlink),a(0:nlink),tsa(nmeas)
 C

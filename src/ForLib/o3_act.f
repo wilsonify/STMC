@@ -3,6 +3,10 @@
          !C Calculates action value iact of potts.com.
          use iso_c_binding
          implicit none
+         real(c_double) :: sta,act
+         real(c_double),parameter :: ZERO=0.0
+         integer(c_int) :: ipf,ns,nd,IS,ID
+
 
          dimension sta(3,ns),ipf(nd,ns)
          act=zero

@@ -1,5 +1,9 @@
-      SUBROUTINE HEAPSORT(N,X)
+      SUBROUTINE HEAPSORT(N,X) bind(c,name="heapsort_")
          !C COPYRIGHT, BERND BERG, JUNE 16, 1999.
+         use iso_c_binding
+         implicit none
+         real(c_double) :: X,TEMP
+         integer(c_int) :: N,M,NHALF,I1,I2,I
 
          DIMENSION X(N)
 

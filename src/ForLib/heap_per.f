@@ -1,8 +1,10 @@
-      SUBROUTINE HEAP_PER(N,X,IPER)
+      SUBROUTINE HEAP_PER(N,X,IPER) bind(c,name="heap_per_")
          !C COPYRIGHT, BERND BERG, October 4, 2000.  AS HEAPSORT, IN
          !C ADDITION THE ARRAY  IPER  KEEPS TRACK OF THE PERMUTATION.
          use iso_c_binding
          implicit none
+         real(c_double) :: X,TEMP
+         integer(c_int) :: N,IPER,I,NHALF,M,ITMP,I1,I2
 
          DIMENSION X(N),IPER(N)
 

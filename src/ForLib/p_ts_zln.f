@@ -4,6 +4,11 @@
          !C function Z and related variables from time series fragments.
          use iso_c_binding
          implicit none
+         real(c_double) :: beta0,b,a,tsa,Zln,Aln,A2ln,XM2ln
+         real(c_double) :: XM2ln1,Zln1,addln,aln1,a2ln1
+         real(c_double),parameter ::ONE=1.0,TWO=2.0
+         integer(c_int) :: nq,nlink,nmeas,nstate
+         integer(c_int) :: nqm1,imeas,iact,iq
 
          dimension b(0:nlink),a(0:nlink),tsa(nmeas,0:nq)
          dimension nstate(0:nq-1)

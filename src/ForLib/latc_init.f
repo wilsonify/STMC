@@ -4,6 +4,8 @@
          !C Initialize pointer arrays.
          use iso_c_binding
          implicit none
+         integer(c_int) :: ns,nsc,nd,nla,ias,iac,iasc,icpf,icpb,nlink
+         integer(c_int) :: IX,ISC1,ISC2,IS,IX_SUM,ID,IC,ISCT
          dimension ias(2,nsc),iac(ns),iasc(ns)
          dimension icpf(nd,2,nsc),icpb(nd,2,nsc),nla(nd),ix(nd)
          nlink=nd*ns

@@ -1,10 +1,16 @@
-      SUBROUTINE KOLM1(N,Fxct,DEL1,DEL2,Q1,Q2)
+      SUBROUTINE KOLM1(N,Fxct,DEL1,DEL2,Q1,Q2) bind(c,name="kolm1_")
          !C Copyright, Bernd Berg, Mar 2, 2001.
          !C Exact one-sided Kolmogorov tests, implementing equation of
          !C Birnbaum and Tingey, Ann. Math. Stat. 22 (1951) 592. See also:
          !C van der Waerden, Mathematical Statistics, Springer 1969.
-        use iso_c_binding
-        implicit none
+         use iso_c_binding
+         implicit none
+         real(c_double) :: Fxct,DEL1,DEL2,Q1,Q2
+         real(c_double) :: DEL,FEMP,DELLN,XN,YNLN,Q,XKP1
+         real(c_double) :: GAMMA_LN,XNP1MK,BLN,QLN,X,DELPLUS
+         real(c_double),parameter :: ONE=1.0,ZERO=0.0
+         integer(c_int) :: N,I,J,K
+
 
          DIMENSION Fxct(N)
 C

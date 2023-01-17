@@ -1,8 +1,9 @@
-      SUBROUTINE HEAP_IPER(N,IX,IPER)
+      SUBROUTINE HEAP_IPER(N,IX,IPER) bind(c,name="heap_iper_")
          !C COPYRIGHT, BERND BERG, FEB 11, 2003.
          !C VERSION OF HEAP_PER, WHICH SORTS AN INTEGER ARRAY IX.
          use iso_c_binding
          implicit none
+         integer(c_int) :: N,IX,IPER,I,NHALF,M,ITEMP,ITMP,I1,I2
 
          DIMENSION IX(N),IPER(N)
 

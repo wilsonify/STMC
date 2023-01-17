@@ -3,6 +3,9 @@
          !C Assigns random (i.e. beta=0) values to the states sta(3,is).
          use iso_c_binding
          implicit none
+         real(c_double) :: STA,Z,RMAFUN,RHO,PHI,TPI
+         real(c_double),parameter :: ONE=1.0,HALF=0.5,TWO=2.0
+         integer(c_int) :: NS,IS
 
          dimension sta(3,ns)
          do is=1,ns

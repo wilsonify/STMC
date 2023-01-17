@@ -1,8 +1,10 @@
-      subroutine ixcor(ix,nla,is,nd) ! Jun 18, 2000.
+      subroutine ixcor(ix,nla,is,nd) bind(c,name="ixcor_")
+         ! Jun 18, 2000.
          !C Input:   is = number of lattice site
          !c Output:  ix   array of nd coordinates of this site
          use iso_c_binding
          implicit none
+         integer(c_int) :: ix,nla,is,nd,ns,id,js,nspart
 
          dimension ix(nd),nla(nd)
          ns=nla(1)

@@ -1,9 +1,12 @@
-      subroutine icpointer(ns,nsc,nd,ias,iac,iasc,icpf,icpb,nla,ix,is)
+      subroutine icpointer(ns,nsc,nd,ias,iac,
+     &   iasc,icpf,icpb,nla,ix,is) bind(c,name="icpointer_")
          !C Copyright, Bernd Berg, Sep 26 2003.
          !C Input:   is = number of lattice site
          !C Output:  icpf,icpb: forward and backward checkerboard pointers.
          use iso_c_binding
          implicit none
+         integer(c_int) :: ns,nsc,nd,ias,iac,iasc,icpf,icpb,nla,ix,is
+         integer(c_int) :: ic,isc,id,ipf,iscf,isfun,ipb,iscb
 
          dimension ias(2,nsc),iac(ns),iasc(ns)
          dimension icpf(nd,2,nsc),icpb(nd,2,nsc),nla(nd),ix(nd)

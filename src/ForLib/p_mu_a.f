@@ -3,6 +3,9 @@
          !C dimensionless microcanonical free energy parameters.
          use iso_c_binding
          implicit none
+         integer(c_int) :: iact_min,nlink,namin,ndel_muca,beta0,b,a,hasum
+         integer(c_int) :: iact_next,iact_old,iact
+         real(c_double),parameter :: HALF=0.5
 
          dimension b(0:nlink),a(0:nlink),hasum(0:nlink)
          dimension ndel_muca(0:nlink) ! Eliminate in the final version!

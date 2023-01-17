@@ -4,7 +4,10 @@
          !C Purpose: Count distinct local energy distributions as needed for EDS.
          use iso_c_binding
          implicit none
-         logical lold
+         integer(c_int) :: nact_old,nact_new,n2d
+         integer(c_int) :: mcase,ncase,icase,n2dp1,ID
+
+         logical(c_bool) lold
 
          dimension nact_old(0:n2d+1,mcase),nact_new(0:n2d+1)
 c
