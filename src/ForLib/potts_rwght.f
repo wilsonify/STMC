@@ -4,6 +4,10 @@
          !C              to the histogram hb() and its error bars hbe() at beta.
          use iso_c_binding
          implicit none
+         real(c_double) :: ha,hae,beta0,beta,hb,hbe
+         real(c_double) :: hasum,act0m,hbsum,a,factor
+         real(c_double),parameter :: ZERO=0.0,half=0.5
+         integer(c_int) :: nlink,iact
 
          dimension ha(0:nlink),hae(0:nlink),hb(0:nlink),hbe(0:nlink)
 c

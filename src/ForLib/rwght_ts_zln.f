@@ -2,6 +2,10 @@
          !C BB, Nov 29 2003. Temperature re-weighting of an action time series.
          use iso_c_binding
          implicit none
+         real(c_double) :: beta,beta0,tsa,Zln,Aln,A2ln
+         real(c_double) :: Zln1,Aln1,A2ln1,addln
+         integer(c_int) :: nmeas,imeas
+         real(c_double),parameter :: TWO=2.0
 
          dimension tsa(nmeas)
 

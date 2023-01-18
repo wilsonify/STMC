@@ -4,6 +4,9 @@
          !C THE ARRAY X HAS TO BE SORTED ON INPUT.
          use iso_c_binding
          implicit none
+         real(c_double) :: X,YKEY,XKEY,F,FQ
+         real(c_double),parameter :: ONE=1.0,ZERO=0.0,EIGHT=8.0
+         integer(c_int) :: IUG,N,ICNT,i
 
          CHARACTER CI*2
          DIMENSION X(N)

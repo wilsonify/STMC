@@ -4,6 +4,9 @@
          !C MARSAGLIA, ZAMAN AND TSANG, Stat. Prob. 8 (1990) 35.
          use iso_c_binding
          implicit none
+         real(c_double) :: XR,U,C,CD,CM,UNI
+         integer(c_int) :: i,j
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0
 
 
          COMMON/RASET1/U(97),C,CD,CM,I,J

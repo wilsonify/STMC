@@ -3,6 +3,9 @@
          !C Assigns random (i.e. beta=0) values 0,..,nq-1 to the states ista(is).
          use iso_c_binding
          implicit none
+         real(c_double) :: xr,q
+         real(c_double),parameter :: ONE=1.0
+         integer(c_int) :: ista,ns,nq,is
 
          dimension ista(ns)
          q=one*nq

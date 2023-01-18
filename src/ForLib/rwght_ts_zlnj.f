@@ -3,6 +3,8 @@
          !C Jackknife bins.
          use iso_c_binding
          implicit none
+         real(c_double) :: ZlnA,AlnA,A2lnA,ZlnJ,AlnJ,A2lnJ,addln
+         integer(c_int) :: NRPT,IRPT,ISGN
 
          DIMENSION ZlnA(nrpt),AlnA(nrpt),A2lnA(nrpt)
          DIMENSION ZlnJ(0:nrpt),AlnJ(0:nrpt),A2lnJ(0:nrpt)

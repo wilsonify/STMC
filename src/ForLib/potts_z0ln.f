@@ -4,6 +4,11 @@
          !C Potts model, normalization of the partition function Z at beta0=0.
          use iso_c_binding
          implicit none
+         real(c_double) :: b,ha,hasum,Zln_dif,beta0,Z0ln,ha_iact
+         real(c_double) :: a,zln,Zln1,addln
+         integer(c_int) :: nq,ns,nlink,namin,ndel_muca,iact_next,iact
+         integer(c_int) :: iloop_ha,iact_old
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0,HALF=0.5,TWO=2.0
 
 
          dimension b(0:nlink),ha(0:nlink),hasum(0:nlink)

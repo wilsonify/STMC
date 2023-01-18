@@ -6,6 +6,9 @@
          !C norm=0:  no normalization of the ha histogram, otherwise normalization.
          use iso_c_binding
          implicit none
+         real(c_double) :: ha,ham,hae,act,norm,hasum,factor,potts_actm
+         real(c_double),parameter :: ZERO=0.0
+         integer(c_int) :: nrpt,iud,nlink,irpt,ilink
 
          dimension ha(0:nlink),ham(0:nlink),hae(0:nlink),act(nrpt)
 C

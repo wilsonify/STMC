@@ -4,6 +4,11 @@
          !C Potts model ln of the partition function Z and related variables.
          use iso_c_binding
          implicit none
+         real(c_double) :: beta0,b,ha,hasum,Zln,Aln,A2ln,hsum
+         real(c_double) :: a,Zln1_max,Zln1,Aln1,A2ln1,addln
+         integer(c_int) :: nlink,namin,iopt,iloop_ha
+         integer(c_int) :: iact,iact_old
+         real(c_double),parameter :: half=0.5,two=2.0,one=1.0,zero=0.0
 
 
          dimension b(0:nlink),ha(0:nlink),hasum(0:nlink)

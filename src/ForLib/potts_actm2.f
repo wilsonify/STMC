@@ -4,6 +4,9 @@
          !C Works for the mean of any histogram.
          use iso_c_binding
          implicit none
+         real(c_double) :: potts_actm2, potts_actm, hsum
+         real(c_double),parameter :: ZERO=0.0
+         integer(c_int) :: iamin,iamax,ha,ia
 
 
          dimension ha(iamin:iamax)

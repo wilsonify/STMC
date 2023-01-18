@@ -4,6 +4,7 @@
          !C and returns the corresponding action variable iact.
          use iso_c_binding
          implicit none
+         integer(c_int) :: ista,iact,nd,ns,iq,is
 
          dimension ista(ns)
          iact=nd*ns

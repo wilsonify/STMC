@@ -6,6 +6,11 @@
          !C FOR IUO<=5 THE INFORMATIVE MESSAGES ARE OFF.
          use iso_c_binding
          implicit none
+         integer(c_int) :: iuo,iud,iseed1,iseed2
+         real(c_double) :: u,c,cd,cm,s,t
+         integer(c_int) :: i,j,ij,k,kl,m,ii,jj,n
+         real(c_double) :: ONE=1.0,HALF=0.5,ZERO=0.0
+
 
 
          character*(*) cfile

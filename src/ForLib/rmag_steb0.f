@@ -6,6 +6,10 @@
          !C Further, each of the nq magnetizations is calculated nrpt times in qm().
          use iso_c_binding
          implicit none
+         real(c_double) :: hm,hmm,hme,qm,ha,acpt,potts_actm,cut
+         real(c_double),parameter :: zero=0.0,HALF=0.5
+         integer(c_int) :: n0,ms,nqm1,mlink,ns,nrpt,iud
+         integer(c_int) :: is,iq,irpt_in,nstate0,irpt
 
 
          dimension hm(n0:ms,n0:nqm1),hmm(n0:ms,n0:nqm1),hme(n0:ms,0:nqm1)
