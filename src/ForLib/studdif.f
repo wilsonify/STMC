@@ -3,6 +3,10 @@
          !C Q: STUDENT'S DIFFERENCE TEST: COMPARISION OF TWO MEANS.
          use iso_c_binding
          implicit none
+         real(c_double) :: XM1,EB1,XM2,EB2,Q
+         real(c_double) :: S12,S22,S2,T,STUD_DF
+         real(c_double),parameter :: ONE=1.0,TWO=2.0
+         integer(c_int) :: NF,NF1,NF2,NDAT1,NDAT2
 
 
          COMMON /PARSTUD/ NF

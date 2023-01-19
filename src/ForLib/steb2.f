@@ -8,6 +8,9 @@
          !C           WEIGHT FACTORS ARE RETURNED NORMALIZED TO ONE.
          use iso_c_binding
          implicit none
+         real(c_double) :: DAT,EB,W,XM,XE,WNORM,XV,WNORMI
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0
+         integer(c_int) :: N,I
 
          DIMENSION DAT(N),EB(N),W(N)
 C

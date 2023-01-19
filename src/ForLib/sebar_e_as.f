@@ -7,8 +7,8 @@
          !C
          use iso_c_binding
          implicit none
-         real(c_double) :: PC,EBUP,EBDO
-         real(c_double),parameter :: ZERO=0.0
+         real(c_double) :: PC,EBUP,EBDO,SDV,GAU_XQ
+         real(c_double),parameter :: ZERO=0.0,HALF=0.5,ONE=1.0,TWO=2.0
          integer(c_int) :: N
 
          IF(PC.LE.ZERO) SDV=GAU_XQ(HALF*(ONE+0.68268949D00))

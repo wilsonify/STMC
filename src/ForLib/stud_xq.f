@@ -1,6 +1,9 @@
       FUNCTION STUD_XQ(Q) bind(c,name="stud_xq_")
          use iso_c_binding
          implicit none
+         real(c_double) :: STUD_XQ,Q,STUD_DF,X1,X2,FI1
+         real(c_double),parameter :: HALF=0.5,ZERO=0.0,ONE=1.0
+         integer(c_int) :: NF
 
          EXTERNAL STUD_DF
          COMMON /PARSTUD/ NF

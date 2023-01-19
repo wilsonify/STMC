@@ -21,6 +21,8 @@
          !C
          use iso_c_binding
          implicit none
+         real(c_double) :: FJ,FMEAN,FJM,FMM,FV,FE,BIASM
+         integer(c_int) :: N
 
          DIMENSION FJ(N)
          IF(N.LT.2) STOP 'STEBJ1: N TOO SMALL!'

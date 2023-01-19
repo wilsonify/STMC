@@ -4,6 +4,9 @@
          !C  OUTPUT:  MEAN VALUE XM, UNBIASED VARIANCE XV AND ERROR BAR XE.
          use iso_c_binding
          implicit none
+         real(c_double) :: X,XM,XV,XE
+         integer(c_int) :: N,I
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0
 
          DIMENSION X(N)
          IF(N.LT.2) STOP 'STEB0: N HAS TO BE .GE. 2!'

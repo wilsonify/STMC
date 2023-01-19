@@ -11,6 +11,8 @@
          !C
          use iso_c_binding
          implicit none
+         real(c_double) :: FJJ,FJ,FJMM,FMM,FV,FE,BIASJM
+         integer(c_int) :: N,N1,I
 
          DIMENSION FJJ(N-1,N),FJ(N),FJMM(N)
          IF(N.LT.3) STOP 'STEBJJ1: N TOO SMALL!'

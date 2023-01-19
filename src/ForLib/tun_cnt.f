@@ -5,6 +5,7 @@
          !C every sweep and (namax-namin) is sufficiently large.
          use iso_c_binding
          implicit none
+         integer(c_int) :: namin,namax,iamin,iamax,ntun
 
          logical ltun0
          if(ltun0) then

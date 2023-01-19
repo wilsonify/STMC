@@ -3,6 +3,7 @@
          !C conservative Gaussian approximation.
          use iso_c_binding
          implicit none
+         real(c_double) :: XM1,EB1,XM2,EB2,RATM,RATE,REsmall,RE1,RE2
 
          RATM=XM1/XM2
          RE1=ABS(EB1/XM2)

@@ -5,6 +5,9 @@
          !C           WEIGHT FACTORS NORMALIZED TO ONE.
          use iso_c_binding
          implicit none
+         real(c_double) :: X,W,XM,XE,WNORM,XV
+         real(c_double),parameter :: ZERO=0.0,ONE=1.0
+         integer(c_int) :: N,I
 
          DIMENSION X(N),W(N)
 C
