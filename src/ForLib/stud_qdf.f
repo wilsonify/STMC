@@ -3,10 +3,12 @@
          implicit none
          real(c_double) :: STUD_QDF,T,A,B,X,BETA_I
          real(c_double),parameter :: HALF=0.5,ONE=1.0,ZERO=0.0
-
          integer(c_int) :: NF
 
          COMMON /PARSTUD/ NF
+         IF (NF.LE.ZERO) THEN
+            NF=1.0
+         END IF
 
          A=HALF*NF
          B=HALF

@@ -9,7 +9,7 @@
 
          COMMON /CHI2PAR/ NF
          IF (NF.LE.ZERO) THEN
-            NF = EPS
+            NF = 1.0
          END IF
          X1=ZERO
          X2=ZERO
@@ -18,6 +18,7 @@
          QT=CHI2_DF(X2)
          IF(QT.LE.Q) GO TO 1
          Q2=CHI2_DF(x2)
+
          CHI2_XQ=CHI2_DF_INV(Q,X1,X2)
          RETURN
       END

@@ -26,12 +26,11 @@
          real(c_double), parameter :: c5_l = 0.120858003_c_double
          real(c_double), parameter :: c6_l = -0.536382_c_double
          real(c_double), parameter :: stp_l = 2.50662827465_c_double
-
-
+         
          IF(X.LE.ZERO) THEN
             PRINT*,"GAMMA_LN: Argument X =",X
             STOP 'GAMMA_LN: illegal argument.'
-         END IF
+        END IF
 
          IF(X.GT.ONE) THEN ! Full accuracy of Lanczos formula.
             Y=X
@@ -39,7 +38,8 @@
             Y=ONE+X
          ENDIF
          SER=((ONE+C1_L/Y)+C2_L/(Y+ONE))+C3_L/(Y+TWO)
-         SER=((SER+C4_L/(Y+THREE))+C5_L/(Y+FOUR))+C6_L/(Y+FIVE)
+         SER=((SER+C4_L/(Y+THREE))+C5_L/(Y+FOUR))+
+     &    C6_L/(Y+FIVE)
 
          first_term=(Y-HALF) * LOG(Y+FNINE_HALF)
          second_term=(Y+FNINE_HALF)

@@ -9,12 +9,8 @@
          IF (NF.LE.ZERO) THEN
             NF = EPS
          END IF
-         print *,"NF=",NF
          A=HALF*NF
          X=HALF*CHI2
-         print *,"A=",A
-         print *,"X=",X
          CHI2_DF=GAMMA_P(A,X)
-         print *, "CHI2_DF=",CHI2_DF
          RETURN
       END

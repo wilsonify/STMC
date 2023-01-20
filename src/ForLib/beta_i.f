@@ -42,7 +42,9 @@
          real(c_double) :: C1
          real(c_double) :: C2
 
-         IF(X.LT.ZERO .OR. X.GT.ONE) STOP 'BAD ARGUMENT X IN BETA_I'
+         IF(X.LT.ZERO .OR. X.GT.ONE) THEN
+            STOP 'BAD ARGUMENT X IN BETA_I'
+         END IF
          IF(X.EQ.ZERO .OR. X.EQ.ONE) THEN
             BT=ZERO
          ELSE
@@ -52,8 +54,8 @@
             third_term = GAMMA_LN(B)
             fourth_term = A*LOG(X)
             fifth_term = B*LOG(one_minux_x)
-            exp_term = first_term - second_term - 
-     &                  third_term + fourth_term + 
+            exp_term = first_term - second_term -
+     &                  third_term + fourth_term +
      &                  fifth_term
             BT = EXP(exp_term)
          ENDIF
@@ -78,8 +80,14 @@
          DO ITER=1,ITER_MAX
             XITER=ITER*ONE
             TWO_ITER=XITER+XITER
-            C1=XITER*(BB-XITER)*XX/((AM1+TWO_ITER)*(AA+TWO_ITER))
-            C2=-(AA+XITER)*(APB+XITER)*XX/((AA+TWO_ITER)*(AP1+TWO_ITER))
+            C1 = XITER*
+     &       (BB-XITER)*
+     &       XX/((AM1+TWO_ITER)*
+     &       (AA+TWO_ITER))
+            C2 = -(AA+XITER)*
+     &       (APB+XITER)*
+     &       XX/((AA+TWO_ITER)*
+     &       (AP1+TWO_ITER))
             BCFP=BCF+C1*BCFM
             BP=BZ+C1*BM
             BPP=BP+C2*BZ

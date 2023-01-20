@@ -25,7 +25,9 @@
 
          IF(P.EQ.ONE) THEN
             BBI_DF=ZERO
-            IF(K.EQ.N) BBI_DF=ONE
+            IF(K.EQ.N) THEN
+               BBI_DF=ONE
+            END IF
             RETURN
          END IF
 

@@ -1,10 +1,14 @@
       FUNCTION STUD_DF(T) bind(c,name="stud_df_")
          use iso_c_binding
          implicit none
-         real(c_double) :: STUD_DF,T,NF,A,B,X,BETA_I
+         real(c_double) :: STUD_DF,T,A,B,X,BETA_I
+         integer(c_int) :: NF
          real(c_double),parameter :: ONE=1.0,ZERO=0.0,HALF=0.5
 
          COMMON /PARSTUD/ NF
+         IF (NF.LE.ZERO) THEN
+            NF=1.0
+         END IF
 C
          A=HALF*NF
          B=HALF
