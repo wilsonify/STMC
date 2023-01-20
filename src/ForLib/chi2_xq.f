@@ -1,7 +1,9 @@
       FUNCTION CHI2_XQ(Q) bind(c,name="chi2_xq_")
          use iso_c_binding
          implicit none
-         real(c_double) :: CHI2_XQ,Q,CHI2_DF,NF,X1,X2,Q1,Q2,QT,FI1
+         real(c_double) :: CHI2_XQ,Q,CHI2_DF,CHI2_DF_INV
+         real(c_double) :: X1,X2,Q1,Q2,QT,FI1
+         integer(c_int) :: NF
          real(c_double),parameter :: ZERO=0.0,ONE=1.0,EPS=0.001
 
 
@@ -16,6 +18,6 @@
          QT=CHI2_DF(X2)
          IF(QT.LE.Q) GO TO 1
          Q2=CHI2_DF(x2)
-         CHI2_XQ=FI1(CHI2_DF,Q,X1,X2)
+         CHI2_XQ=CHI2_DF_INV(Q,X1,X2)
          RETURN
       END

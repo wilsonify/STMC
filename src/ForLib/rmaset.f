@@ -52,7 +52,8 @@ C
          ELSE
 C
             IF(IUO.GT.5) WRITE(IUO,*) 'MARSAGLIA CONTINUATION.'
-            OPEN(UNIT=IUD,FILE=cfile,STATUS='UNKNOWN',FORM='UNFORMATTED')
+            OPEN(UNIT=IUD,FILE=cfile,
+     &       STATUS='UNKNOWN',FORM='UNFORMATTED')
             REWIND IUD
             READ(IUD) U,C,CD,CM,I,J
             CLOSE(IUD)

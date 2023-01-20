@@ -1,4 +1,5 @@
-      SUBROUTINE KOLM1_AS(N,Fxct,EPS1,EPS2,Q1as,Q2as) bind(c,name="kolm1_as_")
+      SUBROUTINE KOLM1_AS(N,Fxct,EPS1,EPS2,Q1as,Q2as) 
+     &   bind(c,name="kolm1_as_")
          !C Copyright, Bernd Berg, Apr 3, 2001.
          !C Asymptotic one-sided Kolmogorov tests, implementing Smirnov's
          !C equation, see van der Waerden, Mathematical Statistics, Springer 1969.

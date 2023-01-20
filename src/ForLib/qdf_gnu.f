@@ -19,7 +19,8 @@ C
 C
 C GNUPLOT SCRIPT:
          XKEY=X(1)+(X(N)-X(1))/EIGHT
-         OPEN(IUG,FILE='qdf'//CI//'.plt',STATUS='UNKNOWN',FORM='FORMATTED')
+         OPEN(IUG,FILE='qdf'//CI//'.plt',
+     &    STATUS='UNKNOWN',FORM='FORMATTED')
          WRITE(IUG,*) 'set noyzeroaxis'
          WRITE(IUG,*) 'set yrange [0:0.525]'
 C     WRITE(IUG,'(" set key",1G16.6,",0.50")') XKEY
@@ -37,7 +38,8 @@ c     WRITE(IUG,'(" set key",1G16.6,",0.50")') YKEY
             WRITE(IUG,*) 'plot "qdf01.d" using 1:3 with line 1,\\'
             DO I=2,(ICNT-1)
                WRITE(IUG,101) I,I
-  101          FORMAT('      "qdf',I2.2,'.d" using 1:3 with line ',I2,',\\')
+  101          FORMAT('      "qdf',I2.2,'.d" using 1:3 with line ',
+     &               I2,',\\')
             END DO
             WRITE(IUG,103) ICNT,ICNT
   103       FORMAT('      "qdf',I2.2,'.d" using 1:3 with line ',I2)
@@ -45,7 +47,8 @@ c     WRITE(IUG,'(" set key",1G16.6,",0.50")') YKEY
             CLOSE(IUG)
          ENDIF
 C
-         OPEN(IUG,FILE='qdf'//CI//'.d',STATUS='UNKNOWN',FORM='FORMATTED')
+         OPEN(IUG,FILE='qdf'//CI//'.d',
+     &    STATUS='UNKNOWN',FORM='FORMATTED')
          WRITE(IUG,'(3G16.7)') X(1),ZERO,ZERO
          DO I=1,(N-1)
             F=(I*ONE)/(N*ONE)

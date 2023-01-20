@@ -1,7 +1,7 @@
       FUNCTION F_XQ(Q) bind(c,name="f_xq_")
          use iso_c_binding
          implicit none
-         real(c_double) :: F_XQ, Q,F_DF,NF1,NF2,X1,X2,FI1
+         real(c_double) :: F_XQ, Q,F_DF,NF1,NF2,X1,X2,F_DF_INV
          real(c_double),parameter :: ZERO=0.0,ONE=1.0,HALF=0.5,TEN=10.0
 
 C
@@ -22,7 +22,7 @@ C
             X1=ZERO
          ENDIF
 C
-         F_XQ=FI1(F_DF,Q,X1,X2)
+         F_XQ=F_DF_INV(Q,X1,X2)
 C
          RETURN
       END

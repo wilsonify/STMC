@@ -3,6 +3,10 @@
          !C Transfer the FCT_LN array through the common block.
          use iso_c_binding
          implicit none
+         real(c_double) :: FCT_LN,XKP1,GAMMA_LN
+         real(c_double),parameter :: ONE=1.0
+         integer(c_int) :: NMAX,NDAT,K,IBINO
+
 
          PARAMETER(NMAX=500)
          COMMON /BINO/ FCT_LN(0:NMAX),IBINO

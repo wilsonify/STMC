@@ -1,19 +1,21 @@
       SUBROUTINE AUTCORJ(IT,NDAT,NBINS,DATA,WORK,ACORJ,LMEAN)
-C Copyright, Bernd Berg, Feb 11, 2001.
-C Calculates the jackknife array of autocorrelation at IT (0\le IT).
+         !C Copyright, Bernd Berg, Feb 11, 2001.
+         !C Calculates the jackknife array of autocorrelation at IT (0\le IT).
          use iso_c_binding
          implicit none
          real(c_double) :: DATA,WORK,ACORJ,DMEAN,STMEAN
          integer(c_int) :: IT,NDAT,NBINS,NN,NBIN,NNJ,IBINS,I1,I2,I
          logical(c_bool) :: LMEAN
          real(c_double),parameter :: ZERO=0.0
+         real(c_double) :: first_term, second_term, second_term_one
+         real(c_double) :: second_term_two
          DIMENSION DATA(NDAT),WORK(NBINS),ACORJ(NBINS)
-         
-c
+
+
          DMEAN=ZERO
          IF(LMEAN) DMEAN=STMEAN(NDAT,DATA)
          NN=NDAT-IT
-c
+
          NBIN=NN/NBINS
          NNJ=NBINS*NBIN-NBIN
          IF(NBIN.LE.1) STOP "AUTCORJ: NBIN.LE.1!"
@@ -23,17 +25,21 @@ c
             I1=1+(IBINS-1)*NBIN
             I2=IBINS*NBIN
             DO I=I1,I2
-               WORK(IBINS)=WORK(IBINS)+(DATA(I)-DMEAN)*(DATA(I+IT)-DMEAN)
+               first_term = WORK(IBINS)
+               second_term_one = DATA(I) - DMEAN
+               second_term_two = DATA(I+IT) - DMEAN
+               second_term = second_term_one * second_term_two
+               WORK(IBINS) = first_term + second_term
             END DO
             WORK(IBINS)=WORK(IBINS)/NBIN
          END DO
          CALL DATJACK(NBINS,WORK,ACORJ)
-C Correction of bias from DMEAN:
+         ! Correction of bias from DMEAN:
          IF(LMEAN) THEN
             DO IBINS=1,NBINS
                ACORJ(IBINS)=(ACORJ(IBINS)*NDAT)/(NDAT-1)
             END DO
          END IF
-c
+
          RETURN
       END

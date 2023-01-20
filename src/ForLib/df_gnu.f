@@ -19,7 +19,8 @@ C
 C
 C GNUPLOT SCRIPT:
          XKEY=X(1)+(X(N)-X(1))/EIGHT
-         OPEN(IUG,FILE='df'//CI//'.plt',STATUS='UNKNOWN',FORM='FORMATTED')
+         OPEN(IUG,FILE='df'//CI//'.plt',
+     &    STATUS='UNKNOWN',FORM='FORMATTED')
          WRITE(IUG,*) 'set noyzeroaxis'
          WRITE(IUG,'(" set key",1G16.6,",0.95")') XKEY
          WRITE(IUG,*) 'plot "df'//CI//'.d" using 1:2 with line 1,\\'

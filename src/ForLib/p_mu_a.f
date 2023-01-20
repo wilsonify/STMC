@@ -1,9 +1,11 @@
-      subroutine p_mu_a(iact_min,nlink,namin,ndel_muca,beta0,b,a,hasum)
+      subroutine p_mu_a(iact_min,nlink,namin,
+     &   ndel_muca,beta0,b,a,hasum)
          !C Copyright Bernd Berg, Apr 23 2002.  Potts model, calculates the
          !C dimensionless microcanonical free energy parameters.
          use iso_c_binding
          implicit none
-         integer(c_int) :: iact_min,nlink,namin,ndel_muca,beta0,b,a,hasum
+         integer(c_int) :: iact_min,nlink,namin
+         integer(c_int) :: ndel_muca,beta0,b,a,hasum
          integer(c_int) :: iact_next,iact_old,iact
          real(c_double),parameter :: HALF=0.5
 

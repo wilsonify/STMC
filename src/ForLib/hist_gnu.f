@@ -35,13 +35,15 @@ C GNUPLOT SCRIPT:
          WRITE(6,*) "         "
          WRITE(6,'(" HIST_GNU: Open files ",A7," and "A5,".")')
      &    'h'//CI//'.plt','h'//CI//'.d'
-         OPEN(IUG,FILE='h'//CI//'.plt',STATUS='UNKNOWN',FORM='FORMATTED')
+         OPEN(IUG,FILE='h'//CI//'.plt',
+     &    STATUS='UNKNOWN',FORM='FORMATTED')
          WRITE(IUG,*) 'plot "h'//CI//'.d" using 1:2 with line 1'
          WRITE(IUG,*) 'pause -1'
          CLOSE(IUG)
 C
          IF(ICNT.GT.1) THEN ! Create his.plt to plot all histograms
-            WRITE(6,*) "HIST_GNU: Open file his.plt to plot all histograms."
+            WRITE(6,*) "HIST_GNU:
+     &       Open file his.plt to plot all histograms."
             OPEN(IUG,FILE='his.plt',STATUS='UNKNOWN',FORM='FORMATTED')
 C       WRITE(IUG,*) 'plot "h01.d" using 1:2 with line 1,\'  ! DOS
             WRITE(IUG,*) 'plot "h01.d" using 1:2 with line 1,\\' ! UNIX
@@ -50,7 +52,10 @@ C       WRITE(IUG,*) 'plot "h01.d" using 1:2 with line 1,\'  ! DOS
 C         DOS:
 C100      FORMAT('      "h',I2.2,'.d" using 1:2 with line ',I2,',\')
 C         UNIX:
-  100          FORMAT('      "h',I2.2,'.d" using 1:2 with line ',I2,',\\')
+
+
+  100          FORMAT(
+     &       '      "h',I2.2,'.d" using 1:2 with line ',I2,',\\')
             END DO
             WRITE(IUG,101) ICNT,ICNT
   101       FORMAT('      "h',I2.2,'.d" using 1:2 with line ',I2)

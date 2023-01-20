@@ -12,7 +12,9 @@
          integer(c_int) :: is,iq,irpt_in,nstate0,irpt
 
 
-         dimension hm(n0:ms,n0:nqm1),hmm(n0:ms,n0:nqm1),hme(n0:ms,0:nqm1)
+         dimension hm(n0:ms,n0:nqm1)
+         dimension hmm(n0:ms,n0:nqm1)
+         dimension hme(n0:ms,0:nqm1)
          dimension qm(nrpt,0:nqm1),ha(n0:mlink)
 C
          do is=n0,ns

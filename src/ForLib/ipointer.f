@@ -1,4 +1,5 @@
-      subroutine ipointer(ipf,ipb,nla,ix,ns,is,nd) bind(c,name="ipointer_")
+      subroutine ipointer(ipf,ipb,nla,ix,ns,is,nd) 
+     &    bind(c,name="ipointer_")
          !C Input:   is = number of lattice site
          !C Output:  ipf,ipb: forward and backward pointer (lattice
          !C                   site numbers in those directions).

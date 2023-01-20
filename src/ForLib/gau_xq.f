@@ -1,7 +1,7 @@
       FUNCTION GAU_XQ(Q) bind(c,name="gau_xq_")
          use iso_c_binding
          implicit none
-         real(c_double) :: GAU_XQ,Q,GAU_DF,X1,X2,FI1
+         real(c_double) :: GAU_XQ,Q,GAU_DF,X1,X2,GAU_DF_INV
          real(c_double),parameter :: HALF=0.5,ZERO=0.0,ONE=1.0
 
          EXTERNAL GAU_DF
@@ -19,7 +19,7 @@
     2       X1=X1-ONE
             IF(GAU_DF(X1).GE.Q) GO TO 2
          ENDIF
-         GAU_XQ=FI1(GAU_DF,Q,X1,X2)
+         GAU_XQ=GAU_DF_INV(Q,X1,X2)
 
          RETURN
       END
