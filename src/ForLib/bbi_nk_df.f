@@ -14,9 +14,6 @@
             K=1
          END IF
 
-         print *,"N=",N
-         print *, "K=",K
-         print *, "P=",P
          BBI_NK_DF=BBI_DF(N,K,P)
          RETURN
       END

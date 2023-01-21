@@ -489,20 +489,20 @@ TEST(test_stud_xq, test_stud_xq01)
 //     EXPECT_EQ(result, 4.95);
 // }
 
-// TEST(test_bbi_nk_df, test_bbi_nk_df01)
-// {
-//     double result;
-//     double P = 0.8;
-//     result = bbi_nk_df_(&P);
-//     result = round(result, 4);
-//     EXPECT_EQ(result, 0.0000);
-// }
+TEST(test_bbi_nk_df, test_bbi_nk_df01)
+{
+    double result;
+    double P = 0.8;
+    result = bbi_nk_df_(&P);
+    result = round(result, 4);
+    EXPECT_EQ(result, 1.0003);
+}
 
 // TEST(test_bbi_nk_xq_, test_bbi_nk_xq_01)
 // {
 //     double result = 0.0;
-//     // double Q = 0.8;
-//     // result = bbi_nk_xq_(&Q);
+//     double Q = 0.8;
+//     result = bbi_nk_xq_(&Q);
 //     result = round(result, 4);
 //     EXPECT_EQ(result, 0.0000);
 // }

@@ -24,12 +24,9 @@ link_directories(external/googletest/build/lib)
 # build a fortran library
 
 include_directories(src/ForLib)
-add_library(stmeanlibrary SHARED src/ForLib/stmean.f)
-set_target_properties(stmeanlibrary PROPERTIES LINKER_LANGUAGE Fortran)
 FILE(GLOB ForLibSources src/ForLib/*.f)
 add_library(forlib SHARED ${ForLibSources})
 set_target_properties(forlib PROPERTIES LINKER_LANGUAGE Fortran)
-target_link_libraries(forlib stmeanlibrary)
 link_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 

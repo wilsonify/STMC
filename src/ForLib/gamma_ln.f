@@ -12,6 +12,7 @@
          real(c_double) third_term
          real(c_double) log_x
          real(c_double), parameter :: ZERO = 0.0_c_double
+         real(c_double), parameter :: EPS = 0.001
          real(c_double), parameter :: HALF = 0.5_c_double
          real(c_double), parameter :: ONE = 1.0_c_double
          real(c_double), parameter :: TWO = 2.0_c_double
@@ -26,11 +27,10 @@
          real(c_double), parameter :: c5_l = 0.120858003_c_double
          real(c_double), parameter :: c6_l = -0.536382_c_double
          real(c_double), parameter :: stp_l = 2.50662827465_c_double
-         
+
          IF(X.LE.ZERO) THEN
-            PRINT*,"GAMMA_LN: Argument X =",X
-            STOP 'GAMMA_LN: illegal argument.'
-        END IF
+            X=EPS
+         END IF
 
          IF(X.GT.ONE) THEN ! Full accuracy of Lanczos formula.
             Y=X

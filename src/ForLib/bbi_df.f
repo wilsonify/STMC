@@ -3,21 +3,30 @@
          !C Copyright, Berg, October 23 1998.
          use iso_c_binding
          implicit none
-         integer(c_int) N
-         integer(c_int) K
-         real(c_double) P
+         integer(c_int) :: N
+         integer(c_int) :: K
+         real(c_double) :: P
          real(c_double), parameter :: ONE = 1.0_c_double
          real(c_double), parameter :: ZERO = 0.0_c_double
-         real(c_double) XKP1
-         real(c_double) XNMK
-         real(c_double) BETA_I
-         real(c_double) BBI_DF
-         IF(K.GT.N) STOP "BBI_DF: K cannot be > N"
-         IF(N.LE.0) STOP "BBI_DF: N cannot be < 0"
-         IF(K.LT.0) STOP "BBI_DF: K cannot be < 0"
-         IF(K.GT.N.OR.N.LE.0.OR.K.LT.0) STOP "BBI_DF: False N or K."
-         IF(P.LT.ZERO .OR. P.GT.ONE) STOP "BBI_DF: False P input."
-
+         real(c_double) :: XKP1
+         real(c_double) :: XNMK
+         real(c_double) :: BETA_I
+         real(c_double) :: BBI_DF
+         IF(K.GT.N) THEN
+            STOP "BBI_DF: K cannot be > N"
+         end if
+         IF(N.LE.0) THEN
+            STOP "BBI_DF: N cannot be < 0"
+         END IF
+         IF(K.LT.0) THEN
+            STOP "BBI_DF: K cannot be < 0"
+         END IF
+         IF(K.GT.N.OR.N.LE.0.OR.K.LT.0) THEN
+            STOP "BBI_DF: False N or K."
+         END IF
+         IF(P.LT.ZERO .OR. P.GT.ONE) THEN
+            STOP "BBI_DF: False P input."
+         END IF
          IF(P.EQ.ZERO) THEN
             BBI_DF=ONE
             RETURN

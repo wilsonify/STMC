@@ -3,16 +3,17 @@
 
          use iso_c_binding
          implicit none
-         real(c_double) GAMMA_LN
-         real(c_double) BETA_I
-         real(c_double) X
-         real(c_double) A
-         real(c_double) B
-         real(c_double) BT
+         real(c_double) :: GAMMA_LN
+         real(c_double) :: BETA_I
+         real(c_double) :: X
+         real(c_double) :: A
+         real(c_double) :: B
+         real(c_double) :: BT
          real(c_double), parameter :: ZERO = 0.0_c_double
          real(c_double), parameter :: HALF = 0.5_c_double
          real(c_double), parameter :: ONE = 1.0_c_double
          real(c_double), parameter :: TWO = 2.0_c_double
+         integer(c_int) :: ITER
          integer(c_int), parameter :: ITER_MAX = 200
          real(c_double), parameter :: EPS = 1.D-10
          real(c_double) :: one_minux_x
@@ -32,7 +33,7 @@
          real(c_double) :: BM
          real(c_double) :: BCF
          real(c_double) :: BZ
-         integer(c_int) :: ITER
+         
          real(c_double) :: XITER
          real(c_double) :: TWO_ITER
          real(c_double) :: BCFP
