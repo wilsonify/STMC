@@ -9,7 +9,7 @@ C Analysis program for multicanonical data, including times series.
       include 'mc.par'
       include 'potts.par'
       include 'muca.par'
-      common /lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
+      common '/lat/ ns,nla(nd),ipf(nd,ms),ipb(nd,ms)'
       include '../../ForLib/potts.com'
       include '../../ForLib/potts_muca.com'
       dimension b(0:mlink),a(0:mlink),hasum(0:mlink)
