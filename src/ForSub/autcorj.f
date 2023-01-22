@@ -1,4 +1,4 @@
-      SUBROUTINE AUTCORJ(IT,NDAT,NBINS,DATA,WORK,ACORJ,LMEAN)
+      SUBROUTINE AUTCORJ(IT,NDAT,NBINS,DATA,WORK,ACORJ,LMEAN) bind(c,name="autcorj_")
          !C Copyright, Bernd Berg, Feb 11, 2001.
          !C Calculates the jackknife array of autocorrelation at IT (0\le IT).
          use iso_c_binding

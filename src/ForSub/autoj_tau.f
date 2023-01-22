@@ -1,4 +1,4 @@
-      SUBROUTINE AUTOJ_TAU(IUO,NBINS,AJ)
+      SUBROUTINE AUTOJ_TAU(IUO,NBINS,AJ) bind(c,name="autoj_tau_")
 C Jackknife analysis of the exponential and integrated
 C autocorrelation times. Input: coefficients from jackknifed fits.
          use iso_c_binding

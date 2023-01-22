@@ -1,4 +1,4 @@
-      SUBROUTINE AUTCORA(NT,NDAT,DATA,ACOR,LMEAN)
+      SUBROUTINE AUTCORA(NT,NDAT,DATA,ACOR,LMEAN) bind(C,name="autcora_")
          ! C Copyright, Bernd Berg, Feb 11 2001.
          ! C Calculates the entire array ACOR of autocorrelations: IT=0,1,...
          ! C Small difference to acorf.f, because for IT.NE.NT acorf.f takes
