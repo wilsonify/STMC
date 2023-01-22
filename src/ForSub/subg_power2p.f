@@ -1,4 +1,4 @@
-      SUBROUTINE SUBG(X,A,YFIT,DYDA,MFTO)
+      SUBROUTINE SUBG_POW2P(X,A,YFIT,DYDA,MFTO)
          !C Copyright, Bernd Berg, Apr 21 2002.
          !C USER PROVIDED SUBROUTINE FOR THE FIT FUNCTION
          !C Y=C1*X**A2+C3*X**A4 with positive coefficients C1=EXP(A1) and C3=EXP(A3).
