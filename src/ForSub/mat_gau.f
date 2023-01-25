@@ -1,4 +1,5 @@
       Subroutine MAT_GAU(AMAT,N,BMAT,M)
+     &    bind(c,name="mat_gau_")
          !C Invert a square matrix
          use iso_c_binding
          implicit none

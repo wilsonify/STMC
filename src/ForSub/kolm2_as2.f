@@ -1,4 +1,5 @@
-      SUBROUTINE KOLM2_AS2(N1,N2,DAT1,DAT2,DEL,Q)
+      SUBROUTINE KOLM2_AS2(N1,N2,DAT1,DAT2,DEL,Q) 
+     &   bind(c,name="kolm2_as2_")
          !C Copyright, Bernd Berg, Apr 27, 2001.
          !C Asymptotic two-sided Kolmogorov test for two data sets.
          !C See kolm2_as.f for further comments.

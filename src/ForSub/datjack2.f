@@ -1,4 +1,4 @@
-      SUBROUTINE DATJACK2(N,X,XJJ)
+      SUBROUTINE DATJACK2(N,X,XJJ) bind(c,name="datjack2_")
          ! C Copyright Bernd Berg, Dec 13 2000.
          ! C CALCULATION OF  SECOND LEVEL JACKKNIFE BINS  XJJ(N-1,N)
          ! C FROM  N  DATA  X(N).

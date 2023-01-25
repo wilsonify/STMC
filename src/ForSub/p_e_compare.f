@@ -1,4 +1,6 @@
-      subroutine p_e_compare(nact_old,nact_new,n2d,mcase,ncase,icase)
+      subroutine p_e_compare(
+     &   nact_old,nact_new,n2d,mcase,ncase,icase)
+     &   bind(c,name="p_e_compare_")
 
          !C Copyright Bernd Berg, Jan 02 2002.
          !C Purpose: Count distinct local energy distributions as needed for EDS.

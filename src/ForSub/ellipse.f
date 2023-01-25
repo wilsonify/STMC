@@ -1,4 +1,4 @@
-      SUBROUTINE ELLIPSE(XM,SGXM,SGYM,EIGVS,PROB,IUD)
+      SUBROUTINE ELLIPSE(XM,SGXM,SGYM,EIGVS,PROB,IUD) bind(c,name="ellipse_")
          !C PURPOSE: PREPARE CONFIDENCE ELLIPSE FOR GNUPLOT.
          use iso_c_binding
          implicit none

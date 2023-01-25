@@ -1,4 +1,4 @@
-      SUBROUTINE KOLM2_AS(N,Fxct,DEL,Q)
+      SUBROUTINE KOLM2_AS(N,Fxct,DEL,Q) bind(c,name="kolm2_as_")
          !C Copyright, Bernd Berg, Apr 19, 2001.
          !C Asymptotic two-sided Kolmogorov test in the form of
          !C M.A. Stephens, J. Royal Stat. Soc. B 32 (1970) 115.

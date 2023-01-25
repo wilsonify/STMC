@@ -1,4 +1,4 @@
-      SUBROUTINE FIT_L(NDAT,X,Y,SGY,A,SGA,CHI2,Q,COV)
+      SUBROUTINE FIT_L(NDAT,X,Y,SGY,A,SGA,CHI2,Q,COV) bind(c,name="fit_l_")
          !C
          !C Copyright, Bernd Berg, November 1, 2000.
          !C  GIVEN IS A SET OF NDAT POINTS X(I), Y(I) WITH STANDARD DEVIATIONS

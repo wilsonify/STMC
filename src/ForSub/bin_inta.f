@@ -1,4 +1,4 @@
-      SUBROUTINE BIN_INTA(K,KBMAX,DATA,DATB,DBE,RUP,RDO,RAT)
+      SUBROUTINE BIN_INTA(K,KBMAX,DATA,DATB,DBE,RUP,RDO,RAT) bind(c,name="bin_inta_")
          !C Copyright: Bernd Berg, Feb 18 2000.
          !C Caculation of the integrated autocorrelation time tau_int via the
          !C bining procedure: The variance ratio RAT converges towards tau_int.

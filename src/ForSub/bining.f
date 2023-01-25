@@ -1,4 +1,4 @@
-      SUBROUTINE BINING(NDAT,DATA,NBINS,DATB)
+      SUBROUTINE BINING(NDAT,DATA,NBINS,DATB) bind(c,name="bining_")
          !C Copyright, Bernd Berg, Jan 10 1992.
          !C
          !C    PURPOSE:

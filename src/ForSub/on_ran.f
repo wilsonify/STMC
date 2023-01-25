@@ -1,4 +1,4 @@
-      subroutine On_ran(sta,n,ns)
+      subroutine On_ran(sta,n,ns) bind(c,name="on_ran_")
          !C Copyright, Bernd Berg, Feb 10 2002.
          !C Assigns random (i.e. beta=0) values to the states ista(is).
          use iso_c_binding

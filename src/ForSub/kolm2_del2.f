@@ -1,4 +1,5 @@
       SUBROUTINE KOLM2_DEL2(N1,N2,DAT1,DAT2,DEL)
+     &   bind(c,name="kolm2_del2_")   
          use iso_c_binding
          implicit none
          real(c_double) :: DAT1,DAT2,DEL,FEMP1,FEMP2

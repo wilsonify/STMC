@@ -1,4 +1,5 @@
       subroutine lat_init(ns,nd,ipf,ipb,nla,ix,nlink)
+     &   bind(c,name="lat_init_")
          use iso_c_binding
          implicit none
          integer(c_int) :: ns,nd,ipf,ipb,nla,ix,nlink,nsfun,is

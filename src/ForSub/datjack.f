@@ -1,4 +1,4 @@
-      SUBROUTINE DATJACK(N,X,XJ)
+      SUBROUTINE DATJACK(N,X,XJ) bind(c,name="datjack_")
          ! C Copyright, Bernd Berg, Dec 13 2000.
          ! C CALCULATION OF  N  JACKKNIFE BINS  XJ(N)  FOR  N  DATA IN  X(N).
          use iso_c_binding

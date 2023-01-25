@@ -1,4 +1,6 @@
-      subroutine latc_init(ns,nsc,nd,nla,ias,iac,iasc,icpf,icpb,nlink)
+      subroutine latc_init(
+     &    ns,nsc,nd,nla,ias,iac,iasc,icpf,icpb,nlink)
+     &    bind(c,name="latc_init_")
          !C Copyright, Bernd Berg, Sep 26 2003.
          !C Checkerboard lattice: Initialize number of lattice sites and links.
          !C Initialize pointer arrays.

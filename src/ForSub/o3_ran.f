@@ -1,4 +1,5 @@
       subroutine O3_ran(sta,ns)
+     &   bind(c,name="o3_ran_")
          !C Copyright, Bernd Berg, Jan 13 2002.
          !C Assigns random (i.e. beta=0) values to the states sta(3,is).
          use iso_c_binding

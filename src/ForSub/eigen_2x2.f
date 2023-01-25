@@ -1,4 +1,4 @@
-      SUBROUTINE EIGEN_2X2(AMAT,EVAL,EVCT)
+      SUBROUTINE EIGEN_2X2(AMAT,EVAL,EVCT) bind(c,name="eigen_2x2_")
          !C Real eigenvalues EVAL and eigenvectors EVCT of the AMAT 2x2 matrix.
          !C EVCT returns the eigenvectors stored column-wise.
          !C AMAT is unchanged on exit.

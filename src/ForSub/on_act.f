@@ -1,4 +1,5 @@
       subroutine On_act(sta,ipf,n,ns,nd,act)
+     &   bind(c,name="on_act_")
          !C Copyright, Bernd Berg, Feb 12 2002.
          !C Calculates action value iact of potts.com.
          use iso_c_binding

@@ -1,4 +1,4 @@
-      SUBROUTINE AUTCORJA(NT,NDAT,NBINS,DATA,WORK,ACORJ,LMEAN) 
+      SUBROUTINE AUTCORJA(NT,NDAT,NBINS,DATA,WORK,ACORJ,LMEAN) bind(c,name="autcorja_")
      &   bind(c,name="autcorja_")
 C Copyright, Bernd Berg, Apr 20 2002.
 C Jackknife array of autocorrelation at IT (0\le IT).

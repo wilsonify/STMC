@@ -1,4 +1,4 @@
-      SUBROUTINE FCT_LN_INIT
+      SUBROUTINE FCT_LN_INIT() bind(c,name="fct_ln_init_")
          !C Initialization for fast calculations of binomial expressions.
          !C Transfer the FCT_LN array through the common block.
          use iso_c_binding
@@ -6,8 +6,6 @@
          real(c_double) :: FCT_LN,XKP1,GAMMA_LN
          real(c_double),parameter :: ONE=1.0
          integer(c_int) :: NMAX,NDAT,K,IBINO
-
-
          PARAMETER(NMAX=500)
          COMMON /BINO/ FCT_LN(0:NMAX),IBINO
          IF(NDAT.GT.NMAX) STOP "FCT_LN_INIT: NDAT.GT.NMAX."

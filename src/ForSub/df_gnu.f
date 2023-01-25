@@ -1,4 +1,4 @@
-      SUBROUTINE DF_GNU(IUG,N,X)
+      SUBROUTINE DF_GNU(IUG,N,X) bind(c,name="df_gnu_")
          !C Copyright, Bernd Berg, Nov 7 2000.
          !C GNUPLOT FOR DISTRIBUTION FUNCTION.
          !C THE ARRAY X HAS TO BE SORTED ON INPUT (CALL HEASORT).
